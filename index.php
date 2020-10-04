@@ -48,18 +48,22 @@ if(ISSET($_SESSION['response'])){
 <script src=https://productlists.co.za/services/sell/products/feature/option/api.js ></script>
 
 
-<?php include "header_2.php"; ?>
+<?php include "header_3.php"; ?>
 
 <div class="row p_cont"  >
 <div class="" >
 <div class="content col-sm-9" >
 <a name=main ></a>
 <div id="main" class=main >
-
-<?php include 'services/build_your_brand/feature/video.php'; ?>
+	
+<iframe src="https://productlists.co.za/services/f_snake" style="width:100%;height:auto;" ></iframe>
 
 <?php include 'timeline.php'; ?>
 
+	<a href="https://productlists.co.za/services/cv_engine/templates/temp22.html" >
+		<img src="https://productlists.co.za/services/cv_engine/temp222.png" width="100%" />
+	</a>	
+	
 </div>
 </div>
 <div class="col-sm-3" >
@@ -74,7 +78,7 @@ if(ISSET($_SESSION['response'])){
 </div>
 </div>
 </div>
-<?php include "footer_3.php"; ?>
+<?php include "footer_4.php"; ?>
 </body>
 </html>
 <?php
