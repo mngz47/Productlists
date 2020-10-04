@@ -13,10 +13,10 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
 <div class="col-sm-2" >
 <h3>Customer Service</h3>
   <ul style="list-style:none;" >
-    <li><a href=https://productlists.co.za/customer_service/faq.html >FAQ</a></li>
-    <li><a href=https://productlists.co.za/customer_service/privacy_policy.html >Privacy Policy</a></li>
-    <li><a href=https://productlists.co.za/customer_service/terms_conditions.html >Terms & Conditions</a></li>
-    <li><a href=https://productlists.co.za/customer_service/shipping_returns.html >Shipping & Returns</a></li>
+    <li><a href=https://productlists.co.za/customer_service/faq.php >FAQ</a></li>
+    <li><a href=https://productlists.co.za/customer_service/privacy_policy.php >Privacy Policy</a></li>
+    <li><a href=https://productlists.co.za/customer_service/terms_conditions.php >Terms & Conditions</a></li>
+    <li><a href=https://productlists.co.za/customer_service/shipping_returns.php >Shipping & Returns</a></li>
   </ul>
 </div>
 <div class="col-sm-2" >
