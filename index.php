@@ -50,13 +50,13 @@ if(ISSET($_SESSION['response'])){
 
 <?php include "header_3.php"; ?>
 
-<div class="row p_cont"  >
-<div class="" >
+<div class="p_cont"  >
+<div class="row" >
 <div class="content col-sm-9" >
 <a name=main ></a>
 <div id="main" class=main >
 	
-<iframe src="https://productlists.co.za/services/f_snake" style="width:100%;height:auto;" ></iframe>
+<iframe src="https://productlists.co.za/services/f_snake/index.html" style="width:100%;height:450px;border:2px solid yellow;" ></iframe>
 
 <?php include 'timeline.php'; ?>
 
