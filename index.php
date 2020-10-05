@@ -56,7 +56,7 @@ if(ISSET($_SESSION['response'])){
 <a name=main ></a>
 <div id="main" class=main >
 	
-<iframe src="https://productlists.co.za/services/f_snake/index.html" style="width:100%;height:450px;border:2px solid yellow;" ></iframe>
+<iframe src="https://productlists.co.za/services/f_snake/index.html" style="width:100%;height:400px;border:2px solid yellow;" ></iframe>
 
 <?php include 'timeline.php'; ?>
 
