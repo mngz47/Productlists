@@ -61,11 +61,15 @@ if(ISSET($_SESSION['response'])){
 <div class="content col-sm-6" >
 <a name=main ></a>
 <div id="main" class=main >
-    
+	<h3>Frequently Asked Questions</h3>
+	    
+	    <p>
 <strong>What is the purpose of Productlists?</strong><br>
 To sell local and international products, help lower cost of products through buying power queues,
 help customers make better buying decisions through columns about product variance and the
-market.<br><br>
+market.
+	    </p>
+	    <p>
 <strong>What are the benefits of using Productlists?</strong><br>
 Time saving, feature intensive to help customers understand the market and make better buying
 decisions.
@@ -75,46 +79,56 @@ therefore we give the money back to you by giving you a 3% discount.
 Buying Power Queue – allows you to buy a product at the same time as a group of people that
 allows you to have price dropping leverage.
 Reusable Shopping Cart – Stores the shopping cart checkout history and allows you to cut time by
-simply reusing the previous shopping cart and helps you to monitor your buying patterns.<br><br>
+simply reusing the previous shopping cart and helps you to monitor your buying patterns.
+	</p>
+	<p>
 <strong>Where do you source your Product?</strong><br>
 We primarily find South African suppliers on Instagram, but we list suppliers from Europe and Asia to
-gain access to overall international market in terms of product variance and quality.<br><br>
+gain access to overall international market in terms of product variance and quality.
+	</p>
+	<p>
 <strong>How do I buy items on Productlists?</strong><br>
 You can add item to cart select delivery methods and payment methods then click checkout, this will
 take you to delivery information section which will then allow you to make payment and complete
-the transaction. You can check the status of your transaction via home page.<br><br>
+the transaction. You can check the status of your transaction via home page.
+	</p>
+	<p>
 <strong>When Will I get the product I have ordered?</strong><br>
 Product ordered from local South African supplier will take 3-5 days whereas product from Europe
 or China is expected to take 14-20 days. If you are experiencing delays, we advise you to wait for at
 least three days before contacting support given that you’re unhappy with the status of the
-transaction.<br><br>
+transaction.
+	</p>
+	<p>
 <strong>How can I monitor my order?</strong><br>
 For each transaction we make use of a messaging thread for each order, this makes it easier to
-enquire about your order - your message will be replied to within 24hrs.<br><br>
-<strong>Is it safe to transact on Productlists?</strong><br>
+enquire about your order - your message will be replied to within 24hrs.
+	</p>
+	<p>
+		<strong>Is it safe to transact on Productlists?</strong><br>
 We make use of TSL which is an international standard to transmit information securely. All
-payments are performed by third party domain with more experience.<br><br>
-<strong>How can I return damaged or wrong Products?</strong><br>
-
-Customer Service admin@productlists.co.za<br>
-
-071 947 1009<br>
-Productlists © Copyright 2020 | All rights Reserved<br>
+payments are performed by third party domain with more experience.
+	</p>
+	<p>	
+	<strong>How can I return damaged or wrong Products?</strong><br>
 We prefer that you swap the product for an alternative, but we do offer an option to return the
 product, but you have limited time of a week after receiving the product to detect any damages and
 return it. You will have to take images of the damaged product and send an email to claim your
 refund.
+	</p>
+	<p>
 <strong>Why should I donate?</strong><br>
 We create content about local markets and showcase business success stories, we believe that the
 best way to grow economy is to show the practical examples. Your donation will go towards
-improving the quality of this content and the number of people with access to it.<br><br>
-
+improving the quality of this content and the number of people with access to it.
+	</p>
+	<p>
 <strong>How do I donate?</strong><br>
 PayPal account: admin@productlists.co.za<br>
 Productlists (pty)ltd<br>
 Bank: FNB<br>
 Account no: 62689950501<br>
-
+	</p>
 </div>
 </div>
 <div class="col-sm-3" >
