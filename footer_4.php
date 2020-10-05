@@ -53,5 +53,10 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
     <input name=date_added_n type=text id=date_added class=invisible />
     <input name=text value="Newsletter" placeholder=message class=invisible />
 </form>
+    <div>
+   admin@productlists.co.za<br>
+   071 947 1009<br>
+   Productlists © Copyright 2020 | All rights Reserved
+    </div>
 </div>
 </div>
