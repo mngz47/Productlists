@@ -61,6 +61,7 @@ if(ISSET($_SESSION['response'])){
 <div class="content col-sm-6" >
 <a name=main ></a>
 <div id="main" class=main >
+	<h3>Privacy Policy</h3>
   <p>
     <strong>What information we collect?</strong><br>
 Personal Information: First Name, Last Name, Email
