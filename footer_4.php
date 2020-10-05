@@ -1,7 +1,5 @@
 <div class=row style="padding-bottom:20px;padding-left:20px;rgba(0,0,0,0.2);
 box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
-<div class="col-sm-1" >
-</div>
 <div class="col-sm-2" >
 <h3>Our Company</h3>
 <ul style="list-style:none;" >
@@ -10,7 +8,7 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
     <li><a href=https://www.productlists.co.za/feature/device_usage/ >Usage</a></li>
   </ul>
 </div>
-<div class="col-sm-2" >
+<div class="col-sm-3" >
 <h3>Customer Service</h3>
   <ul style="list-style:none;" >
     <li><a href=https://productlists.co.za/customer_service/faq.php >FAQ</a></li>
@@ -56,7 +54,7 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
     <div>
    admin@productlists.co.za<br>
    071 947 1009<br>
-   Productlists © Copyright 2020 | All rights Reserved
+   Productlists © Copyright 2020
     </div>
 </div>
 </div>
