@@ -21,7 +21,7 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
 <div class="col-sm-2" >
 <h3>Suppliers</h3>
   <ul style="list-style:none;" >
-    <li><a href=https://www.productlists.co.za/services/sell >Add Company</a></li>
+    <li><a href=https://www.productlists.co.za/services/sell/index.php >Add Company</a></li>
     <li><a href=https://www.productlists.co.za/services/sell/products/product_general.php >Sell Product</a></li>
     <li><a href=https://www.productlists.co.za/services/sell/company_transactions.php >Transactions</a></li>
   </ul>
