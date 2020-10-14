@@ -6,7 +6,7 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
 $sql = 'DELETE FROM product WHERE id='.$_GET['product_id'];
 $result = $conn->query($sql);
 if($result){
-
+echo 'ff_ff';
 $sql = 'SELECT id FROM product WHERE id>'.$_GET['product_id'].';';
 $result = $conn->query($sql);
 if($result){
