@@ -56,8 +56,30 @@ if(ISSET($_SESSION['response'])){
 <a name=main ></a>
 <div id="main" class=main >
 	
-<iframe src="https://productlists.co.za/services/f_snake/index.html" style="width:100%;height:400px;border:2px solid yellow;" ></iframe>
+<iframe id=tv src="https://productlists.co.za/services/f_snake/index.html" style="width:100%;height:400px;border:2px solid yellow;" ></iframe>
+<script>
+	var apps = 
+	    [ "https://productlists.co.za/services/f_snake/index.html",
+	      "https://www.productlists.co.za/services/pamel_slots/index.html",
+	      "https://www.productlists.co.za/services/kasi_nametest/index.html",
+	      "https://productlists.co.za/services/cv_engine/templates/temp32.html"];
+	
+	var index = 0;
+	function next(){
+		if(index<apps.length){
+			e('tv').src = apps[index];
+			index++;
+		}else{
+		index = 0;	
+		}
+	}
+	
+	</script>
+	<a href=# onclick=next(); class=block style="float:right;" >Another One</a>
+	
+<iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=26&l=ur1&category=bestsellingproducts&banner=1F8VTV49P7N5K5XY5N82&f=ifr&linkID=62fbaa2c4f1eadfd296f4e00a685b4c2&t=productlists4-20&tracking_id=productlists4-20" width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
 
+	
 <?php include 'timeline.php'; ?>
 
 	<a href="https://productlists.co.za/services/cv_engine/templates/temp22.html" >
