@@ -1,7 +1,7 @@
 <div class=row style="padding-bottom:20px;padding-left:20px;rgba(0,0,0,0.2);
 box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
 <div class="col-sm-2" >
-<h3>Our Company</h3>
+<h3>Company</h3>
 <ul style="list-style:none;" >
     <li><a href=https://www.productlists.co.za/feature/support.php >Support</a></li>
     <li><a href=https://www.productlists.co.za/about.php >About</a></li>
