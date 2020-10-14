@@ -60,18 +60,12 @@ if(ISSET($_SESSION['response'])){
 
 <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=26&l=ur1&category=bestsellingproducts&banner=1F8VTV49P7N5K5XY5N82&f=ifr&linkID=62fbaa2c4f1eadfd296f4e00a685b4c2&t=productlists4-20&tracking_id=productlists4-20" width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
 	
-<?php include 'timeline.php'; ?>
-
-	<a href="https://productlists.co.za/services/cv_engine/templates/temp22.html" >
-		<img src="https://productlists.co.za/services/cv_engine/temp222.png" width="100%" />
-	</a>	
-	
 </div>
 </div>
 <div class="col-sm-3" >
 <div id=right_pane class="right_pane" >
 <div id=left_pane_1 >
-<?php include "services/sell/products/feature/group_four.php"; ?>
+<?php include "services/sell/products/feature/group_four_affiliate.php"; ?>
 </div>
 <div id=right_pane_2 style="display:none;" >
 <?php include "feature/relationship.php"; ?>
@@ -80,6 +74,22 @@ if(ISSET($_SESSION['response'])){
 </div>
 </div>
 </div>
+	
+	<div class="row" >
+<div class="content col-sm-9" >
+	<div style="padding:20px;" >
+		<?php include 'timeline.php'; ?>
+
+	<a href="https://productlists.co.za/services/cv_engine/templates/temp22.html" >
+		<img src="https://productlists.co.za/services/cv_engine/temp222.png" width="100%" />
+	</a>	
+	
+	</div>
+		</div>
+<div class="col-sm-3" >
+		</div>
+	</div>
+	
 <?php include "footer_4.php"; ?>
 </body>
 </html>
