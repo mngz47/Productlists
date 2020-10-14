@@ -13,7 +13,7 @@
     
     function four_next(){
 		if(index<affiliates.length){
-			e('four_forward').src = affiliates[index];
+			e('four_target').src = affiliates[index];
 			index++;
 		}else{
 		index = 0;	
