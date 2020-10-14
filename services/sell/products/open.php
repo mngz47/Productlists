@@ -122,7 +122,7 @@ if(ISSET($_SESSION['response'])){
 	
     ?>
 
-<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_2.php'); ?>
+<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_3.php'); ?>
 
 <div class="body row" >
 <div class="content col-sm-5" >
@@ -131,8 +131,17 @@ if(ISSET($_SESSION['response'])){
 <div id=mother style="display:none;position:absolute;left:500px;top:200px;border:2px solid black;width:300px;height:300px;z-index:30;" >
 </div>    
 <div class=products id=products >
-<?php
+<div class=row >
+<div class=col-sm-1 >
+</div>
+</div>
+</div>
+<div class="content col-sm-8" >
+   
+	<?php
 
+	$specification;
+	
 $sql = 'SELECT p.id,p.company_id,p.title,p.quantity,p.price,p.brand,p.specification,p.parameters,p.measurement,p.discount,DATE_FORMAT(p.date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
 ' product p  WHERE p.id='.$product_id;
    
@@ -143,10 +152,7 @@ if($row = $result->fetch_assoc()){
 	
 	$more_than_one_product = false;
 	
-	echo 
 	
-	'<div class=row >'.
-	'<div class=col-sm-3 >';
 	$sql2 = "SELECT url FROM product_image WHERE product_id=".$row["id"];
 	$result2 = $conn->query($sql2);
 	$row2 = $result2->fetch_assoc();
@@ -241,9 +247,9 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		   ($row['quantity']>0?
 		   '<div class=add_to_cart ><input id=cart_qty type=number value=1 placeholder="Qty" /><a class="btn btn-primary" id=add_to_cart href=# onclick="addToCart(setParameters('.$row['id'].'),this);return false;" >add to cart</a></div>':'<div class="block center" >Out of Stock</div>');
 		  
+	         $specification = $row['specification'];
            echo 
-		   '</div>'.
-		   '<p class=spec >'.$row['specification'].'</p>';
+		   '</div>'
 		   
 		   echo
 		   '</div></div></div>'; 
@@ -253,12 +259,17 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 	
 ?>
 
-
-</div>
-</div>
-</div>
-<div class="content col-sm-4" >
-    <?php
+	<div id=tabs >
+		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='none';e('spec').style.display='';" class="space" >Description</a>
+		<a href=# onclick="e('checkout').style.display='';e('reviews').style.display='none';e('spec').style.display='none';" class="space" >Checkout</a>
+		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='';e('spec').style.display='none';" class="space" >Reviews</a>
+	</div>
+	
+	<div id=spec >
+	<?php echo '<p class=spec >'.$specification.'</p>';  ?>
+	</div>
+<div id=checkout style="display:none;" >
+	 <?php
     
     if(!ISSET($_SESSION['customer_id'])){
      
@@ -274,48 +285,44 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
     
     <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/footer.php'); ?>
 
+	</div>
+<div class=row id=reviews style="display:none;" >	
+<?php
+include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products/reply/index.php";
+   
+include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products/reply/list.php";
+?>
+</div>
+	
 </div>
 <div class="col-sm-3" >
-<div id=right_pane class="right_pane" >
-<div id=left_pane_1 >
-<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php'); ?>
+
 </div>
-<div id=left_pane_4 >
+</div>
+	
+	<div class=row >
+		<div class=col-sm-4 ><?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four_affiliate.php'); ?>
+</div>
+		<div class=col-sm-4 >
 <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/references.php'); ?>
-</div>
+
 <div id=left_pane_2 style="display:none;" >
 <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/relationship.php'); ?>
-</div>
-<div id=right_pane_3 >
+			</div>
 <?php 
 include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/option/index.php';
 ?>
-</div>
-
-<?php
+	</div>
+		<div class=col-sm-4 >
+	<?php
 
 $service_item = 2;
 include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/cover_face.php';
  
 ?>
-
-</div>
-</div>
-</div>
-<?php
-
-echo 
-'<div class=row ><div class=col-sm-9 >';
-
-include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products/reply/index.php";
-   
-include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products/reply/list.php";
-
-
-echo
-'</div><div class=col-sm-3 ></div></div>';
-
-
+	</div>
+		</div>
+<?php 	
 include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/footer_3.php"; 
 ?>
 
