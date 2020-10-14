@@ -12,7 +12,7 @@
     var index = 0;
     
     function four_next(){
-		if(index<apps.length){
+		if(index<affiliates.length){
 			e('four_forward').src = affiliates[index];
 			index++;
 		}else{
