@@ -323,7 +323,7 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/cover_face.ph
 	</div>
 		</div>
 <?php 	
-include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/footer_3.php"; 
+include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/footer_4.php"; 
 ?>
 
 </div>
