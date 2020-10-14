@@ -5,7 +5,8 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
 <ul style="list-style:none;" >
     <li><a href=https://www.productlists.co.za/feature/support.php >Support</a></li>
     <li><a href=https://www.productlists.co.za/about.php >About</a></li>
-    <li><a href=https://www.productlists.co.za/feature/device_usage/ >Usage</a></li>
+    <li><a href=https://www.productlists.co.za/feature/aggregation/lite >Automatic</a></li>
+    <li><a href=https://www.productlists.co.za/invest.php >Invest</a></li>
   </ul>
 </div>
 <div class="col-sm-3" >
@@ -53,7 +54,7 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
 </form>
     <div>
    admin@productlists.co.za<br>
-   071 947 1009<br>
+   +2771 947 1009<br>
    Productlists © Copyright 2020
     </div>
 </div>
