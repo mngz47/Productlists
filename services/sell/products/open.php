@@ -259,10 +259,10 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 	</div>
 	</div>
 
-	<div id=tabs style="padding:40px;font-size:1em;" >
-		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='none';e('spec').style.display='';" class="space" >Description</a>
-		<a href=# onclick="e('checkout').style.display='';e('reviews').style.display='none';e('spec').style.display='none';" class="space" >Checkout</a>
-		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='';e('spec').style.display='none';" class="space" >Reviews</a>
+	<div id=tabs style="padding:10px;font-size:1.2em;" >
+		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='none';e('spec').style.display='';return false;" class="space" >Description</a>
+		<a href=# onclick="e('checkout').style.display='';e('reviews').style.display='none';e('spec').style.display='none';return false;" class="space" >Checkout</a>
+		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='';e('spec').style.display='none';return false;" class="space" >Reviews</a>
 	</div>
 	<div style="padding:10px;" >
 		<div id=spec >
