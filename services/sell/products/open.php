@@ -125,55 +125,13 @@ if(ISSET($_SESSION['response'])){
 <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_3.php'); ?>
 
 <div class="body row" >
-<div class="content col-sm-5" >
-<a name=main ></a>
-<div id="main" class=main >
-<div id=mother style="display:none;position:absolute;left:500px;top:200px;border:2px solid black;width:300px;height:300px;z-index:30;" >
-</div>    
-<div class=products id=products >
-<div class=row >
-<div class=col-sm-2 >
-</div>
-</div>
+<div class="col-sm-2" >
+
 </div>
 <div class="content col-sm-7" >
    
-	
 
-	<div id=tabs >
-		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='none';e('spec').style.display='';" class="space" >Description</a>
-		<a href=# onclick="e('checkout').style.display='';e('reviews').style.display='none';e('spec').style.display='none';" class="space" >Checkout</a>
-		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='';e('spec').style.display='none';" class="space" >Reviews</a>
-	</div>
 	
-	<div id=spec >
-	<?php echo '<p class=spec >'.$specification.'</p>';  ?>
-	</div>
-<div id=checkout style="display:none;" >
-	 <?php
-    
-    if(!ISSET($_SESSION['customer_id'])){
-     
-    // include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/q_c/quick_c.php');
-   
-    }
-    
-    include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/face.php');
-   
-    
-     ?>
-  
-    
-    <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/footer.php'); ?>
-
-	</div>
-<div class=row id=reviews style="display:none;" >	
-<?php
-include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products/reply/index.php";
-   
-include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products/reply/list.php";
-?>
-</div>
 	
 </div>
 <div class="col-sm-3" >
@@ -181,33 +139,9 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 </div>
 </div>
 	
-	<div class=row >
-		<div class=col-sm-4 ><?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four_affiliate.php'); ?>
-</div>
-		<div class=col-sm-4 >
-<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/references.php'); ?>
-
-<div id=left_pane_2 style="display:none;" >
-<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/relationship.php'); ?>
-			</div>
-<?php 
-include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/option/index.php';
-?>
-	</div>
-		<div class=col-sm-4 >
-	<?php
-
-$service_item = 2;
-include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/cover_face.php';
- 
-?>
-	</div>
-		</div>
 <?php 	
 include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/footer_4.php"; 
 ?>
-
-</div>
 </div>
 </body>
 </html>
