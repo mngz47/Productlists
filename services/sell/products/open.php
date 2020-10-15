@@ -246,7 +246,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		   '</div>';
 		   
 		   echo
-		   '</div></div>'; 
+		   '</div>'; 
 		   
     }
 }
