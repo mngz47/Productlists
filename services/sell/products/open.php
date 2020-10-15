@@ -292,7 +292,7 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 </div>
 	</div>
 		   
-	</div>
+	
 	</div>
 
 </div>
