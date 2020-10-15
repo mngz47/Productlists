@@ -255,13 +255,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 }
 	
 ?>
-		   
-	</div>
-	</div>
-
-</div>
-<div class="col-sm-6" >
-
+	
 	<div id=tabs style="padding:10px;font-size:1.2em;" >
 		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='none';e('spec').style.display='';return false;" class="space" >Description</a>
 		<a href=# onclick="e('checkout').style.display='';e('reviews').style.display='none';e('spec').style.display='none';return false;" class="space" >Checkout</a>
@@ -297,9 +291,15 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 ?>
 </div>
 	</div>
-	
+		   
+	</div>
+	</div>
+
 </div>
+<div class="col-sm-5" >
+
 </div>
+	</div>
 	<div class=row style="padding:20px;" >
 		<div class=col-sm-4 ><?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four_affiliate.php'); ?>
 </div>
