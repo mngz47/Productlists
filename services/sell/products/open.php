@@ -248,7 +248,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 	         $specification = $row['specification'];
 			 
            echo 
-		   '</div></div></div>';
+		   '</div></div>';
 		   
 		   
     }
@@ -292,7 +292,7 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 </div>
 	</div>
 		   
-	
+		</div>
 	</div>
 
 </div>
