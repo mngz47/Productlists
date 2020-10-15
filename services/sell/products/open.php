@@ -147,7 +147,10 @@ if($row = $result->fetch_assoc()){
 	
 	$more_than_one_product = false;
 	
+	echo 
 	
+	'<div class=row >'.
+	'<div class=col-sm-3 >';
 	$sql2 = "SELECT url FROM product_image WHERE product_id=".$row["id"];
 	$result2 = $conn->query($sql2);
 	$row2 = $result2->fetch_assoc();
