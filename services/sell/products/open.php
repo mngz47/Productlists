@@ -125,10 +125,10 @@ if(ISSET($_SESSION['response'])){
 <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_3.php'); ?>
 
 <div class="body row" >
-<div class="col-sm-2" >
+<div class="col-sm-4" >
 
 </div>
-<div class="content col-sm-7" >
+<div class="content col-sm-5" >
    
 
 	<?php
@@ -246,7 +246,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		   '</div>';
 		   
 		   echo
-		   '</div></div></div>'; 
+		   '</div></div>'; 
 		   
     }
 }
