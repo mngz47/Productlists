@@ -130,8 +130,10 @@ if(ISSET($_SESSION['response'])){
 </div>
 <div class="content col-sm-6" >
    
-
-	<?php
+	<div id="main" class=main >
+	   <div class=products id=products >
+		   
+		   <?php
 
 $specification;
 	
@@ -250,7 +252,10 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 }
 	
 ?>
-	
+		   
+	</div>
+	</div>
+
 	<div id=tabs style="padding:40px;font-size:1em;" >
 		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='none';e('spec').style.display='';" class="space" >Description</a>
 		<a href=# onclick="e('checkout').style.display='';e('reviews').style.display='none';e('spec').style.display='none';" class="space" >Checkout</a>
