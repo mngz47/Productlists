@@ -25,6 +25,17 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
 <meta name="autor" content="Mongezi Mafunda" />
 </head>
 <body>
+  <?php 
+  
+  if(ISSET($_POST['pp'])){
+    if($_POST['pp']){
+       echo '<script>alert("Success");</script>';
+    }else{
+      echo '<script>alert("Failure");</script>';
+    }
+  }
+  
+  ?>
 <script src=https://www.productlists.co.za/api.js ></script>
 <script src=https://www.productlists.co.za/verification.js ></script>
 <script src=https://www.productlists.co.za/feature/search/api.js ></script>
@@ -36,10 +47,13 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
 <div class="body row" >
 <div class="col-sm-3" >
 <div id=left_pane class="left_pane" >
-
-<div id=left_pane_2 >
+<div id=left_pane_1 >
+<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four_affiliate.php'; ?>
+</div>
+<div id=left_pane_2 style="display:none;" >
 <?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/relationship.php'; ?>
-</div></div>
+</div>
+  </div>
 </div>
 <div class="content col-sm-6" >
 <a name=main ></a>
@@ -48,18 +62,18 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
   <p>
     <h3>Invest</h3>
       Help us gain competitive advantage as we automate the internet.</p>
-    <div id=calculator >
+    <div id=calculator style="width:333px;margin-left:auto;margin-right:auto;" >
           <p>
     <h2>Return Calculator<small>9% Interest</small></h2>
-      First payment in begins in 3 Months</p>
+      First payment begins in 3 Months</p>
     
         <span>Amount</span>
-        <input type=number id=amount />
+        <input type=number id=amount class="form-control" />
         <span>Period of Returns (Months)</span>
-        <input type=number id=months onblur=calc_returns(); />
+        <input type=number id=months onblur=calc_returns(); class="form-control"  />
         <span>Returns</span>
-        <input type=text id=returns />
-        <a class="btn btn-primary" onclick="invest();" >invest</a>
+        <input type=text id=returns class="form-control"  />
+        <a class="btn btn-primary" style="float:right;" onclick="invest();" >invest</a>
         <script>
             
             function calc_returns(){
@@ -73,7 +87,9 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
             }
             
             function invest(){
-                
+                e('amount_ff').value = e('amount').value;
+                e('item_name').value += e('months').value+' Months';
+              e('payment_ff').submit();
             }
             
         </script>
@@ -87,6 +103,15 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
  include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/footer_4.php'; 
  ?>
 </div>
+<form action=https://www.payfast.co.za/eng/process method=post id=payment_ff class=invisible >
+<input type=text name=merchant_id value=12647788 />
+<input type=text name=merchant_key value=nliu1lbt07r75 />
+<input type=text name=return_url value=https://www.productlists.co.za/invest.php?pp=1 />
+<input type=text name=cancel_url value=https://www.productlists.co.za/invest.php?pp=0 />
+<input type=text id=amount_ff name=amount />
+<input type=text id=item_name name=item_name value="Investment " />
+<input type=text name=email_confirmation value="1" />
+</form>
 </body>
 </html>
 <?php
