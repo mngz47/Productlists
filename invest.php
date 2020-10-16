@@ -1,17 +1,9 @@
 <?php
 
-function httpGet($url){
-$curl = curl_init();
-curl_setopt_array($curl, array(
-    CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => $url,
-));
-return curl_exec($curl);
-curl_close($curl);
-}
-
 session_start();
+
 $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -53,12 +45,40 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
 <a name=main ></a>
 
 <div id="main" class=main >
-   <h3>Invest</h3>
-
-  
-
+  <p>
+    <h3>Invest</h3>
+      Help us gain competitive advantage as we automate the internet.</p>
+    <div id=calculator >
+          <p>
+    <h2>Return Calculator<small>9% Interest</small></h2>
+      First payment in begins in 3 Months</p>
+    
+        <span>Amount</span>
+        <input type=number id=amount />
+        <span>Period of Returns (Months)</span>
+        <input type=number id=months onblur=calc_returns(); />
+        <span>Returns</span>
+        <input type=text id=returns />
+        <a class="btn btn-primary" onclick="invest();" >invest</a>
+        <script>
+            
+            function calc_returns(){
+                  if(e('amount').value && e('months').value){
+                     
+                 //  e('returns').value = (e('amount').value + e('amount').value*0.09)/e('months').value ;
+                      
+                     }else{
+                         alert('Fill in Amount and Period of Returns');
+                     }
+            }
+            
+            function invest(){
+                
+            }
+            
+        </script>
+    </div>
 </div>
-
 </div>
 <div class="col-sm-3" >
 </div>
