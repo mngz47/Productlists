@@ -60,26 +60,26 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
 
 <div id="main" class=main >
   <p>
-    <h3>Invest</h3>
+    <h2>Invest</h2>
       Help us gain competitive advantage as we automate the internet.</p>
-    <div id=calculator style="width:333px;margin-left:auto;margin-right:auto;" >
+    <div id=calculator style="width:333px;margin-left:auto;margin-right:auto;margin-bottom:20px;" >
           <p>
-    <h2>Return Calculator<small>9% Interest</small></h2>
+    <h4>Return Calculator<small> 9% Interest</small></h4>
       First payment begins in 3 Months</p>
     
         <span>Amount</span>
         <input type=number id=amount class="form-control" />
-        <span>Period of Returns (Months)</span>
+        <span>Period of Return (Months)</span>
         <input type=number id=months onblur=calc_returns(); class="form-control"  />
-        <span>Returns</span>
+        <span>Total Returns</span>
         <input type=text id=returns class="form-control"  />
-        <a class="btn btn-primary" style="float:right;" onclick="invest();" >invest</a>
+        <a class="btn btn-primary space" style="float:right;" onclick="invest();" >invest</a>
         <script>
             
             function calc_returns(){
                   if(e('amount').value && e('months').value){
                      
-                 //  e('returns').value = (e('amount').value + e('amount').value*0.09)/e('months').value ;
+                  e('returns').value = (e('amount').value + e('amount').value*0.09)/e('months').value ;
                       
                      }else{
                          alert('Fill in Amount and Period of Returns');
