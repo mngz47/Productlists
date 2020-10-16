@@ -68,7 +68,7 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
       First payment begins in 3 Months</p>
     
         <span>Amount</span>
-        <input type=number id=amount class="form-control" />
+        <input type=number id=amount onblur=calc_returns(); class="form-control" />
         <span>Period of Return (Months)</span>
         <input type=number id=months onblur=calc_returns(); class="form-control"  />
         <span>Monthly Return</span>
