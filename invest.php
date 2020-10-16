@@ -71,7 +71,7 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
         <input type=number id=amount class="form-control" />
         <span>Period of Return (Months)</span>
         <input type=number id=months onblur=calc_returns(); class="form-control"  />
-        <span>Total Returns</span>
+        <span>Monthly Return</span>
         <input type=text id=returns class="form-control"  />
         <a  href=# class="btn btn-primary" style="float:right;margin:5px;" onclick="invest();return false;" >invest</a>
     </div>
@@ -89,7 +89,10 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
             function calc_returns(){
                   if(e('amount').value && e('months').value){
                      
-                  e('returns').value = (e('amount').value + e('amount').value*0.09)/e('months').value ;
+                    var aa = parseInt(e('amount').value);
+                    var mm = parseInt(e('months').value);
+                    
+                  e('returns').value = Math.round((aa + aa*0.09)/mm);
                       
                      }else{
                          alert('Fill in Amount and Period of Returns');
