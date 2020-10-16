@@ -64,7 +64,7 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
       Help us gain competitive advantage as we automate the internet.</p>
     <div id=calculator style="width:333px;margin-left:auto;margin-right:auto;margin-bottom:20px;" >
           <p>
-    <h4>Return Calculator<small> 9% Interest</small></h4>
+    <h3>Return Calculator<small> 9% Interest</small></h3>
       First payment begins in 3 Months</p>
     
         <span>Amount</span>
@@ -73,7 +73,7 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
         <input type=number id=months onblur=calc_returns(); class="form-control"  />
         <span>Total Returns</span>
         <input type=text id=returns class="form-control"  />
-        <a class="btn btn-primary space" style="float:right;" onclick="invest();" >invest</a>
+        <a class="btn btn-primary" style="float:right;margin:5px;" onclick="invest();" >invest</a>
         <script>
             
             function calc_returns(){
