@@ -73,8 +73,18 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
         <input type=number id=months onblur=calc_returns(); class="form-control"  />
         <span>Total Returns</span>
         <input type=text id=returns class="form-control"  />
-        <a class="btn btn-primary" style="float:right;margin:5px;" onclick="invest();" >invest</a>
-        <script>
+        <a  href=# class="btn btn-primary" style="float:right;margin:5px;" onclick="invest();return false;" >invest</a>
+    </div>
+</div>
+</div>
+<div class="col-sm-3" >
+</div>
+</div>
+<?php
+ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/footer_4.php'; 
+ ?>
+</div>
+  <script>
             
             function calc_returns(){
                   if(e('amount').value && e('months').value){
@@ -93,16 +103,6 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
             }
             
         </script>
-    </div>
-</div>
-</div>
-<div class="col-sm-3" >
-</div>
-</div>
-<?php
- include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/footer_4.php'; 
- ?>
-</div>
 <form action=https://www.payfast.co.za/eng/process method=post id=payment_ff class=invisible >
 <input type=text name=merchant_id value=12647788 />
 <input type=text name=merchant_key value=nliu1lbt07r75 />
