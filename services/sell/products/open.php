@@ -304,7 +304,6 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 		<div class=col-sm-4 ><?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four_affiliate.php'); ?>
 </div>
 		<div class=col-sm-4 >
-<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/references.php'); ?>
 
 <div id=left_pane_2 style="display:none;" >
 <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/relationship.php'); ?>
@@ -314,6 +313,9 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products
 ?>
 	</div>
 		<div class=col-sm-4 >
+			
+<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/references.php'); ?>
+			
 	<?php
 
 $service_item = 2;
