@@ -71,7 +71,7 @@ if(ISSET($_SESSION['response'])){
     var index_home = 0;
     
     function four_next_home(){
-		if(index<affiliates.length){
+		if(index_home<affiliates.length){
 			e('four_target_home').src = affiliates_banner[index_home];
 			index_home++;
 		}else{
