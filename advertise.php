@@ -60,21 +60,21 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
 
 <div id="main" class=main >
   <p>
-    <h2>Invest</h2>
-      Help us gain competitive advantage as we automate the internet.</p>
-    <div id=calculator style="width:333px;margin-left:auto;margin-right:auto;margin-bottom:20px;" >
-          <p>
-    <h3>Return Calculator<small> 9% Interest</small></h3>
-      First payment begins in 3 Months</p>
-    
-        <span>Amount</span>
-        <input type=number id=amount onblur=calc_returns(); class="form-control" />
-        <span>Period of Return (Months)</span>
-        <input type=number id=months onblur=calc_returns(); class="form-control"  />
-        <span>Monthly Return</span>
-        <input type=text id=returns class="form-control"  />
-        <a  href=# class="btn btn-primary" style="float:right;margin:5px;" onclick="invest();return false;" >invest</a>
-    </div>
+  <h3>Di-On-Marketing</h3>
+We are improving the business image of Newcastle by managing top pipeline
+to showcase our product and services.
+The pipeline is physically based in Newcastle where the print out newsletter is
+issued. We also have reach online through Facebook classified groups. The
+estimate people that can be reached are 150k.
+The pipeline involves printing out locally then creating digital content that
+corresponds in the form of video, posting it on YouTube and sharing on
+Facebook.
+We also make use of online directories like Gumtree as well as banners on our
+chain of websites.
+The pipeline is carried out every 3 days for the whole month.
+  </p>
+  
+  
 </div>
 </div>
 <div class="col-sm-3" >
@@ -84,37 +84,6 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
  include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/footer_4.php'; 
  ?>
 </div>
-  <script>
-            
-            function calc_returns(){
-                  if(e('amount').value && e('months').value){
-                     
-                    var aa = parseInt(e('amount').value);
-                    var mm = parseInt(e('months').value);
-                    
-                  e('returns').value = Math.round((aa + aa*0.09)/mm);
-                      
-                     }else{
-                         alert('Fill in Amount and Period of Returns');
-                     }
-            }
-            
-            function invest(){
-                e('amount_ff').value = e('amount').value;
-                e('item_name').value += e('months').value+' Months';
-              e('payment_ff').submit();
-            }
-            
-        </script>
-<form action=https://www.payfast.co.za/eng/process method=post id=payment_ff class=invisible >
-<input type=text name=merchant_id value=12647788 />
-<input type=text name=merchant_key value=nliu1lbt07r75 />
-<input type=text name=return_url value=https://www.productlists.co.za/invest.php?pp=1 />
-<input type=text name=cancel_url value=https://www.productlists.co.za/invest.php?pp=0 />
-<input type=text id=amount_ff name=amount />
-<input type=text id=item_name name=item_name value="Investment " />
-<input type=text name=email_confirmation value="1" />
-</form>
 </body>
 </html>
 <?php
