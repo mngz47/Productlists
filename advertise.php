@@ -62,23 +62,23 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
   <p>
   <h3>Di-On-Marketing</h3>
 We are improving the business image of Newcastle by managing top pipeline
-to showcase our product and services.
+to showcase our product and services.<br><br>
 The pipeline is physically based in Newcastle where the print out newsletter is
 issued. We also have reach online through Facebook classified groups. The
-estimate people that can be reached are 150k.
+estimate people that can be reached are 150k.<br><br>
 The pipeline involves printing out locally then creating digital content that
 corresponds in the form of video, posting it on YouTube and sharing on
-Facebook.
+Facebook.<br><br>
 We also make use of online directories like Gumtree as well as banners on our
-chain of websites.
+chain of websites.<br><br>
 The pipeline is carried out every 3 days for the whole month.
   </p>
   <h4>Pricing Options <small>(Free graphic design)</small></h4>
   <div class=row >
     <div class=col-sm-4 >
       <div class=space >
-        <h5>Basic</h5>
-R150 (monthly)<br>
+        <h5><strong>Basic</strong></h5>
+        <span style="color:green" >R150</span> (monthly)<br>
 Newsletter Print(1)<br>
 YouTube Video(1)<br>
 Facebook groups(4)<br>
@@ -86,8 +86,8 @@ Facebook groups(4)<br>
     </div>
     <div class=col-sm-4 >
     <div class=space >
-      <h5>Moderate</h5>
-R250 (monthly)<br>
+      <h5><strong>Moderate</strong></h5>
+      <span style="color:green" >R250</span> (monthly)<br>
 Newsletter Print(1)<br>
 YouTube Video(1)<br>
 Facebook groups(8)<br>
@@ -96,8 +96,8 @@ Online Directory(3)
     </div>
     <div class=col-sm-4 >
     <div class=space >
-       <h5>Professional</h5>
-R350 (monthly)<br>
+       <h5><strong>Professional</strong></h5>
+      <span style="color:green" >R350</span> (monthly)<br>
 Newsletter Print(1)<br>
 YouTube Video(1)<br>
 Facebook groups(12)<br>
@@ -108,7 +108,7 @@ Website Banner (3)
   </div>
   
   <p>
-    <strong>enquire</strong>
+    <strong>enquire:</strong><br>
 mngz636@gmail.com<br>
 063 530 6336<br>
 4 VALK Amajuba 2940
