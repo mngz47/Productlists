@@ -24,6 +24,7 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
     <li><a href=https://www.productlists.co.za/services/sell/index.php >Add Company</a></li>
     <li><a href=https://www.productlists.co.za/services/sell/products/product_general.php >Sell Product</a></li>
     <li><a href=https://www.productlists.co.za/services/sell/company_transactions.php >Transactions</a></li>
+    <li><a href=https://www.productlists.co.za/advertise.php >Advertise</a></li> 
   </ul>
 </div>
 <div class="col-sm-2" >
@@ -32,7 +33,7 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
     <li><a href=https://www.productlists.co.za/member/signup_main.php >Account</a></li>
     <li><a href=https://www.productlists.co.za/feature/shopping_cart/index.php >Shopping Cart</a></li>
     <li><a href=https://www.productlists.co.za/member/customer_transaction.php >Transactions</a></li>
-    <li><a href=https://www.productlists.co.za/services/ >Services</a></li>
+    <li><a href=https://www.productlists.co.za/services/index.php >Services</a></li>
   </ul>
 </div>
 <div class="col-sm-3" >
