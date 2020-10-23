@@ -40,7 +40,7 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
 <script src=https://www.productlists.co.za/verification.js ></script>
 <script src=https://www.productlists.co.za/feature/search/api.js ></script>
 <script src=https://www.productlists.co.za/feature/sign/api.js ></script>
-<div id=container class=container >
+<div class=p_cont >
 
   <?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_3.php'; ?>
   
