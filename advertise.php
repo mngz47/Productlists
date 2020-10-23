@@ -73,7 +73,46 @@ We also make use of online directories like Gumtree as well as banners on our
 chain of websites.
 The pipeline is carried out every 3 days for the whole month.
   </p>
+  <h4>Pricing Options <small>(Free graphic design)</small></h4>
+  <div class=row >
+    <div class=col-sm-4 >
+      <div class=space >
+        <h5>Basic</h5>
+R150 (monthly)<br>
+Newsletter Print(1)<br>
+YouTube Video(1)<br>
+Facebook groups(4)<br>
+      </div>
+    </div>
+    <div class=col-sm-4 >
+    <div class=space >
+      <h5>Moderate</h5>
+R250 (monthly)<br>
+Newsletter Print(1)<br>
+YouTube Video(1)<br>
+Facebook groups(8)<br>
+Online Directory(3)
+      </div>
+    </div>
+    <div class=col-sm-4 >
+    <div class=space >
+       <h5>Professional</h5>
+R350 (monthly)<br>
+Newsletter Print(1)<br>
+YouTube Video(1)<br>
+Facebook groups(12)<br>
+Online Directory(6)<br>
+Website Banner (3)
+      </div>
+    </div>
+  </div>
   
+  <p>
+    <strong>enquire</strong>
+mngz636@gmail.com<br>
+063 530 6336<br>
+4 VALK Amajuba 2940
+  </p>
   
 </div>
 </div>
