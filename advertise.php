@@ -75,7 +75,7 @@ The pipeline is carried out every 3 days for the whole month.
   </p>
   <h4>Pricing Options <small>(Free graphic design)</small></h4>
   <div class=row >
-    <div class=col-sm-4 >
+    <div class=col-sm-4 onclick="setPackage(150);this.className+=' block';" >
       <div class=space >
         <h5><strong>Basic</strong></h5>
         <span style="color:green" >R150</span> (monthly)<br>
@@ -84,7 +84,7 @@ YouTube Video(1)<br>
 Facebook groups(4)<br>
       </div>
     </div>
-    <div class=col-sm-4 >
+    <div class=col-sm-4 onclick="setPackage(250);this.className+=' block';" >
     <div class=space >
       <h5><strong>Moderate</strong></h5>
       <span style="color:green" >R250</span> (monthly)<br>
@@ -94,7 +94,7 @@ Facebook groups(8)<br>
 Online Directory(3)
       </div>
     </div>
-    <div class=col-sm-4 >
+    <div class=col-sm-4 onclick="setPackage(350);this.className+=' block';" >
     <div class=space >
        <h5><strong>Professional</strong></h5>
       <span style="color:green" >R350</span> (monthly)<br>
@@ -106,7 +106,7 @@ Website Banner (3)
       </div>
     </div>
   </div>
-  
+  <a href=# onclick=advertise(); class="btn btn-primary" style="float:right;" >Advertise</a>
   <p>
     <strong>enquire:</strong><br>
 mngz636@gmail.com<br>
@@ -119,10 +119,39 @@ mngz636@gmail.com<br>
 <div class="col-sm-3" >
 </div>
 </div>
-<?php
+ 
+ <?php
  include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/footer_4.php'; 
  ?>
 </div>
+  
+  <script>
+  
+    function setPackage(price){
+       e('amount_ff').value = price;
+    }
+    
+    function advertise(){
+      if(e('amount_ff').value){
+           e('payment_ff').submit(); 
+      }else{
+       alert('Select Pricing Option'); 
+      }
+  
+    }
+    
+  </script>
+  
+ <form action=https://www.payfast.co.za/eng/process method=post id=payment_ff class=invisible >
+<input type=text name=merchant_id value=12647788 />
+<input type=text name=merchant_key value=nliu1lbt07r75 />
+<input type=text name=return_url value=https://www.productlists.co.za/advertise.php?pp=1 />
+<input type=text name=cancel_url value=https://www.productlists.co.za/advertise.php?pp=0 />
+<input type=text id=amount_ff name=amount />
+<input type=text id=item_name name=item_name value="Advertise" />
+<input type=text name=email_confirmation value="1" />
+</form>
+  
 </body>
 </html>
 <?php
