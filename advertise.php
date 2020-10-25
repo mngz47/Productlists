@@ -74,8 +74,8 @@ chain of websites.<br><br>
 The pipeline is carried out every 3 days for the whole month.
   </p>
   <h4>Pricing Options <small>(Free graphic design)</small></h4>
-  <div class=row >
-    <div class=col-sm-4 onclick="setPackage(150);this.className+=' block';" >
+  <div class=row id=pricing_option >
+    <div class=col-sm-4 onclick="setPackage(this,150);" >
       <div class=space >
         <h5><strong>Basic</strong></h5>
         <span style="color:green" >R150</span> (monthly)<br>
@@ -84,7 +84,7 @@ YouTube Video(1)<br>
 Facebook groups(4)<br>
       </div>
     </div>
-    <div class=col-sm-4 onclick="setPackage(250);this.className+=' block';" >
+    <div class=col-sm-4 onclick="setPackage(this,250);" >
     <div class=space >
       <h5><strong>Moderate</strong></h5>
       <span style="color:green" >R250</span> (monthly)<br>
@@ -94,7 +94,7 @@ Facebook groups(8)<br>
 Online Directory(3)
       </div>
     </div>
-    <div class=col-sm-4 onclick="setPackage(350);this.className+=' block';" >
+    <div class=col-sm-4 onclick="setPackage(this,350);" >
     <div class=space >
        <h5><strong>Professional</strong></h5>
       <span style="color:green" >R350</span> (monthly)<br>
@@ -106,8 +106,10 @@ Website Banner (3)
       </div>
     </div>
   </div>
-  <a href=# onclick=advertise(); class="btn btn-primary" style="float:right;" >Advertise</a>
-  <p>
+  <div style="height:50px;" >
+      <a href=# onclick=advertise(); class="btn btn-primary" style="float:right;" >Advertise</a>
+  </div>
+<p>
     <strong>enquire:</strong><br>
 mngz636@gmail.com<br>
 063 530 6336<br>
@@ -127,7 +129,14 @@ mngz636@gmail.com<br>
   
   <script>
   
-    function setPackage(price){
+    function setPackage(ele,price){
+     var ops = e('pricing_option').getElementsByTagName('div');
+      
+      for(var a=0;a<ops.length;a++){
+       ops[a].className = ops[a].className.replace('block','');
+      }
+      
+      ele.className+=' block';
        e('amount_ff').value = price;
     }
     
