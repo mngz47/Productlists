@@ -106,7 +106,7 @@ Website Banner (3)
       </div>
     </div>
   </div>
-  <div style="height:50px;" >
+  <div style="height:50px;padding:10px;" >
       <a href=# onclick=advertise(); class="btn btn-primary" style="float:right;" >Advertise</a>
   </div>
 <p>
