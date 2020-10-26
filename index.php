@@ -107,10 +107,6 @@ if(ISSET($_SESSION['response'])){
 	<div style="padding:20px;" >
 		<?php include 'timeline.php'; ?>
 
-	<a href="https://productlists.co.za/services/cv_engine/templates/temp22.html" >
-		<img src="https://productlists.co.za/services/cv_engine/temp222.png" width="100%" />
-	</a>	
-	
 	</div>
 		</div>
 <div class="col-sm-3" >
