@@ -45,7 +45,17 @@ $in_product = true;
 
 <!DOCTYPE html>
 <html>
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6WQ0XKPSP9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6WQ0XKPSP9');
+</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <?php 
 
 $t;
