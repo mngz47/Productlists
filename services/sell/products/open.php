@@ -286,7 +286,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		<div id=spec >
 	<?php echo '<p class=spec >'.$specification.'</p>';  ?>
 	</div>
-	<div id=queue style="display:none; >
+	<div id=queue style="display:none;" >
 	<?php 
 		if(ISSET($row['bulk']) && $row['bulk']==1){
 			include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/queue/index.php'; 
