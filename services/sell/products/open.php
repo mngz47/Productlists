@@ -147,7 +147,7 @@ if(ISSET($_SESSION['response'])){
 
 $specification;
 	
-$sql = 'SELECT p.id,p.company_id,p.title,p.quantity,p.price,p.brand,p.specification,p.parameters,p.measurement,p.discount,DATE_FORMAT(p.date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
+$sql = 'SELECT p.id,p.company_id,p.title,p.quantity,p.price,p.brand,p.specification,p.parameters,p.measurement,p.discount,p.bulk,DATE_FORMAT(p.date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
 ' product p  WHERE p.id='.$product_id;
    
 
@@ -274,13 +274,26 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 <div class="col-sm-6" >
 
 	<div id=tabs style="padding:10px;font-size:1.2em;" >
-		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='none';e('spec').style.display='';return false;" class="space" >Description</a>
-		<a href=# onclick="e('checkout').style.display='';e('reviews').style.display='none';e('spec').style.display='none';return false;" class="space" >Checkout</a>
-		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='';e('spec').style.display='none';return false;" class="space" >Reviews</a>
+		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='none';e('spec').style.display='';e('queue').style.display='none';return false;" class="space" >Description</a>
+		
+		<a href=# onclick="e('checkout').style.display='';e('reviews').style.display='none';e('spec').style.display='none';e('queue').style.display='none';return false;" class="space" >Checkout</a>
+		
+		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='none';e('spec').style.display='none';e('queue').style.display='';return false;" class="space" >Queue</a>
+		
+		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='';e('spec').style.display='none';e('queue').style.display='none';return false;" class="space" >Reviews</a>
 	</div>
 	<div style="padding:10px;" >
 		<div id=spec >
 	<?php echo '<p class=spec >'.$specification.'</p>';  ?>
+	</div>
+	<div id=queue style="display:none; >
+	<?php 
+		if(ISSET($row['bulk']) && $row['bulk']==1){
+			include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/queue/index.php'; 
+		}else{
+			echo '<p>Feature is supported for items available in bulk.</p>';
+		}
+	?>
 	</div>
 <div id=checkout style="display:none;" >
 	 <?php
