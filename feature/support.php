@@ -1,6 +1,9 @@
 <?php
+
 session_start();
+
 $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,32 +29,17 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
 <script src=https://www.productlists.co.za/verification.js ></script>
 <script src=https://www.productlists.co.za/feature/search/api.js ></script>
 <script src=https://www.productlists.co.za/feature/sign/api.js ></script>
-<div id=container class=container >
-<div id=header class="header row" >
-<div class="col-sm-3" >
-<div>
-<a href=https://www.productlists.co.za/index.php class="logo logo_start" ></a>
-<a href=https://www.productlists.co.za/index.php class="title logo" >Productlists</a>
-<a href="#" onclick="toggleUpperScroll();return false;" class="toggleUpperScroll highlight" ></a>
-<a href="#" onclick="toggleSignIn();return false;" class="toggleSignIn highlight" ></a>
-</div>
-</div>
-<div class="col-sm-6" >
-<div class=upper_scroll >
-<input onfocus=s_in(); onblur=s_out(this); type=search onkeyup="search(this.value);" class="form-control shadow" id=search placeholder="search" />
-</div>
-</div>
-<div id=header_right class="col-sm-3">
-<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/sign/signin.php'; ?>
-</div>
-</div>
+<div id=container class=p_cont >
+    
+    <?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_3.php'; ?>
+    
 <div class="body row" >
 <div class="col-sm-3" >
 <div id=left_pane class="left_pane" >
 <div id=left_pane_1 >
-<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php'; ?>
+<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four_affiliate.php'; ?>
 </div>
-<div id=left_pane_2 >
+<div id=left_pane_2 style="display:none;" >
 <?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/relationship.php'; ?>
 </div></div>
 </div>
@@ -66,7 +54,7 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
 <h3>
     Help
 </h3> 
-<form action="feature/feedback/index.php" method=post onsubmit=setDate('date_added'); >
+<form action="feedback/index.php" method=post onsubmit=setDate('date_added'); >
     
     <input name=email type=text class=form-control placeholder=email style="margin-bottom:10px;" />
     
@@ -109,26 +97,7 @@ Western Cape<br>
 </div>
 <div class="col-sm-3" >
 <div id=right_pane class="right_pane" >
-<div id=right_pane_1 >
-<?php 
-include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/option/index.php';
-?>
 </div>
-<div id=right_pane_2 >
-<?php 
- include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/directory_listings/feature/occupation.php"; 
-?>
-</div>
-<div id=right_pane_3 >
-<?php 
- include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/directory_listings/feature/company_type.php"; 
-?>
-</div>
-<div id=right_pane_4 >
-<?php
-include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/build_your_brand/feature/author.php"; 
-?>
-</div></div>
 </div>
 </div>
 <?php
