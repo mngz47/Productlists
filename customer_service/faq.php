@@ -123,12 +123,19 @@ best way to grow economy is to show the practical examples. Your donation will g
 improving the quality of this content and the number of people with access to it.
 	</p>
 	<p>
-<strong>How do I donate?</strong><br>
+<strong>Banking Details/strong><br>
 PayPal account: admin@productlists.co.za<br>
-Productlists (pty)ltd<br>
+Productlists (pty)ltd <br>
 Bank: FNB<br>
-Account no: 62689950501<br>
+Account no: 62689950501 (Down at the moment)<br>
+	<br>
+PayPal account: mngz636@gmail.co.za<br>
+Mongezi Mafunda <br>
+Bank: Standard Bank<br>
+Account no: 10129573092 (Recommended)<br>
 	</p>
+		
+		
 </div>
 </div>
 <div class="col-sm-3" >
