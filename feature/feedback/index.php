@@ -8,27 +8,28 @@
 
 //-----------------------------------
 
-require 'vendor/autoload.php'; // If you're using Composer (recommended)
 
-$email = new \SendGrid\Mail\Mail(); 
-$email->setFrom("test@example.com", "Example User");
-$email->setSubject("Sending with SendGrid is Fun");
-$email->addTo("mngz636@gmail.com", "Example User");
-$email->addContent("text/plain", "and easy to do anywhere, even with PHP");
-$email->addContent(
-    "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
-);
-$sendgrid = new \SendGrid(getenv('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'));
-try {
-    $response = $sendgrid->send($email);
-    print $response->statusCode() . "\n";
-    print_r($response->headers());
-    print $response->body() . "\n";
-} catch (Exception $e) {
-    echo 'Caught exception: '. $e->getMessage() ."\n";
-}
+$client = new httpClient;
+$request = new httpClientRequest;
 
+$body = new httpMessageBody;
+$body->append('{  "personalizations": [    {      "to": [        {          "email": "mngz636@gmail.com"        }      ],      "subject": "Hello, World!"    }  ],  "from": {    "email": "from_address@example.com"  },  "content": [    {      "type": "text/plain",      "value": "Hello, World!"    }  ]}');
 
+$request->setRequestUrl('https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send');
+$request->setRequestMethod('POST');
+$request->setBody($body);
+
+$request->setHeaders(array(
+	'x-rapidapi-host' => 'rapidprod-sendgrid-v1.p.rapidapi.com',
+	'x-rapidapi-key' => 'f4d041c051msh25be51a74caa34bp14fd74jsn556f558ca5da',
+	'content-type' => 'application/json',
+	'accept' => 'application/json'
+));
+
+$client->enqueue($request)->send();
+$response = $client->getResponse();
+
+echo $response->getBody();
 
 //-------------------------------
 
