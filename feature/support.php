@@ -69,7 +69,7 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
 
 <div class=row style="margin-bottom:20px;" >
 <div class=col-sm-6 >
-<img src=pmb.JPG width=100% title="Productlists Pietermaritzburg Office" />
+    
 </div>
 <div class=col-sm-6  >
 802 Sibukosezwe rd<br>
@@ -81,7 +81,7 @@ Kwazulu Natal<br>
 </div>
 <div class=row style="margin-bottom:20px;" >
 <div class=col-sm-6  >
-<img src=capetown.JPG width=100% title="Productlists Capetown Office" />
+
 </div>
 <div class=col-sm-6 >
 Shop 16 Ngulube Drive Informal Markets<br>
