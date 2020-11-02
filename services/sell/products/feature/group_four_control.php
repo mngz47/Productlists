@@ -1,4 +1,4 @@
-<?php<script>
+<script>
     
 function sendreq_22(url,target){
 var req = new XMLHttpRequest();
