@@ -53,6 +53,9 @@ if(ISSET($_SESSION['response'])){
 <div id=left_pane_1 >
 <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php'); ?>
 </div>
+<div id=left_pane_3 >
+<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four_control.php'); ?>
+</div>	
 <div id=left_pane_2 style="display:none;" >
 <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/relationship.php'); ?>
 </div>
@@ -123,7 +126,7 @@ best way to grow economy is to show the practical examples. Your donation will g
 improving the quality of this content and the number of people with access to it.
 	</p>
 	<p>
-<strong>Banking Details/strong><br>
+<strong>Banking Details</strong><br>
 PayPal account: admin@productlists.co.za<br>
 Productlists (pty)ltd <br>
 Bank: FNB<br>
