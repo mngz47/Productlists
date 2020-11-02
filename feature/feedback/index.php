@@ -8,40 +8,21 @@
 
 //-----------------------------------
 
-$curl = curl_init();
+require 'vendor/autoload.php';
+use Mailgun\Mailgun;
 
-curl_setopt_array($curl, [
-	CURLOPT_URL => "https://rapidapi.p.rapidapi.com/email/send",
-	CURLOPT_RETURNTRANSFER => true,
-	CURLOPT_FOLLOWLOCATION => true,
-	CURLOPT_ENCODING => "",
-	CURLOPT_MAXREDIRS => 10,
-	CURLOPT_TIMEOUT => 30,
-	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-	CURLOPT_CUSTOMREQUEST => "POST",
-	CURLOPT_POSTFIELDS => "{
-    \"recipient\": \"mngz636@gmail.com\",
-    \"sender\": \"admin@productlists.com\",
-    \"subject\": \"Subject of Email\",
-    \"message\": \"Body of Email\"
-}",
-	CURLOPT_HTTPHEADER => [
-		"content-type: application/json",
-		"x-rapidapi-host: fapimail.p.rapidapi.com",
-		"x-rapidapi-key: f4d041c051msh25be51a74caa34bp14fd74jsn556f558ca5da"
-	],
-]);
+# Instantiate the client.
+$mgClient = new Mailgun('f6f26b4383b27ab64c8c7921a387746b-ea44b6dc-07d85e16');
+$domain = "sandboxc720bc57eb9e4e1db3d3473679e23e14.mailgun.org";
 
-$response = curl_exec($curl);
-$err = curl_error($curl);
+# Make the call to the client.
+$result = $mgClient->sendMessage("$domain",
+	array('from'    => 'Mailgun Sandbox <postmaster@sandboxc720bc57eb9e4e1db3d3473679e23e14.mailgun.org>',
+		  'to'      => 'Mongezi <mngz636@gmail.com>',
+		  'subject' => 'Hello Mongezi',
+		  'text'    => 'Congratulations Mongezi, you just sent an email with Mailgun!  You are truly awesome! '));
 
-curl_close($curl);
 
-if ($err) {
-	echo "cURL Error #:" . $err;
-} else {
-	echo $response;
-}
 //-------------------------------
 
 
