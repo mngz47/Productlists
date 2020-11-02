@@ -4,6 +4,8 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/api.php';
 
 session_start();
 
+p_mail('mngz636@gmail.com','Productlists Feedback',$_POST['email'].'>>>'.$_POST['text']);
+
 if(ISSET($_POST['email']) && ISSET($_POST['text']) && ISSET($_POST['date_added'])   && !ISSET($_SESSION['feedback_lock'])){
 
 $pattern = "/[0-9a-zA-Z]{3,10}@[0-9a-zA-Z]{3,10}\.(com|co\.za)/";
