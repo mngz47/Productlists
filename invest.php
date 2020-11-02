@@ -63,7 +63,7 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
     <h2>Invest</h2>
    Help us gain competitive advantage.<br>
   <strong>Financail Needs</strong><br>
-  <table>
+  <table style="width=200px;margin:20px;" >
     <tr><td>Advertising<td><td>R100 000<td></tr>
     <tr><td>Mobile App<td><td>R100 000<td></tr>
   </table>
