@@ -10,8 +10,8 @@
 
 $curl = curl_init();
 
-curl_setopt_array($curl, array(
-	CURLOPT_URL => "https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send",
+curl_setopt_array($curl, [
+	CURLOPT_URL => "https://rapidapi.p.rapidapi.com/email/send",
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_FOLLOWLOCATION => true,
 	CURLOPT_ENCODING => "",
@@ -19,14 +19,18 @@ curl_setopt_array($curl, array(
 	CURLOPT_TIMEOUT => 30,
 	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 	CURLOPT_CUSTOMREQUEST => "POST",
-	CURLOPT_POSTFIELDS => "{  \"personalizations\": [    {      \"to\": [        {          \"email\": \"mngz636@gmail.com\"        }      ],      \"subject\": \"Hello, World!\"    }  ],  \"from\": {    \"email\": \"from_address@example.com\"  },  \"content\": [    {      \"type\": \"text/plain\",      \"value\": \"Hello, World!\"    }  ]}",
-	CURLOPT_HTTPHEADER => array(
-		"accept: application/json",
+	CURLOPT_POSTFIELDS => "{
+    \"recipient\": \"mngz636@gmail.com\",
+    \"sender\": \"admin@productlists.com\",
+    \"subject\": \"Subject of Email\",
+    \"message\": \"Body of Email\"
+}",
+	CURLOPT_HTTPHEADER => [
 		"content-type: application/json",
-		"x-rapidapi-host: rapidprod-sendgrid-v1.p.rapidapi.com",
+		"x-rapidapi-host: fapimail.p.rapidapi.com",
 		"x-rapidapi-key: f4d041c051msh25be51a74caa34bp14fd74jsn556f558ca5da"
-	),
-));
+	],
+]);
 
 $response = curl_exec($curl);
 $err = curl_error($curl);
@@ -38,7 +42,6 @@ if ($err) {
 } else {
 	echo $response;
 }
-
 //-------------------------------
 
 
