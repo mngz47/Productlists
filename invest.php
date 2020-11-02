@@ -40,7 +40,7 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
 <script src=https://www.productlists.co.za/verification.js ></script>
 <script src=https://www.productlists.co.za/feature/search/api.js ></script>
 <script src=https://www.productlists.co.za/feature/sign/api.js ></script>
-<div id=container class=container >
+<div id=container class=p_cont >
 
   <?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_3.php'; ?>
   
@@ -61,7 +61,13 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
 <div id="main" class=main >
   <p>
     <h2>Invest</h2>
-      Help us gain competitive advantage as we automate the internet.</p>
+   Help us gain competitive advantage.
+  <strong>Financail Needs</strong><br>
+  <span>Advertising</span><br>
+  <span>Mobile App</span><br>
+  <br><br>
+  After you process the transaction you will recieve personal email from us with confirmation.
+  </p>
     <div id=calculator style="width:333px;margin-left:auto;margin-right:auto;margin-bottom:20px;" >
           <p>
     <h3>Return Calculator<small> 9% Interest</small></h3>
