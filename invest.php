@@ -64,8 +64,8 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
    Help us gain competitive advantage.<br>
   <strong>Financail Needs</strong><br>
   <table style="width=400px;margin:20px;" >
-    <tr><td>Advertising<td></tr>
-    <tr><td>Mobile App<td></tr>
+    <tr><td>Advertising</td></tr>
+    <tr><td>Mobile App</td></tr>
   </table>
   After you process the transaction you will recieve personal email from us with confirmation.<br>
   To make investment greater than R6000 access <a href=https://www.productlists.co.za/customer_service/faq.php >FAQ</a> for banking details.
