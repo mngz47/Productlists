@@ -4,7 +4,22 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/api.php';
 
 session_start();
 
-p_mail('mngz636@gmail.com','Productlists Feedback',$_POST['email'].'>>>'.$_POST['text']);
+// p_mail('mngz636@gmail.com','Productlists Feedback',$_POST['email'].'>>>'.$_POST['text']);
+
+
+use google\appengine\api\mail\Message;
+
+try {
+    $message = new Message();
+    $message->setSender('admin@productlists.co.za');
+    $message->addTo('mngz636@gmail.com');
+    $message->setSubject('Productlists Feedback');
+    $message->setTextBody(,$_POST['email'].'>>>'.$_POST['text']);
+    $message->send();
+    echo 'Mail Sent';
+} catch (InvalidArgumentException $e) {
+    echo 'There was an error';
+}
 
 if(ISSET($_POST['email']) && ISSET($_POST['text']) && ISSET($_POST['date_added'])   && !ISSET($_SESSION['feedback_lock'])){
 
