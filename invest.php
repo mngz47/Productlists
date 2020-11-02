@@ -63,9 +63,10 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
     <h2>Invest</h2>
    Help us gain competitive advantage.<br>
   <strong>Financail Needs</strong><br>
-  <span>Advertising</span><br>
-  <span>Mobile App</span><br>
-  <br>
+  <table>
+    <tr><td>Advertising<td><td>R100 000<td></tr>
+    <tr><td>Mobile App<td><td>R100 000<td></tr>
+  </table>
   After you process the transaction you will recieve personal email from us with confirmation.
   </p>
     <div id=calculator style="width:333px;margin-left:auto;margin-right:auto;margin-bottom:20px;" >
