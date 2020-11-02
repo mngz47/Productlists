@@ -53,6 +53,9 @@ if(ISSET($_SESSION['response'])){
 <div id=left_pane_1 >
 <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php'); ?>
 </div>
+	<div id=left_pane_3 >
+<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four_control.php'); ?>
+</div>
 <div id=left_pane_2 style="display:none;" >
 <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/relationship.php'); ?>
 </div>
@@ -76,7 +79,7 @@ delivery is free.<br>
 support.<br>
 </p>
 <p>
-<strong>RETURNS<strong><br>
+<strong>RETURNS</strong><br>
 1. You have limited time of a week after receiving the product to detect any
 damages and return it.<br>
 2. You will have to take images of the damaged product and send an email then
