@@ -249,7 +249,7 @@ $sql = 'SELECT p.id,p.company_id,p.title,p.price,p.brand,p.specification,p.param
 
 }
 
-	echo '[sql]<textarea>'.$sql.'</textarea>';
+	//echo '[sql]<textarea>'.$sql.'</textarea>';
 	
 $result = $conn->query($sql);
 
@@ -259,18 +259,17 @@ $has_products = $row = $result->fetch_assoc();
 
 $c_p = 0;
 
-$end = 40;
+$end = (ISSET($_GET['s'])?$_GET['s']*40+40:40);
 
 $locked = false;
 
 while($row){
 	 
 	 if($c_p>=$begin && !$locked){
-	 $end=$c_p+40;
 	 $locked=true;
 	 }
 	 
-	 $extend = ($c_p>=$begin && $c_p<(ISSET($_GET['s'])?$_GET['s']*40+40:$end));
+	 $extend = ($c_p>=$begin && $c_p<$end);
 	 
 	 $completed = false;
 	 
