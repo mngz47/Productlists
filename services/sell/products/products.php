@@ -222,13 +222,12 @@ if($category){
 $s_t;
 {
 	
-$sql = 'SELECT COUNT(id) AS s_t FROM product';
-	
-	/*' WHERE draft=0'.
+$sql = 'SELECT COUNT(id) AS s_t FROM product'.
+	' WHERE draft=0'.
 ($category?' AND category="'.$category.'"':'').
 ($category_type?' AND category_type="'.$category_type.'"':'').
 ($brand?' AND brand="'.$brand.'"':'').
-($alph?' AND UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'');*/
+($alph?' AND UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'');
 
 
 $result = $conn->query($sql);
@@ -238,14 +237,14 @@ $result = $conn->query($sql);
 		   }
 
 $sql = 'SELECT p.id,p.company_id,p.title,p.price,p.brand,p.specification,p.parameters,p.measurement,p.quantity,p.discount,DATE_FORMAT(p.date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
-' product p';
-/*' WHERE draft=null'.
+' product p'.
+' WHERE draft=null'.
 ($category?' AND category="'.$category.'"':'').
 ($category_type?' AND category_type="'.$category_type.'"':'').
 ($brand?' '.($category || $category_type?'':'WHERE').'AND brand="'.$brand.'"':'').
 ($alph?' '.($category || $category_type || $brand?'AND':'WHERE').' UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'').
 ($love?' ORDER BY f.love DESC':($cheapest?' ORDER BY p.price ASC':($latest?' ORDER BY p.date_added DESC':($alph==''?' ORDER BY p.title ASC':($angry?' ORDER BY f.angry DESC':($happy?' ORDER BY f.happy DESC':($discount?' ORDER BY p.discount DESC':' ')))))));
-*/
+
 
 }
 
@@ -402,15 +401,8 @@ echo '('.$sql.')---'.mysqli_error($conn);
 	'</tr></table>'.
 	'</div>';
 	
-	$hide_s = false;
-    $s = 
-	(ISSET($_GET["s"])?
-	(($hide_s=($_GET["s"]*40>=$s_t))?
-	    $_GET["s"]:
-		$_GET["s"]+1):
-	(($hide_s=(40>=$s_t))?
-	    0:1));
-
+	$hide_s = ($s*40>=$s_t);
+  
 	echo
 	'<div class=nav >'.
     (!$hide_s?'<a class=more href="products.php?s='.$s.'#current" > load more </a>':'').
