@@ -236,13 +236,14 @@ $result = $conn->query($sql);
 		   }
 
 $sql = 'SELECT p.id,p.company_id,p.title,p.price,p.brand,p.specification,p.parameters,p.measurement,p.quantity,p.discount,DATE_FORMAT(p.date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
-' product p'.
-' WHERE draft=null'.
+' product p';
+/*' WHERE draft=null'.
 ($category?' AND category="'.$category.'"':'').
 ($category_type?' AND category_type="'.$category_type.'"':'').
 ($brand?' '.($category || $category_type?'':'WHERE').'AND brand="'.$brand.'"':'').
 ($alph?' '.($category || $category_type || $brand?'AND':'WHERE').' UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'').
-($love?' ORDER BY f.love DESC':($cheapest?' ORDER BY p.price ASC':($latest?' ORDER BY p.date_added DESC':($alph==''?' ORDER BY p.title ASC':($angry?' ORDER BY f.angry DESC':($happy?' ORDER BY f.happy DESC':($discount?' ORDER BY p.discount DESC':' ')))))));;
+($love?' ORDER BY f.love DESC':($cheapest?' ORDER BY p.price ASC':($latest?' ORDER BY p.date_added DESC':($alph==''?' ORDER BY p.title ASC':($angry?' ORDER BY f.angry DESC':($happy?' ORDER BY f.happy DESC':($discount?' ORDER BY p.discount DESC':' ')))))));
+*/
 
 }
 
