@@ -269,7 +269,7 @@ while($row){
 	 $locked=true;
 	 }
 	 
-	 $extend = ($c_p>=$begin && $c_p<$end);
+	 $extend = ($c_p>=$begin && $c_p<40);
 	 
 	 $completed = false;
 	 
