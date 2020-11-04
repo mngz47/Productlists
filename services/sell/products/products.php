@@ -309,6 +309,8 @@ $sql = 'SELECT DISTINCT f.product_id,f.love,f.angry,f.happy,p.id,p.company_id,p.
 }
 }
 
+	echo '[sql]<textarea>'.$sql.'</textarea>';
+	
 $result = $conn->query($sql);
 
 if($result){
@@ -464,10 +466,10 @@ echo '('.$sql.')---'.mysqli_error($conn);
 	$hide_s = false;
     $s = 
 	(ISSET($_GET["s"])?
-	(($hide_s=($_GET["s"]*4>=$s_t))?
+	(($hide_s=($_GET["s"]*40>=$s_t))?
 	    $_GET["s"]:
 		$_GET["s"]+1):
-	(($hide_s=(4>=$s_t))?
+	(($hide_s=(40>=$s_t))?
 	    0:1));
 
 	echo
