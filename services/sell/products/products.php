@@ -140,7 +140,7 @@ $product_id = (ISSET($_GET['product_id'])?$_GET['product_id']:($reverse_p_id?-1:
 
 $s = ISSET($_GET["s"])?$_GET["s"]:(ISSET($_COOKIE['auto'])?explode(';',$_COOKIE['auto'])[4]:0);
 
-$begin = ($s && !ISSET($_GET["s"])?$s*40:0);
+$begin = $s*40;
 
 setcookie('auto',$category.';'.$alph.';'.$order_by.';'.$product_id.';'.$s.';'.$company.';'.$brand.';'.$category_type,time() + (86400 * 30 * 7),'/');
 ?>
@@ -259,7 +259,7 @@ $has_products = $row = $result->fetch_assoc();
 
 $c_p = 0;
 
-$end = (ISSET($_GET['s'])?$_GET['s']*40+40:40);
+$end = $s*40+40;
 
 $locked = false;
 
@@ -269,7 +269,7 @@ while($row){
 	 $locked=true;
 	 }
 	 
-	 $extend = ($c_p>=$begin && $c_p<40);
+	 $extend = ($c_p>=$begin && $c_p<$end);
 	 
 	 $completed = false;
 	 
