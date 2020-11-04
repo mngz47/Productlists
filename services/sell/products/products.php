@@ -220,69 +220,7 @@ if($category){
 <?php
 
 $s_t;
-if($best_selling){
-$sql = 'SELECT DISTINCT COUNT(product_id) AS s_t FROM transaction';
-$result = $conn->query($sql);
-	       if($result){
-		   $row = $result->fetch_assoc();
-		   $s_t = $row['s_t'];
-		   }
-
-$sql = 'SELECT DISTINCT COUNT(t.product_id) AS rank,f.product_id,f.love,f.angry,f.happy,p.id,p.company_id,p.title,p.price,p.quantity,p.brand,p.specification,p.parameters,p.discount,DATE_FORMAT(p.date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
-' product p INNER JOIN transaction t ON p.id=t.product_id INNER JOIN feeling f ON p.id=f.product_id WHERE draft=0'.
-($category?' AND category="'.$category.'"':'').
-($brand?' AND brand="'.$brand.'"':'').
-($alph?' AND UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'').
-' ORDER BY rank DESC';
-
-}else if($company){
-
-$sql = 'SELECT title,COUNT(id) AS s_t FROM product'.
-' WHERE draft=0 AND company_id='.$company.
-($category?' AND category="'.$category.'"':'').
-($brand?' AND brand="'.$brand.'"':'').
-($alph==''?'':' AND UPPER(SUBSTRING(title,1,1))="'.$alph.'"');
-
-$result = $conn->query($sql);
-	       if($result){
-		   $row = $result->fetch_assoc();
-		   $s_t = $row['s_t'];
-		   }
-
-$sql = 'SELECT DISTINCT f.product_id,f.love,f.angry,f.happy,p.id,p.company_id,p.title,p.price,p.quantity,p.brand,p.specification,p.parameters,p.discount,DATE_FORMAT(p.date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
-' product p INNER JOIN feeling f ON p.id=f.product_id'.
-' WHERE draft=0 AND company_id='.$company.
-($category?' AND category="'.$category.'"':'').
-($brand?' AND brand="'.$brand.'"':'').
-($alph?' AND UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'').
-($love?' ORDER BY f.love DESC':($cheapest?' ORDER BY p.price ASC':($latest?' ORDER BY p.date_added DESC':($alph==''?' ORDER BY p.title ASC':($angry?' ORDER BY f.angry DESC':($happy?' ORDER BY f.happy DESC':($discount?' ORDER BY p.discount DESC':' ')))))));
-
-}else{
-if($category=='grocery' && !$in_product){
-	
-$sql = 'SELECT COUNT(id) AS s_t FROM product WHERE draft=0'.
-($category?' AND category="'.$category.'"':'').
-($category_type?' AND category_type="'.$category_type.'"':'').
-($brand?' AND brand="'.$brand.'"':'').
-($alph?' AND UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'');
-
-
-$result = $conn->query($sql);
-	       if($result){
-		   $row = $result->fetch_assoc();
-		   $s_t = $row['s_t'];
-		   }
-		   
-$sql = 'SELECT p.title,p.id,p.company_id,p.quantity,p.price,p.brand,p.discount,p.measurement,DATE_FORMAT(p.date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
-' product p WHERE draft=0'.
-($category?' AND category="'.$category.'"':'').
-($category_type?' AND category_type="'.$category_type.'"':'').
-($brand?' AND brand="'.$brand.'"':'').
-($alph?' AND UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'').
-' GROUP BY title';
-
-	
-}else{
+{
 	
 $sql = 'SELECT COUNT(id) AS s_t FROM product WHERE draft=0'.
 ($category?' AND category="'.$category.'"':'').
@@ -297,8 +235,8 @@ $result = $conn->query($sql);
 		   $s_t = $row['s_t'];
 		   }
 
-$sql = 'SELECT DISTINCT f.product_id,f.love,f.angry,f.happy,p.id,p.company_id,p.title,p.price,p.brand,p.specification,p.parameters,p.measurement,p.quantity,p.discount,DATE_FORMAT(p.date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
-' product p INNER JOIN feeling f ON p.id=f.product_id'.
+$sql = 'SELECT p.id,p.company_id,p.title,p.price,p.brand,p.specification,p.parameters,p.measurement,p.quantity,p.discount,DATE_FORMAT(p.date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
+' product p'.
 ' WHERE draft=0'.
 ($category?' AND category="'.$category.'"':'').
 ($category_type?' AND category_type="'.$category_type.'"':'').
@@ -306,7 +244,6 @@ $sql = 'SELECT DISTINCT f.product_id,f.love,f.angry,f.happy,p.id,p.company_id,p.
 ($alph?' '.($category || $category_type || $brand?'AND':'WHERE').' UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'').
 ($love?' ORDER BY f.love DESC':($cheapest?' ORDER BY p.price ASC':($latest?' ORDER BY p.date_added DESC':($alph==''?' ORDER BY p.title ASC':($angry?' ORDER BY f.angry DESC':($happy?' ORDER BY f.happy DESC':($discount?' ORDER BY p.discount DESC':' ')))))));;
 
-}
 }
 
 	echo '[sql]<textarea>'.$sql.'</textarea>';
