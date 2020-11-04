@@ -48,33 +48,21 @@ if(ISSET($_SESSION['response'])){
 <script src=https://productlists.co.za/services/sell/products/product_general_api.js ></script>
 <script src=https://productlists.co.za/services/sell/products/feature/option/api.js ></script>
 <div class=scroll_master >
-<div id=container class=container >
+<div id=container class=p_cont >
 
-<div id=header class="header row" >
-<div class="col-sm-3" >
-<div>
-<a href=https://www.productlists.co.za/index.php class="logo logo_start" ></a>
-<a href=https://www.productlists.co.za/index.php class="title logo" >Productlists</a>
-<a href="#" onclick="toggleUpperScroll();return false;" class="toggleUpperScroll highlight" ></a>
-<a href="#" onclick="toggleSignIn();return false;" class="toggleSignIn highlight" ></a>
-</div>
-</div>
-<div class="col-sm-6" >
-<div class=upper_scroll >
-<input onfocus=s_in(); onblur=s_out(this); type=search onkeyup="search(this.value);" class="form-control shadow" id=search placeholder="search" />
-</div>
-</div>
-<div id=header_right class="col-sm-3">
-<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/sign/signin.php'; ?>
-</div>
-</div>
+	<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_3.php'; ?>
+	
 <div class="body row" >
 <div class="col-sm-3" >
 <div id=left_pane class="left_pane" >
 <div id=left_pane_1 >
 <?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php'; ?>
 </div>
-<div id=left_pane_2 >
+<div id=left_pane_3 >
+<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four_control.php'; ?>
+</div>
+	
+<div id=left_pane_2 style="display:none;" >
 <?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/relationship.php'; ?>
 </div>
 </div>
@@ -177,7 +165,7 @@ $refs = explode('|',$row['refs']);
 ?>
 </div>
 <span>Specification</span>
-<textarea name=specification onfocus="v_open(this,2000);" onkeydown="return (len(this,null)?true:false);" onblur=<?php echo ($row?'editfield_2("services/sell/products/update_product.php","'.$row['id'].'","specification","\""+this.value+"\"",specification_v(this));':'specification_v(this);'); ?> ><?php echo ($row?$row['specification']:''); ?></textarea>
+<textarea name=specification onfocus="v_open(this,2000);" onkeydown="return (len(this,null)?true:false);" onblur=<?php echo ($row?'editfield_3("services/sell/products/update_product_2.php","'.$row['id'].'","specification","\""+this.value+"\"",specification_v(this));':'specification_v(this);'); ?> ><?php echo ($row?$row['specification']:''); ?></textarea>
 <script> var options = [
 <?php 
     $sql = 'SELECT DISTINCT category FROM product';
@@ -231,31 +219,12 @@ echo
 </div>
 <div class="col-sm-3" >
 <div id=right_pane class="right_pane" >
-<div id=right_pane_1 >
-<?php 
-include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products/feature/option/index.php";
-?>
-</div>
-<div id=right_pane_2 >
-<?php 
-include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/directory_listings/feature/occupation.php"; 
-?>
-</div>
-<div id=right_pane_3 >
-<?php 
- include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/directory_listings/feature/company_type.php"; 
-?>
-</div>
-<div id=right_pane_4 >
-<?php
- include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/build_your_brand/feature/author.php"; 
- ?>
-</div>
+
 </div>
 </div>
 </div>
 <?php
- include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/footer.php"; 
+ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/footer_4.php"; 
 ?>
 
 </div>
