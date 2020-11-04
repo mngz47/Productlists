@@ -259,7 +259,7 @@ $has_products = $row = $result->fetch_assoc();
 
 $c_p = 0;
 
-$end;
+$end = 40;
 
 $locked = false;
 
