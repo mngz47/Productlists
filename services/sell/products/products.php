@@ -222,11 +222,13 @@ if($category){
 $s_t;
 {
 	
-$sql = 'SELECT COUNT(id) AS s_t FROM product WHERE draft=0'.
+$sql = 'SELECT COUNT(id) AS s_t FROM product';
+	
+	/*' WHERE draft=0'.
 ($category?' AND category="'.$category.'"':'').
 ($category_type?' AND category_type="'.$category_type.'"':'').
 ($brand?' AND brand="'.$brand.'"':'').
-($alph?' AND UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'');
+($alph?' AND UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'');*/
 
 
 $result = $conn->query($sql);
