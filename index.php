@@ -117,7 +117,8 @@ if(ISSET($_SESSION['response'])){
 <div class="content col-sm-9" >
 	<div style="padding:20px;" >
 		<?php include 'timeline.php'; ?>
-
+		
+		<?php include "services/build_your_brand/feature/video_2.php"; ?>
 	</div>
 		</div>
 <div class="col-sm-3" >
