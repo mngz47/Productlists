@@ -1,5 +1,8 @@
 <?php
+echo '--';
+
 session_start();
+
 if(ISSET($_SESSION['company_id'])){
 $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
 
