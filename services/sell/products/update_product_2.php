@@ -14,6 +14,6 @@ $result = $conn->query($sql);
 $conn->close();
 echo ($result?'success':'error with query : '.$sql);
 }else{
-  echo $_SESSION['company_id'];
+  echo '>>'.$_SESSION['company_id'];
 }
 ?>
