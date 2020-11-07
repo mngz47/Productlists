@@ -2,7 +2,7 @@
 /*
 session_start();
 
-//if(ISSET($_SESSION['company_id'])){
+if(ISSET($_SESSION['company_id'])){
 $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
 
 if($_GET['fieldname']=='price'){
@@ -15,9 +15,10 @@ $result = $conn->query($sql);
 
 echo ($result?'success':'error with query : '.$sql);
 $conn->close();
-//}else{
-//  echo '>>'.$_SESSION['company_id'];
-//}
+}else{
+ echo '>>'.$_SESSION['company_id'];
+}
 */
 echo '---';
+
 ?>
