@@ -93,8 +93,7 @@ if(ISSET($_SESSION['response'])){
 </div>
 <div class="col-sm-3" >
 <div id=right_pane class="right_pane" >
-<div id=right_pane_1 >
-
+       
 </div>
 </div>
 </div>
