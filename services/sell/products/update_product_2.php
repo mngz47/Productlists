@@ -1,5 +1,5 @@
 <?php
-
+/*
 session_start();
 
 //if(ISSET($_SESSION['company_id'])){
@@ -18,4 +18,6 @@ $conn->close();
 //}else{
 //  echo '>>'.$_SESSION['company_id'];
 //}
+*/
+echo '---';
 ?>
