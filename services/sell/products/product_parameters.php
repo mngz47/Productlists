@@ -87,7 +87,7 @@ $row = $result->fetch_assoc();
 }
 }
 ?>
-<a href=https://www.productlists.co.za/services/sell/products/products.php?product_id=<?php echo $_GET['product_id']; ?> >View Product</a>
+<a href=https://www.productlists.co.za/services/sell/products/open.php?product_id=<?php echo $_GET['product_id']; ?> >View Product</a>
 <form id=input method=post action="<?php echo (!$row?'new_product.php':'') ?>" enctype="multipart/form-data" onsubmit=setDate("date_added"); >
 <div id=new_product class="input" >
 <div class="row" >
