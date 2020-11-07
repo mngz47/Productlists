@@ -165,7 +165,7 @@ $refs = explode('|',$row['refs']);
 ?>
 </div>
 <span>Specification</span>
-<textarea name=specification onfocus="v_open(this,2000);" onkeydown="return (len(this,null)?true:false);" onblur=<?php echo ($row?'editfield_3("services/sell/products/update_product_2.php","'.$row['id'].'","specification","\""+this.value+"\"",specification_v(this));':'specification_v(this);'); ?> ><?php echo ($row?$row['specification']:''); ?></textarea>
+<textarea name=specification onfocus="v_open(this,2000);" onkeydown="return (len(this,null)?true:false);" onblur=<?php echo ($row?'editfield_3("services/sell/products/update_product_2.php","'.$row['id'].'","specification","\""+this.value+"\"",stillOriginal(this));':'specification_v(this);'); ?> ><?php echo ($row?$row['specification']:''); ?></textarea>
 <script> var options = [
 <?php 
     $sql = 'SELECT DISTINCT category FROM product';
