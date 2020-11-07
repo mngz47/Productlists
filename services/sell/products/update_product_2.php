@@ -10,7 +10,7 @@ $sql = 'UPDATE product SET discount=((price-'.$_POST[$_GET['fieldname']].')/pric
 $result = $conn->query($sql);
 }
 
-$sql = 'UPDATE product SET '.$_GET['fieldname'].'="'.$_POST[$_GET['fieldname']].'" WHERE id='.$_GET['id'].';';
+$sql = 'UPDATE product SET '.$_GET['fieldname'].'='.$_POST[$_GET['fieldname']].' WHERE id='.$_GET['id'].';';
 $result = $conn->query($sql);
 
 echo ($result?'success':'error with query : '.$sql);
