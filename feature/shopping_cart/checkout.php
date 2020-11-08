@@ -1,4 +1,21 @@
 <?php
+
+function getQueueDiscount($product_id,$price){
+	$q_discount;
+	$sql = 'SELECT COUNT(id) AS ii FROM queue WHERE product_id='.$product_id;
+$result = $conn->query($sql);
+	       if($result){
+			   $q_row = $result->fetch_assoc();
+			   
+			   
+		   if($q_row['ii']>0){
+			   
+                 $q_discount = 	$price - (($price/3)*($q_row['ii']/1000));
+		   }
+		   }
+		   return $q_discount;
+}
+
 session_start();
 if(ISSET($_SESSION['customer_id'])){
 	setcookie('active_checkout_payment',$_GET['p'],time() + (86400 * 30 * 7),'/');
