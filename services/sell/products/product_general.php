@@ -153,8 +153,10 @@ echo '<div><a href=# class=close onclick="deleteProductImage(this,\''.$row2['id'
 <option value="5" <?php echo ($row && $row['health_table']==5?'selected':(ISSET($_SESSION['product_general_cache'])?(explode(';',$_SESSION['product_general_cache'])[5]=='5'?'selected':''):'')); ?> >fats, oils, sweets</option>
 </select>
 
-<input id=date_added type=text name=date_added hidden=true />
-<span><input name=draft type=checkbox />Draft</span>
+<span><input name=bulk type=checkbox <?php echo ($row?'onchange=editfield("services/sell/products/update_product.php","'.$row['id'].'","bulk","\""+(this.checked?0:1)+"\"");':''); ?> />Bulk</span>
+<span><input name=draft type=checkbox <?php echo ($row?'onchange=editfield("services/sell/products/update_product.php","'.$row['id'].'","draft","\""+(this.checked?0:1)+"\"");':''); ?> />Draft</span>
+	
+<input id=date_added type=text name=date_added hidden=true />	
 </div>
 </div>
 <div id=error_msg class=verification >
