@@ -47,7 +47,7 @@ if(ISSET($_SESSION['response'])){
 <script src=https://productlists.co.za/feature/sign/api.js ></script>
 <script src=https://productlists.co.za/services/sell/company_general_api.js ></script>
 <script src=https://productlists.co.za/services/sell/products/feature/option/api.js ></script>
-<div id=container class=container >
+<div id=container class=p_cont >
 	
 	<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_3.php'; ?>
 	
@@ -151,7 +151,9 @@ echo (ISSET($_SESSION['company_id'])?
 <div class="col-sm-3" >
 <div id=right_pane class="right_pane" >
 
-	
+<div id=right_pane_1 >
+<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products/feature/option/index.php"; ?>
+</div>
 
 </div>
 </div>
