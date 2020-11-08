@@ -1,5 +1,7 @@
 <?php
 
+$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+
 function getQueueDiscount($product_id,$price){
 	$q_discount;
 	$sql = 'SELECT COUNT(id) AS ii FROM queue WHERE product_id='.$product_id;
@@ -28,9 +30,6 @@ if(ISSET($_SESSION['customer_id'])){
 	 }
 	
 if(ISSET($_SESSION['cart']) && !empty($_SESSION['cart'])){
-
-
-$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
 
 $products = explode('&',$_SESSION['cart']);
 
