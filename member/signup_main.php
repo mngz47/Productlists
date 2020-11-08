@@ -52,7 +52,7 @@ if(ISSET($_SESSION['response'])){
 <script src=https://productlists.co.za/feature/sign/api.js ></script>
 <div id=container class=p_cont >
 
-<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/header_2.php"; ?>
+<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/header_3.php"; ?>
 
 
 <div class="body row" >
@@ -164,7 +164,7 @@ if(!ISSET($_SESSION['customer_id'])){
 </div>
 </div>
 <?php
- include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/footer_2.php"; 
+ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/footer_4.php"; 
 ?>
 </div>
 </body>
