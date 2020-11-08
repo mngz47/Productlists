@@ -44,14 +44,14 @@ $params = explode('/',$products[$a])[2];
 
 $total_products+=$qty;
 		  
-$sql = 'SELECT id,title,price,company_id,shipment_cost FROM product WHERE id='.$id;
+$sql = 'SELECT id,title,price,company_id,shipment_cost,bulk FROM product WHERE id='.$id;
 $result = $conn->query($sql);
 
 if($result){
 $row2 = $result->fetch_assoc();
 
 $product_title .= $row2['title'].';';
-$total_cost+=($row2['price']*$qty);
+$total_cost+=(($row2['bulk']==1?getQueueDiscount($row2['id'],$row2['price']):$row2['price'])*$qty);
 $delivery+=$row2['shipment_cost']*$qty;
 
 }
