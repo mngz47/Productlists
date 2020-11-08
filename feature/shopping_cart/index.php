@@ -3,6 +3,22 @@ session_start();
 
 $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
 
+function getQueueDiscount($product_id,$price){
+	$q_discount;
+	$sql = 'SELECT COUNT(id) AS ii FROM queue WHERE product_id='.$product_id;
+$result = $conn->query($sql);
+	       if($result){
+			   $q_row = $result->fetch_assoc();
+			   
+			   
+		   if($q_row['ii']>0){
+			   
+                 $q_discount = 	$price - (($price/3)*($q_row['ii']/1000));
+		   }
+		   }
+		   return $q_discount;
+}
+
 $LOCATION = 'feature/shopping_cart/index.php';
 
 if(ISSET($_GET['params']) && ISSET($_GET['qty'])){
@@ -96,7 +112,7 @@ $total_products = 0;
 for($a=0;$a<count($products)-1;$a++){
 
 $id = explode('/',$products[$a])[0];
-$sql = 'SELECT id,company_id,title,price,discount,measurement,shipment_cost FROM product WHERE id='.$id;
+$sql = 'SELECT id,company_id,title,price,discount,measurement,shipment_cost,bulk FROM product WHERE id='.$id;
 $result = $conn->query($sql);
 
 if($result){
