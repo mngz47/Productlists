@@ -12,7 +12,7 @@ $result = $conn->query($sql);
 		   $ii = intval($q_row['ii']);
 		   if($ii>0){
 			   
-            //     $q_discount = 	$price - (($price/3)*($ii/1000));
+              $q_discount = 	$price - (($price/3)*($ii/1000));
 		  
 		   }
 		   }
