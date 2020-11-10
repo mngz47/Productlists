@@ -7,15 +7,15 @@ function getQueueDiscount($product_id,$price){
 	$q_discount;
 	$sql = 'SELECT COUNT(id) AS ii FROM queue WHERE product_id='.$product_id;
 $result = $conn->query($sql);
-	      /* if($result){
-			   
-		       $q_row = $result->fetch_assoc();
-			   $ii = intval($q_row['ii']);
+	      if($q_row = $result->fetch_assoc()){
+	
+		   $ii = intval($q_row['ii']);
 		   if($ii>0){
 			   
-                 $q_discount = 	$price - (($price/3)*($ii/1000));
+            //     $q_discount = 	$price - (($price/3)*($ii/1000));
+		  
 		   }
-		   }*/
+		   }
 		   return ($q_discount?$q_discount:$price);
 }
 
