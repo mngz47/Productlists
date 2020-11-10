@@ -8,14 +8,14 @@ function getQueueDiscount($product_id,$q_price){
 	$sql = 'SELECT COUNT(id) AS ii FROM queue WHERE product_id='.$product_id;
 	$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
 $result = $conn->query($sql);
-	    //  if($q_row = $result->fetch_assoc()){
+	    if($q_row = $result->fetch_assoc()){
 		//   if($q_row['ii']){
 			   
             //  $q_discount = ($price/3)($q_row['ii']/1000);
 		//   $q_discount = $q_price - $q_discount;
 			   
 		 //  }
-		//   }
+		 }
 		   return ($q_discount?$q_discount:$q_price);
 }
 
