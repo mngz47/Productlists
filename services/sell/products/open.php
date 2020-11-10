@@ -8,11 +8,9 @@ function getQueueDiscount($product_id,$price){
 	$sql = 'SELECT COUNT(id) AS ii FROM queue WHERE product_id='.$product_id;
 $result = $conn->query($sql);
 	      if($q_row = $result->fetch_assoc()){
-	
-		   $ii = intval($q_row['ii']);
-		   if($ii>0){
+		   if($q_row['ii']){
 			   
-              $q_discount = 	$price - (($price/3)*($ii/1000));
+              $q_discount = ($price - (($price/3)*(intval($q_row['ii'])/1000)));
 		  
 		   }
 		   }
