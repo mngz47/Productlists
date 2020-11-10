@@ -11,7 +11,7 @@ $result = $conn->query($sql);
 		   if($q_row['ii']){
 			   
             //  $q_discount = ($price/3)($q_row['ii']/1000);
-		   $q_discount = $q_price - $q_discount;
+		//   $q_discount = $q_price - $q_discount;
 			   
 		   }
 		   }
