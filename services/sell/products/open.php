@@ -10,8 +10,9 @@ $result = $conn->query($sql);
 	      if($q_row = $result->fetch_assoc()){
 		   if($q_row['ii']){
 			   
-              $q_discount = ($price - (($price/3)($q_row['ii']/1000)));
-		  
+              $q_discount = ($price/3)($q_row['ii']/1000);
+		   $q_discount = $price - $q_discount;
+			   
 		   }
 		   }
 		   return ($q_discount?$q_discount:$price);
