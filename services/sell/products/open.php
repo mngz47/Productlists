@@ -5,9 +5,9 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
 
 function getQueueDiscount($product_id,$price){
 	$q_discount;
-	/*$sql = 'SELECT COUNT(id) AS ii FROM queue WHERE product_id='.$product_id;
+	$sql = 'SELECT COUNT(id) AS ii FROM queue WHERE product_id='.$product_id;
 $result = $conn->query($sql);
-	       if($result){
+	      /* if($result){
 			   
 		       $q_row = $result->fetch_assoc();
 			   $ii = intval($q_row['ii']);
