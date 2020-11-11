@@ -8,7 +8,9 @@
 			 "https://www.productlists.co.za/services/banners/ezio.html",
 			 "https://www.productlists.co.za/services/banners/enola-holmes.html",
 			 "https://www.productlists.co.za/services/banners/betway.html",
-			 "https://www.productlists.co.za/services/banners/revenuehits.html"
+			 "https://www.productlists.co.za/services/banners/revenuehits.html",
+			 "https://www.productlists.co.za/services/banners/splitly.html"
+			     
 			 ];
 	    
     var index_home = 0;
