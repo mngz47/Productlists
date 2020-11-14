@@ -10,8 +10,10 @@
 			 "https://www.productlists.co.za/services/banners/betway.html",
 			 "https://www.productlists.co.za/services/banners/revenuehits.html",
 			 "https://www.productlists.co.za/services/banners/splitly.html",
-			 "https://www.productlists.co.za/services/banners/touch_bistro.html"
-			     
+			 "https://www.productlists.co.za/services/banners/touch_bistro.html",
+			 "https://www.productlists.co.za/services/banners/vulintaba.html",
+			 "https://www.productlists.co.za/services/banners/jungle_scout.html",
+			 "https://www.productlists.co.za/services/banners/horse_society.html"
 			 ];
 	    
     var index_home = 0;
