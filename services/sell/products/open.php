@@ -292,7 +292,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 	<div id=tabs style="padding:10px;font-size:1.2em;" >
 		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='none';e('spec').style.display='';e('queue').style.display='none';return false;" class="space" >Description</a>
 		
-		<a href=# <?php echo (ISSET($row['bulk']) && $row['bulk']==1?'style="display:none;"':''); ?> onclick="e('checkout').style.display='';e('reviews').style.display='none';e('spec').style.display='none';e('queue').style.display='none';return false;" class="space" >Checkout</a>
+		<a href=#  onclick="e('checkout').style.display='';e('reviews').style.display='none';e('spec').style.display='none';e('queue').style.display='none';return false;" class="space" >Checkout</a>
 		
 		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='none';e('spec').style.display='none';e('queue').style.display='';return false;" class="space" >Queue</a>
 		
