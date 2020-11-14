@@ -294,15 +294,15 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		
 		<a href=# <?php echo (ISSET($row['bulk']) && $row['bulk']==1?'style="display:none;"':''); ?> onclick="e('checkout').style.display='';e('reviews').style.display='none';e('spec').style.display='none';e('queue').style.display='none';return false;" class="space" >Checkout</a>
 		
-		<a href=# <?php echo (ISSET($row['bulk']) && $row['bulk']==1?'':'style="display:none;"'); ?> onclick="e('checkout').style.display='none';e('reviews').style.display='none';e('spec').style.display='none';e('queue').style.display='';return false;" class="space" >Queue</a>
+		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='none';e('spec').style.display='none';e('queue').style.display='';return false;" class="space" >Queue</a>
 		
 		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='';e('spec').style.display='none';e('queue').style.display='none';return false;" class="space" >Reviews</a>
 	</div>
-	<div style="padding:10px;<?php echo (ISSET($row['bulk']) && $row['bulk']==1?'display:none;':''); ?>" >
+	<div style="padding:10px;" >
 		<div id=spec >
 	<?php echo '<p class=spec >'.$specification.'</p>';  ?>
 	</div>
-	<div id=queue <?php echo (ISSET($row['bulk']) && $row['bulk']==1?'':'style="display:none;"'); ?> >
+	<div id=queue  >
 	<?php 
 		if(ISSET($row['bulk']) && $row['bulk']==1){
 			include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/queue/index.php'; 
