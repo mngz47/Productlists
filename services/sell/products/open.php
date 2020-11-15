@@ -293,7 +293,21 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 	<div id=tabs style="padding:10px;font-size:1.2em;" >
 		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='none';e('spec').style.display='';e('queue').style.display='none';return false;" class="space" >Description</a>
 		
-		<a href=# <?php echo (ISSET($row['bulk']) && $row['bulk']==1?'style="display:none;"':''); ?> onclick="e('checkout').style.display='';e('reviews').style.display='none';e('spec').style.display='none';e('queue').style.display='none';return false;" class="space" >Checkout</a>
+		<?php
+		$queue_checkout;
+		if(ISSET($row['bulk']) && $row['bulk']==1){
+			$sql = 'SELECT COUNT(id) AS ii FROM queue WHERE product_id='.$_GET['product_id'];
+$result = $conn->query($sql);
+	       if($q_row = $result->fetch_assoc()){
+			   
+		   if($q_row['ii']%100>7){
+			  $queue_checkout = 1; 
+		   }
+	         }
+		}
+		?>
+		
+		<a href=# <?php echo ($queue_checkout?'':'style="display:none;"'); ?> onclick="e('checkout').style.display='';e('reviews').style.display='none';e('spec').style.display='none';e('queue').style.display='none';return false;" class="space" >Checkout</a>
 		
 		<a href=# <?php echo (ISSET($row['bulk']) && $row['bulk']==1?'':'style="display:none;"'); ?> onclick="e('checkout').style.display='none';e('reviews').style.display='none';e('spec').style.display='none';e('queue').style.display='';return false;" class="space" >Queue</a>
 		
