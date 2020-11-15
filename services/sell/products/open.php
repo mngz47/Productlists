@@ -10,10 +10,10 @@ function getQueueDiscount($conn,$product_id,$q_price){
         
 	  if($q_row = $result->fetch_assoc()){
 	   if($q_row['ii']){
-			   
+		/*	   
             $q_discount = ($q_price/3)($q_row['ii']/1000);
 	    $q_discount = $q_price - $q_discount;
-			   
+		*/	   
 		  }  
 		  }
 		
