@@ -3,15 +3,15 @@ session_start();
 
 $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
 
-function getQueueDiscount($product_id,$q_price){
+function getQueueDiscount($conn,$product_id,$q_price){
 	$q_discount=0;
 	$sql = 'SELECT COUNT(id) AS ii FROM queue WHERE product_id='.$product_id;
-	$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
-$result = $conn->query($sql);
-	    if($q_row = $result->fetch_assoc()){
+	$result = $conn->query($sql);
+	  
+	  if($q_row = $result->fetch_assoc()){
 	  if($q_row['ii']){
 			   
-             $q_discount = ($price/3)($q_row['ii']/1000);
+            $q_discount = ($price/3)($q_row['ii']/1000);
 	    $q_discount = $q_price - $q_discount;
 			   
 		  }
@@ -92,7 +92,7 @@ $sql = "SELECT title,brand,category,specification FROM product WHERE id=".$produ
 
 $page_title = ($in_product?'| '.$o.' | '.$b.' | '.$t:  ($brand?'| all products by '.$brand:($category?'| all '.$category:'')) );
 	
-$page_meta_content = ($in_product?'| '.$row['specification']:($brand?'| You can now experience all products by "'.$brand.'"; we pride ourselves in local brands boosting the local economy ':($category?'| You can now scroll according to "'.$category.'" option; we are continually reducing the time it takes to complete transaction':'Welcome to technology: you can now share files, shop and experience the best of content. Productlists empowering the youth')));
+$page_meta_content = ($in_product?'|':($brand?'| You can now experience all products by "'.$brand.'"; we pride ourselves in local brands boosting the local economy ':($category?'| You can now scroll according to "'.$category.'" option; we are continually reducing the time it takes to complete transaction':'Welcome to technology: you can now share files, shop and experience the best of content. Productlists empowering the youth')));
 
 ?>
 <title>Productlists <?php echo ($page_title); ?></title>
@@ -213,7 +213,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		   '<table class=p_head >'.
 		   '<tr>'.
 		   '<td class=price title=price >'.
-		   'R'.($row['bulk']==1?getQueueDiscount($row['id'],$row['price']):$row['price']).
+		   'R'.($row['bulk']==1?getQueueDiscount($conn,$row['id'],$row['price']):$row['price']).
 		   '</td>'.
 		   '<td class=discount title=discount >'.($row['discount']?'-'.round($row['discount'],2).'%':'').'</td>'.
 		   '<td class=sold title=sold >'.
