@@ -9,15 +9,15 @@ function getQueueDiscount($conn,$product_id,$q_price){
 	$result = $conn->query($sql);
         
 	  if($q_row = $result->fetch_assoc()){
-	/*    if($q_row['ii']){
+	   if($q_row['ii']){
 			   
-            $q_discount = ($price/3)($q_row['ii']/1000);
+            $q_discount = ($q_price/3)($q_row['ii']/1000);
 	    $q_discount = $q_price - $q_discount;
 			   
-		  }  */
+		  }  
 		  }
-	
-          return ($q_discount?$q_discount:$q_price);
+		
+          return round(($q_discount?$q_discount:$q_price));
 }
 
 $LOCATION = 'services/sell/products/open.php?product_id='.$_GET['product_id'];
