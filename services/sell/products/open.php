@@ -7,7 +7,7 @@ function getQueueDiscount($conn,$product_id,$q_price){
 	$q_discount=0;
 	$sql = 'SELECT COUNT(id) AS ii FROM queue WHERE product_id='.$product_id;
 	$result = $conn->query($sql);
-	  
+        /*  
 	  if($q_row = $result->fetch_assoc()){
 	  if($q_row['ii']){
 			   
@@ -16,6 +16,7 @@ function getQueueDiscount($conn,$product_id,$q_price){
 			   
 		  }
 		  }
+	  */
           return ($q_discount?$q_discount:$q_price);
 }
 
