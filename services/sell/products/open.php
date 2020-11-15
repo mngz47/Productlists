@@ -213,7 +213,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		   '<table class=p_head >'.
 		   '<tr>'.
 		   '<td class=price title=price >'.
-		   'R'.($row['bulk']==1?getQueueDiscount($conn,$row['id'],$row['price']):$row['price']).
+		   'R'. //($row['bulk']==1?getQueueDiscount($conn,$row['id'],$row['price']):$row['price']).
 		   '</td>'.
 		   '<td class=discount title=discount >'.($row['discount']?'-'.round($row['discount'],2).'%':'').'</td>'.
 		   '<td class=sold title=sold >'.
