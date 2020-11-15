@@ -6,7 +6,6 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
 function getQueueDiscount($conn,$product_id,$q_price){
 	$q_discount=0;
 	$sql = 'SELECT COUNT(id) AS ii FROM queue WHERE product_id='.$product_id;
-	$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
 	$result = $conn->query($sql);
         
 	   if($q_row = $result->fetch_assoc()){
@@ -215,7 +214,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		   '<table class=p_head >'.
 		   '<tr>'.
 		   '<td class=price title=price >'.
-		   'R'.($row['bulk']==1?getQueueDiscount($conn,$row['id'],$row['price']):$row['price']).
+		   'R'.($row['bulk']==1?getQueueDiscount($conn,$_GET['product_id'],$row['price']):$row['price']).
 		   '</td>'.
 		   '<td class=discount title=discount >'.($row['discount']?'-'.round($row['discount'],2).'%':'').'</td>'.
 		   '<td class=sold title=sold >'.
