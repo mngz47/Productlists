@@ -307,7 +307,7 @@ $result = $conn->query($sql);
 		}
 		?>
 		
-		<a href=# <?php echo ($queue_checkout?'':'style="display:none;"'); ?> onclick="e('checkout').style.display='';e('reviews').style.display='none';e('spec').style.display='none';e('queue').style.display='none';return false;" class="space" >Checkout</a>
+		<a href=# <?php echo ($queue_checkout || !$row['bulk']?'':'style="display:none;"'); ?> onclick="e('checkout').style.display='';e('reviews').style.display='none';e('spec').style.display='none';e('queue').style.display='none';return false;" class="space" >Checkout</a>
 		
 		<a href=# <?php echo (ISSET($row['bulk']) && $row['bulk']==1?'':'style="display:none;"'); ?> onclick="e('checkout').style.display='none';e('reviews').style.display='none';e('spec').style.display='none';e('queue').style.display='';return false;" class="space" >Queue</a>
 		
