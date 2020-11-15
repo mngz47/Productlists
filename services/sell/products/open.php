@@ -305,7 +305,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 	<div id=queue <?php echo (ISSET($row['bulk']) && $row['bulk']==1?'':'style="display:none;"'); ?> >
 	<?php 
 		if(ISSET($row['bulk']) && $row['bulk']==1){
-			include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/queue/index.php'; 
+	//		include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/queue/index.php'; 
 		}else{
 			echo '<p>Feature is supported for items available in bulk.</p>';
 		}
