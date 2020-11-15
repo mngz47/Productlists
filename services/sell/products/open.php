@@ -2,7 +2,7 @@
 session_start();
 
 $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
-/*
+
 function getQueueDiscount($conn,$product_id,$q_price){
 	$q_discount=0;
 	$sql = 'SELECT COUNT(id) AS ii FROM queue WHERE product_id='.$product_id;
@@ -15,10 +15,10 @@ function getQueueDiscount($conn,$product_id,$q_price){
 	    $q_discount = $q_price - $q_discount;
 			   
 		  }
-		 }
-		   return ($q_discount?$q_discount:$q_price);
+		  }
+          return ($q_discount?$q_discount:$q_price);
 }
-*/
+
 $LOCATION = 'services/sell/products/open.php?product_id='.$_GET['product_id'];
 
 $category = '';
@@ -213,7 +213,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		   '<table class=p_head >'.
 		   '<tr>'.
 		   '<td class=price title=price >'.
-		   'R'.//($row['bulk']==1?getQueueDiscount($conn,$row['id'],$row['price']):$row['price']).
+		   'R'.($row['bulk']==1?getQueueDiscount($conn,$row['id'],$row['price']):$row['price']).
 		   '</td>'.
 		   '<td class=discount title=discount >'.($row['discount']?'-'.round($row['discount'],2).'%':'').'</td>'.
 		   '<td class=sold title=sold >'.
@@ -298,8 +298,8 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		
 		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='';e('spec').style.display='none';e('queue').style.display='none';return false;" class="space" >Reviews</a>
 	</div>
-	<div style="padding:10px;<?php echo (ISSET($row['bulk']) && $row['bulk']==1?'display:none;':''); ?>" >
-		<div id=spec >
+	<div style="padding:10px;" >
+	<div id=spec <?php echo (ISSET($row['bulk']) && $row['bulk']==1?'style="display:none;"':''); ?> >
 	<?php echo '<p class=spec >'.$specification.'</p>';  ?>
 	</div>
 	<div id=queue <?php echo (ISSET($row['bulk']) && $row['bulk']==1?'':'style="display:none;"'); ?> >
