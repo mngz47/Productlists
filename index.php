@@ -79,9 +79,14 @@ if(ISSET($_SESSION['response'])){
 </div>
 <div class="col-sm-3" >
 <div id=right_pane class="right_pane" >
+	
 <div id=left_pane_1 >
-<?php include "services/sell/products/feature/group_four_affiliate.php"; ?>
+<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php'); ?>
 </div>
+<div id=left_pane_3 >
+<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/option/body_right.php'); ?>
+</div>
+	
 <div id=right_pane_2 style="display:none;" >
 <?php include "feature/relationship.php"; ?>
 </div>
@@ -91,14 +96,25 @@ if(ISSET($_SESSION['response'])){
 </div>
 	
 	<div class="row" >
+		<div class="col-sm-1" ></div>
+<div class="content col-sm-10" >
+	<div style="padding:20px;" >
+	
+	<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/option/body_2.php'); ?>	
+	<?php include 'timeline.php'; ?>
+		
+	</div>	
+		</div>
+		<div class="col-sm-1" ></div>
+		</div>
+	<div class="row" >
 <div class="content col-sm-9" >
 	<div style="padding:20px;" >
-		<?php include 'timeline.php'; ?>
-		
 		<?php include "services/build_your_brand/feature/video_2.php"; ?>
 	</div>
 		</div>
 <div class="col-sm-3" >
+<?php include "services/sell/products/feature/group_four_affiliate.php"; ?>
 		</div>
 	</div>
 	
