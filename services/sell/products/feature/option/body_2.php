@@ -25,10 +25,10 @@
 			 '</span></a>';
 			}
 	        }	
-			}
-			$five_brands+=1;
-		}else{
+			}else{
 			break;
+		}
+			$five_brands+=1;
 		}
 	}
     	
