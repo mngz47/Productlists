@@ -4,10 +4,11 @@
     $result2 = $conn->query($sql);
 
     if($result2){
-    $five_brands = 0;
-		
+   
     while(($row2 = $result2->fetch_assoc())){
-		
+	    
+	 $five_brands = 0;
+	    
 		echo ('<a href="services/sell/products/products.php?category='.$row2['category'].'" ><h2>'.$row2['category'].'</h2></a>');
 		echo '<div class=row style="overflow:auto;" >';
 	    
@@ -26,6 +27,8 @@
 	        }	
 			}
 			$five_brands+=1;
+		}else{
+			break;
 		}
 	}
     	
