@@ -83,9 +83,7 @@ if(ISSET($_SESSION['response'])){
 <div id=left_pane_1 >
 <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php'); ?>
 </div>
-<div id=left_pane_3 >
-<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/option/body_right.php'); ?>
-</div>
+
 	
 <div id=right_pane_2 style="display:none;" >
 <?php include "feature/relationship.php"; ?>
@@ -111,8 +109,12 @@ if(ISSET($_SESSION['response'])){
 	<div class="row" >
 <div class="content col-sm-9" >
 	<div style="padding:20px;" >
-		
+		<p>
 		<iframe id=four_target_home src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=instruments&banner=0JB0A4VDS5FZSF8J66G2&f=ifr&linkID=957b6056e810aaba8d6734b832d49fbf&t=productlists4-20&tracking_id=productlists4-20" width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+		</p>
+		<div class=forward >
+    		<script src="https://www.productlists.co.za/services/banners/api.js" ></script>
+		</div>
 		<?php include "services/build_your_brand/feature/video_2.php"; ?>
 		
 	</div>
