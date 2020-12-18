@@ -95,7 +95,7 @@ if(ISSET($_SESSION['response'])){
 	
 	<div class="row" >
 		<div class="col-sm-1" ></div>
-<div class="content col-sm-10" >
+<div class="content col-sm-11" >
 	<div style="padding:20px;" >
 	
 	<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/option/body_2.php'); ?>	
@@ -103,7 +103,6 @@ if(ISSET($_SESSION['response'])){
 		
 	</div>	
 		</div>
-		<div class="col-sm-1" ></div>
 		</div>
 	
 	<div class="row" >
