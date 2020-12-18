@@ -10,7 +10,7 @@
 	 $five_brands = 0;
 	    
 		echo ('<a href="services/sell/products/products.php?category='.$row2['category'].'" ><h2>'.$row2['category'].'</h2></a>');
-		echo '<div class=row style="overflow:auto;" >';
+		echo '<div class=row style="overflow-x:auto;" >';
 	    
 	if($result3=($conn->query("SELECT id,title FROM product WHERE category='".$row2['category']."' ORDER BY date_added DESC"))){
 		while($row3 = $result3->fetch_assoc()){
