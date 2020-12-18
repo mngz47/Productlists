@@ -14,6 +14,7 @@
 	if($result3=($conn->query("SELECT id,title FROM product WHERE category='".$row2['category']."' ORDER BY date_added DESC"))){
 		while($row3 = $result3->fetch_assoc()){
 			if($five_brands<10){
+				
 			if($result4=($conn->query('SELECT url FROM product_image WHERE product_id='.$row3['id']))){
 		    if($row4 = $result4->fetch_assoc()){
 				 
@@ -23,8 +24,6 @@
 			 '</span></a>';
 			}
 	        }	
-			}else{
-			break;	
 			}
 			$five_brands+=1;
 		}
