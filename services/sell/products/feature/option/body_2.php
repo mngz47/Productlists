@@ -20,7 +20,7 @@
 		    	if($row4 = $result4->fetch_assoc()){
 				 
 			echo 
-			 '<a class="row w3-container w3-center w3-animate-zoom" style="background-position:0 20;background-repeat:no-repeat;background-size:100%;background-image:url('.(strpos($row4['url'],'http')!==false?$row4['url']:'https://www.productlists.co.za/services/sell/products/product_images/'.str_replace (' ','%20',$row4['url'])).');display:inline-block;width:110px;height:150px;margin:3px;" '.
+			 '<a class="col-sm-2" style="background-position:0 20;background-repeat:no-repeat;background-size:100%;background-image:url('.(strpos($row4['url'],'//')!==false?$row4['url']:'https://www.productlists.co.za/services/sell/products/product_images/'.str_replace (' ','%20',$row4['url'])).');display:block;height:150px;margin:3px;" '.
 			 ' href="services/sell/products/open.php?product_id='.$row3['id'].'" ><span class=tint >'.$row3['title'].
 			 '</span></a>';
 			}
