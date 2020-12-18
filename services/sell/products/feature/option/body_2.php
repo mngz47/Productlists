@@ -8,12 +8,12 @@
 		
     while(($row2 = $result2->fetch_assoc())){
 		
-		echo ('<a href="services/sell/products/products.php?category'.$row2['category'].' ><h2>'.$row2['category'].'</h2></a>');
-		
+		echo ('<a href="services/sell/products/products.php?category='.$row2['category'].'" ><h2>'.$row2['category'].'</h2></a>');
+		echo '<div class=row style="overflow:auto;" >';
+	    
 	if($result3=($conn->query("SELECT id,title FROM product WHERE category='".$row2['category']."' ORDER BY date_added DESC"))){
-		while($row3 = $result3->fetch_assoc() && $five_brands<20){
-			
-			echo ($five_brands%5?'<div class=row >':'');
+		while($row3 = $result3->fetch_assoc()){
+			if($five_brands<10){
 			if($result4=($conn->query('SELECT url FROM product_image WHERE product_id='.$row3['id']))){
 		    if($row4 = $result4->fetch_assoc()){
 				 
@@ -22,13 +22,15 @@
 			 ' href="services/sell/products/open.php?product_id='.$row3['id'].'" ><span class=tint >'.$row3['title'].
 			 '</span></a>';
 			}
-	        }
-			echo ($five_brands%5?'</div>':'');
-			
+	        }	
+			}else{
+			break;	
+			}
 			$five_brands+=1;
 		}
 	}
     	
+	    echo '</div>';
     } 
     }
 ?>
