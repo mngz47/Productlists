@@ -107,10 +107,14 @@ if(ISSET($_SESSION['response'])){
 		</div>
 		<div class="col-sm-1" ></div>
 		</div>
+	
 	<div class="row" >
 <div class="content col-sm-9" >
 	<div style="padding:20px;" >
+		
+		<iframe id=four_target_home src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=instruments&banner=0JB0A4VDS5FZSF8J66G2&f=ifr&linkID=957b6056e810aaba8d6734b832d49fbf&t=productlists4-20&tracking_id=productlists4-20" width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
 		<?php include "services/build_your_brand/feature/video_2.php"; ?>
+		
 	</div>
 		</div>
 <div class="col-sm-3" >
