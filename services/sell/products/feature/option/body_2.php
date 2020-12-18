@@ -1,6 +1,6 @@
 <?php
 
-	$sql = 'SELECT DISTINCT category FROM product';
+    $sql = 'SELECT DISTINCT category FROM product';
     $result2 = $conn->query($sql);
 
     if($result2){
