@@ -54,9 +54,9 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
     <input name=text value="Newsletter" placeholder=message class=invisible />
 </form>
     <div>
-   admin@productlists.co.za<br>
-   +2771 947 1009<br>
-   Productlists © Copyright 2020
+  <a href= "mailto:admin@productlists.co.za">admin@productlists.co.za</a><br>
+  <a href= "tel:+2771 947 1009">+2771 947 1009</a><br>
+  Productlists © 2020
     </div>
 </div>
 </div>
