@@ -24,14 +24,17 @@ var videos =
 'https://www.youtube.com/embed/T4vuh_kQvcA'];
 
 e('yt_tv').src = videos[video_index];
+	
 
 function nextVideo(){
 	if(video_index<(videos.length-1)){
 		video_index+=1;
 		 e('yt_tv').src = videos[video_index];
+		four_next(video_index);
 	}else{
 		video_index=0;
 		e('yt_tv').src = videos[video_index];
+		four_next(video_index);
 	}
 }
 </script>
