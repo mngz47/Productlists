@@ -114,8 +114,10 @@ if(ISSET($_SESSION['response'])){
 		</div>
 <div class="col-sm-3" >
 <?php include "services/sell/products/feature/group_four_affiliate_video.php"; ?>
-	<div id=group_four_affiliate_video_dd >
-		
+	<div id=group_four_affiliate_video_dd ></div>
+	<div id='amazon_products' style='display:none' >
+		<span class=title >Workx Vacuum Cleaner</span>
+		<p>Portable with strong suction good for removig dirt in narrow spaces. Good to carpet cleaning and car interior.</p>
 	</div>
 		</div>
 	</div>
