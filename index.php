@@ -111,6 +111,8 @@ if(ISSET($_SESSION['response'])){
 		<div id='amazon_products' style='display:none' >
 		<span class=title >Workx Vacuum Cleaner</span>
 		<p>Portable with strong suction good for removig dirt in narrow spaces. Good for cleaning carpets and car interior.</p>
+		<span class=title >Kasi Nametest</span>
+		<p>South African local instant game - Enter your name and find out with Mzansi kasi you are from.</p>
 		</div>
 		
 		<?php include "services/build_your_brand/feature/video_2.php"; ?>
