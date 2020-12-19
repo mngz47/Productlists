@@ -141,7 +141,7 @@ if(ISSET($_SESSION['response'])){
 		</div>
 <div class="col-sm-3" >
 <?php include "services/sell/products/feature/group_four_affiliate_video.php"; ?>
-	<div id=group_four_affiliate_video_dd style="padding:4px;font-size:1.3em;" >Portable with strong suction good for removig dirt in narrow spaces. Good for cleaning carpets and car interior.</div>
+	<div id=group_four_affiliate_video_dd style="padding:4px;font-size:1.3em;" >Productlists is a tech firm working towards solutions to free the youth. Enjoy our instant game service, product listings and reviews.</div>
 		</div>
 	</div>
 	
