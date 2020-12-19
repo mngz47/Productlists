@@ -114,7 +114,7 @@ if(ISSET($_SESSION['response'])){
 		<span class=title >Kasi Nametest</span>
 		<p>South African local instant game - Enter your name and find out with Mzansi kasi you are from.</p>
 		<span class=title >Recreational Activies In Newcastle South Africa</span>
-		<p>Get the latest business and tourist information about Newcastle. Learn about Accommodation, Job Recruitment and more</p>
+		<p>Get the latest business and tourist information about Newcastle. Learn about Accommodation, Job Recruitment and more.</p>
 		<span class=title >F-Snake Classic Productlists Game</span>
 		<p>Play our classic snake game with seven stages. Overcome the obstacle and score as much points as you can.</p>
 			
