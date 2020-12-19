@@ -20,7 +20,7 @@ var video_index = 0;
 
 var videos = 
 [
-'https://www.youtube.com/embed/HjDiASNwExU'
+'https://www.youtube.com/embed/HjDiASNwExU',
 'https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fweb.facebook.com%2Fproductlists.co.za%2Fvideos%2F378822863181119%2F&show_text=false&width=560',
 'https://www.youtube.com/embed/B4RgQEuzcLY',
 'https://www.youtube.com/embed/4uU7UIrSFlg',
