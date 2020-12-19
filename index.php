@@ -113,7 +113,10 @@ if(ISSET($_SESSION['response'])){
 	</div>
 		</div>
 <div class="col-sm-3" >
-<?php include "services/sell/products/feature/group_four_affiliate.php"; ?>
+<?php include "services/sell/products/feature/group_four_affiliate_video.php"; ?>
+	<div id=group_four_affiliate_video_dd >
+		
+	</div>
 		</div>
 	</div>
 	
