@@ -26,24 +26,24 @@ var videos =
 'https://www.youtube.com/embed/T4vuh_kQvcA'];
 
 e('yt_tv').src = videos[video_index];
-	four_next(video_index);
-e('yt_title').innerHTML = e('amazon_products').getElementsByTageName('span')[0].innerHTML;
-e('group_four_affiliate_video_dd').innerHTML = e('amazon_products').getElementsByTageName('p')[0].innerHTML;
+	
+e('yt_title').innerHTML = e('amazon_products').getElementsByTagName('span')[0].innerHTML;
+e('group_four_affiliate_video_dd').innerHTML = e('amazon_products').getElementsByTagName('p')[0].innerHTML;
 
 function nextVideo(){
 	if(video_index<(videos.length-1)){
 		video_index+=1;
 		 e('yt_tv').src = videos[video_index];
 		four_next(video_index);
-		e('yt_title').innerHTML = e('amazon_products').getElementsByTageName('span')[video_index].innerHTML;
-		e('group_four_affiliate_video_dd').innerHTML = e('amazon_products').getElementsByTageName('p')[video_index].innerHTML;
+		e('yt_title').innerHTML = e('amazon_products').getElementsByTagName('span')[video_index].innerHTML;
+		e('group_four_affiliate_video_dd').innerHTML = e('amazon_products').getElementsByTagName('p')[video_index].innerHTML;
 	
 	}else{
 		video_index=0;
 		e('yt_tv').src = videos[video_index];
 		four_next(video_index);
-		e('yt_title').innerHTML = e('amazon_products').getElementsByTageName('span')[video_index].innerHTML;
-		e('group_four_affiliate_video_dd').innerHTML = e('amazon_products').getElementsByTageName('p')[video_index].innerHTML;
+		e('yt_title').innerHTML = e('amazon_products').getElementsByTagName('span')[video_index].innerHTML;
+		e('group_four_affiliate_video_dd').innerHTML = e('amazon_products').getElementsByTagName('p')[video_index].innerHTML;
 	}
 }
 </script>
