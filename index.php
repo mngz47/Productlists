@@ -109,6 +109,8 @@ if(ISSET($_SESSION['response'])){
 <div class="content col-sm-9" >
 	<div style="padding:20px;" >
 		<div id='amazon_products' style='display:none' >
+		<span class=title >Introduction To Productlists</span>
+		<p>Productlists is a tech firm working towards solutions to free the youth. Enjoy our instant game service, product listings and reviews.</p>	
 		<span class=title >Workx Vacuum Cleaner</span>
 		<p>Portable with strong suction good for removig dirt in narrow spaces. Good for cleaning carpets and car interior.</p>
 		<span class=title >Kasi Nametest</span>
@@ -117,8 +119,20 @@ if(ISSET($_SESSION['response'])){
 		<p>Get the latest business and tourist information about Newcastle. Learn about Accommodation, Job Recruitment and more.</p>
 		<span class=title >F-Snake Classic Productlists Game</span>
 		<p>Play our classic snake game with seven stages. Overcome the obstacle and score as much points as you can.</p>
-			
-			
+		<span class=title >F-Snake Classic Productlists Game</span>
+		<p>Play our classic snake game. As you progress in the stages the obstacle moves faster and faster.</p>
+		<span class=title >Touch Bistro Restaurant POS</span>
+		<p>Replace your printed out food menu with a digital tablet menu able to send orders directly to kitchen without calling for waiter.</p>
+		<span class=title >Touch Bistro Digital Menu and Payment</span>
+		<p>Collect more information during payment so you can resell your specials to frequent customers.</p>
+		<span class=title >CV Engine</span>
+		<p>Generate Your CV For FREE in 3 minutes and send it to your email.</p>
+		<span class=title >Stop Pay For Traffic.</span>
+		<p>Saas and other large companies that need to pay for advertising on a monthly basis can create a content division in their businesses.</p>	
+		<span class=title >Jungle Scout</span>
+		<p>Use the best tools to sell on Amazon, optimize your listing - access best selling keywords. Automatic repricing.</p>
+		<span class=title >Adzooma</span>
+		<p>Automate and manage all your Google, Facebook and Microsoft Ads in one place. Award winning App.</p>
 		</div>
 		
 		<?php include "services/build_your_brand/feature/video_2.php"; ?>
