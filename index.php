@@ -114,7 +114,7 @@ if(ISSET($_SESSION['response'])){
 		<span class=title >Workx Vacuum Cleaner</span>
 		<p>Portable with strong suction good for removig dirt in narrow spaces. Good for cleaning carpets and car interior.</p>
 		<span class=title >Kasi Nametest</span>
-		<p>South African local instant game - Enter your name and find out with Mzansi kasi you are from.</p>
+		<p>South African local instant game - enter your name and find out with Mzansi kasi you are from.</p>
 		<span class=title >Recreational Activies In Newcastle South Africa</span>
 		<p>Get the latest business and tourist information about Newcastle. Learn about Accommodation, Job Recruitment and more.</p>
 		<span class=title >F-Snake Classic Productlists Game</span>
