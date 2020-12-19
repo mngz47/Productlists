@@ -5,6 +5,9 @@
    
     var affiliates = [
 	   "//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=productlists4-20&marketplace=amazon&region=US&placement=B06ZY896ZM&asins=B06ZY896ZM&linkId=640f79cc76f9cd0396e8a7a2570b794e&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff",
+	    "https://productlists.co.za/services/banners/kasi_nametest.html",
+	    "https://productlists.co.za/services/banners/recreational.html",
+	    "https://productlists.co.za/services/banners/f_snake.html",
 	    "//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=productlists4-20&marketplace=amazon&region=US&placement=B07K39FRSL&asins=B07K39FRSL&linkId=065aee4d4dac6dbbe3ad4fe7adddc370&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff",
     "//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=productlists4-20&marketplace=amazon&region=US&placement=B08B3X7NXC&asins=B08B3X7NXC&linkId=6d18ac90e6854fe7afdc7f519abc858c&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff",
     "//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=productlists4-20&marketplace=amazon&region=US&placement=B07X2VN311&asins=B07X2VN311&linkId=e1151fffa931fea2528cb6e082f007c6&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff",
