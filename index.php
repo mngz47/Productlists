@@ -119,7 +119,7 @@ if(ISSET($_SESSION['response'])){
 		</div>
 <div class="col-sm-3" >
 <?php include "services/sell/products/feature/group_four_affiliate_video.php"; ?>
-	<div id=group_four_affiliate_video_dd style="padding:4px;font-size:1.2em;" >Portable with strong suction good for removig dirt in narrow spaces. Good to carpet cleaning and car interior.</div>
+	<div id=group_four_affiliate_video_dd style="padding:4px;font-size:1.3em;" >Portable with strong suction good for removig dirt in narrow spaces. Good to carpet cleaning and car interior.</div>
 		</div>
 	</div>
 	
