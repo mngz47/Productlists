@@ -108,6 +108,11 @@ if(ISSET($_SESSION['response'])){
 	<div class="row" >
 <div class="content col-sm-9" >
 	<div style="padding:20px;" >
+		<div id='amazon_products' style='display:none' >
+		<span class=title >Workx Vacuum Cleaner</span>
+		<p>Portable with strong suction good for removig dirt in narrow spaces. Good to carpet cleaning and car interior.</p>
+		</div>
+		
 		<?php include "services/build_your_brand/feature/video_2.php"; ?>
 		
 	</div>
@@ -115,10 +120,6 @@ if(ISSET($_SESSION['response'])){
 <div class="col-sm-3" >
 <?php include "services/sell/products/feature/group_four_affiliate_video.php"; ?>
 	<div id=group_four_affiliate_video_dd ></div>
-	<div id='amazon_products' style='display:none' >
-		<span class=title >Workx Vacuum Cleaner</span>
-		<p>Portable with strong suction good for removig dirt in narrow spaces. Good to carpet cleaning and car interior.</p>
-	</div>
 		</div>
 	</div>
 	
