@@ -127,10 +127,10 @@ if(ISSET($_SESSION['response'])){
 		<p>Collect more information during payment so you can resell your specials to frequent customers.</p>
 		<span class=title >CV Engine</span>
 		<p>Generate Your CV For FREE in 3 minutes and send it to your email.</p>
-		<span class=title >Stop Pay For Traffic.</span>
+		<span class=title >Stop Paying For Traffic.</span>
 		<p>Saas and other large companies that need to pay for advertising on a monthly basis can create a content division in their businesses.</p>	
 		<span class=title >Jungle Scout</span>
-		<p>Use the best tools to sell on Amazon, optimize your listing - access best selling keywords. Automatic repricing.</p>
+		<p>Use the best tools to sell on Amazon, optimize your listing - access best selling keywords and automatic repricing.</p>
 		<span class=title >Adzooma</span>
 		<p>Automate and manage all your Google, Facebook and Microsoft Ads in one place. Award winning App.</p>
 		</div>
