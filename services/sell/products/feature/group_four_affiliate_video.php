@@ -38,5 +38,7 @@
 		index = 0;	
 		}
 	  }
+	    
+	    four_next(index);
     </script>
 </div>
