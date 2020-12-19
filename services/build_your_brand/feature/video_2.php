@@ -31,7 +31,13 @@ var videos =
 'https://www.youtube.com/embed/57kS-89h9-E',
 'https://www.youtube.com/embed/Joi5lIH3E4g',
 'https://www.youtube.com/embed/XDv6u7Pw3m4',
-'https://www.youtube.com/embed/lmrqxiq83pM'
+'https://www.youtube.com/embed/lmrqxiq83pM',
+	'https://www.youtube.com/embed/X7LrM_IoGCw',
+	'https://www.youtube.com/embed/otH3aluC4V8',
+	'https://www.youtube.com/embed/k0qef1dehkk',
+	'https://www.youtube.com/embed/OOwxoPdTN40',
+	'https://www.youtube.com/embed/2wOQxf_IJxU',
+	'https://www.youtube.com/embed/-n_sEksO8wY'
 ];
 
 e('yt_tv').src = videos[video_index];
