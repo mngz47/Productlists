@@ -56,7 +56,7 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
     <div>
   <a href= "mailto:admin@productlists.co.za">admin@productlists.co.za</a><br>
   <a href= "tel:+2771 947 1009">+2771 947 1009</a><br>
-  2020 © Productlists
+        <span onload="this.innerHTML=(new Date().getFullYear());"></span> © Productlists
     </div>
 </div>
 </div>
