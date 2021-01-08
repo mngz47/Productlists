@@ -442,12 +442,12 @@ Ready to help - Ask Alexa to tell a joke, play music, answer questions, play the
 			
 		</div>
 		
-		<?php include "services/build_your_brand/feature/video_2.php"; ?>
+		<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/build_your_brand/feature/video_2.php"; ?>
 		
 	</div>
 		</div>
 <div class="col-sm-3" >
-<?php include "services/sell/products/feature/group_four_affiliate_video.php"; ?>
+<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products/feature/group_four_affiliate_video.php"; ?>
 	<div id=group_four_affiliate_video_dd style="padding:4px;font-size:1.3em;" >Productlists is a tech firm working towards solutions to free the youth. Enjoy our instant game service, product listings and reviews.</div>
 		</div>
 	</div>
