@@ -65,16 +65,16 @@ $row = $result->fetch_assoc();
 
 echo
 "<div id=signin_toggle_hold class='signin shadow' >".
-"<a href=https://www.productlists.co.za/services/sell/company_general.php >".
+"<a href=https://".$HOME_."/services/sell/company_general.php >".
 "<div class=row >".
-"<img class=space src=".($row['logo']?'https://www.productlists.co.za/services/sell/company_images/'.$row['logo']:"https://www.productlists.co.za/resources/company.png")." width=40px />".
+"<img class=space src=".($row['logo']?'https://'.$HOME_.'/services/sell/company_images/'.$row['logo']:"https://".$HOME_."/resources/company.png")." width=40px />".
 "<span class='t' >".
 (strlen($row['name'])>14?substr($row['name'],0,14).'...':$row['name']).
 "</span>".
 "</div>".
 "</a>".
 "<div class='footer scroll_text_cont' >".
-"<a href=https://www.productlists.co.za/feature/sign/signout.php class=scroll_text >sign_out</a>".
+"<a href=https://".$HOME_."/feature/sign/signout.php class=scroll_text >sign_out</a>".
 "</div>".
 "</div>";
 }else if(ISSET($_SESSION['customer_id'])){
@@ -85,14 +85,14 @@ $row = $result->fetch_assoc();
 
 echo
 "<div id=signin_toggle_hold class='signin shadow' >".
-"<a href=https://www.productlists.co.za/member/signup_main.php >".
-"<div class='row' >".
-"<img class=space src=".($row['p_p']?(strpos($row['p_p'],'http')>-1?$row['p_p']:'https://www.productlists.co.za/member/customer_images/'.$row['p_p']):"https://www.productlists.co.za/resources/user.png")." width=40px />".
+"<a href=https://".$HOME_."/member/signup_main.php >".
+"<div class='row' >".  
+"<img class=space src=".($row['p_p']?(strpos($row['p_p'],'http')>-1?$row['p_p']:'https://'.$HOME_.'/member/customer_images/'.$row['p_p']):"https://".$HOME_."/resources/user.png")." width=40px />".
 "<span class=t >".$row['name']." ".$row['surname']."</span>".
 "</div>".
 "</a>".
 "<div class='footer scroll_text_cont' >".
-"<a href=https://www.productlists.co.za/feature/sign/signout.php class=scroll_text >sign_out</a>".
+"<a href=https://".$HOME_."/feature/sign/signout.php class=scroll_text >sign_out</a>".
 "</div>".
 "</div>";
 
@@ -104,12 +104,12 @@ echo
 "#signin { display:none; }".
 "</style>".
 "<div id=sign_face  >".
-"<table style='display:inline-block;' ><tr><td><a href=https://www.productlists.co.za/member/signin_main.php >Sign In</a></td></tr>".
+"<table style='display:inline-block;' ><tr><td><a href=https://".$HOME_."/member/signin_main.php >Sign In</a></td></tr>".
 "<tr><td><a href=https://www.productlists.co.za/member/signup_main.php >Sign Up</a></td></tr></table>".
-"<a href=# onclick='e(\"sign_face\").style.display=\"none\";e(\"signin\").style.display=\"block\";' ><img src=https://www.productlists.co.za/resources/user.png width=40px /></a>".
-"<a href=https://www.productlists.co.za/feature/shopping_cart/index.php ><img src=https://www.productlists.co.za/resources/cart.png width=40px /></a>".
+"<a href=# onclick='e(\"sign_face\").style.display=\"none\";e(\"signin\").style.display=\"block\";' ><img src=https://".$HOME_."/resources/user.png width=40px /></a>".
+"<a href=https://www.productlists.co.za/feature/shopping_cart/index.php ><img src=https://".$HOME_."/resources/cart.png width=40px /></a>".
 "</div>".
-"<form id=signin method=post action='https://www.productlists.co.za/feature/sign/signin.php".(ISSET($_GET['from'])?'?from='.$_GET['from']:'')."' >".
+"<form id=signin method=post action='https://".$HOME_."/feature/sign/signin.php".(ISSET($_GET['from'])?'?from='.$_GET['from']:'')."' >".
 "<div class=row ><table><tr>".
 "<td width=20% class=user_image ></td>".
 "<td width=40% ><input class=form-control type=text name=email_cell placeholder='email' /></td>".
