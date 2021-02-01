@@ -1,5 +1,7 @@
 <?php
 
+$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+
 if(ISSET($_SESSION['company_id'])){
 
 $no_of_t;
