@@ -20,9 +20,9 @@ $directory = $row['directory'];
 
 echo
 "<div class='footer scroll_text_cont' >".
-"<a href=https://<?php echo $HOME_; ?>/services/sell/company_transactions.php class=scroll_text id=transaction_btn >transactions".($no_of_t?'<span id=no_of_transaction >'.$no_of_t.'</span>':'')."</a> ".
-"<a href=https://<?php echo $HOME_; ?>/services/sell/products/products.php?company=".$_SESSION['company_id']." class=scroll_text >view products</a>".
-"<a href=https://<?php echo $HOME_; ?>/services/sell/products/product_general.php class=scroll_text >new product</a>".
+"<a href=https://".$HOME_."/services/sell/company_transactions.php class=scroll_text id=transaction_btn >transactions".($no_of_t?'<span id=no_of_transaction >'.$no_of_t.'</span>':'')."</a> ".
+"<a href=https://".$HOME_."/services/sell/products/products.php?company=".$_SESSION['company_id']." class=scroll_text >view products</a>".
+"<a href=https://".$HOME_."/services/sell/products/product_general.php class=scroll_text >new product</a>".
 "<span class=scroll_text ><input class=space type=checkbox id=directory_act onchange=xml_response(sendreq('services/directory_listings/feature/activate_directory.php?switch=".($directory)."')); ".($directory?'checked':'')."  />activate directory</span>".
 "</div>";
 	
@@ -45,8 +45,8 @@ $directory = $row['directory'];
 
 echo
 "<div class='footer scroll_text_cont' >".
-"<a href=https://<?php echo $HOME_; ?>/feature/balance/index.php class='highlight_green' >balance=R".($row["balance"])."</a>".
-"<a href=https://<?php echo $HOME_; ?>/member/customer_transaction.php class=scroll_text id=transaction_btn >transactions".($no_of_t?'<span id=no_of_transaction >'.$no_of_t.'</span>':'')."</a>".
+"<a href=https://".$HOME_."/feature/balance/index.php class='highlight_green' >balance=R".($row["balance"])."</a>".
+"<a href=https://".$HOME_."/member/customer_transaction.php class=scroll_text id=transaction_btn >transactions".($no_of_t?'<span id=no_of_transaction >'.$no_of_t.'</span>':'')."</a>".
 "<span class=scroll_text ><input class=space type=checkbox id=keep_logged_in onchange=auto_login() ".(ISSET($_COOKIE['auto_login']) && $_COOKIE['auto_login']!=''?'checked':'')."  />keep me logged in</span>".
 "<span class=scroll_text ><input class=space type=checkbox id=directory_act onchange=xml_response(sendreq('services/directory_listings/feature/activate_directory.php?switch=".($directory)."')); ".($directory?'checked':'')."  />activate directory</span>".
 "</div>";
