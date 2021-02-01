@@ -33,9 +33,9 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
               
                 
                $inject.=
-              '<a href="https://www.productlists.co.za/services/build_your_brand/open.php?member_id='.$row3['id'].'" >'.
+              '<a href="https://'.$HOME_.'/services/build_your_brand/open.php?member_id='.$row3['id'].'" >'.
              '<div class="block block_purple" style="min-height:200px;" >'.
-             '<img src="https://www.productlists.co.za/services/build_your_brand/images/'.$row3['cover_image'].'" width=100% />'.
+             '<img src="https://'.$HOME_.'/services/build_your_brand/images/'.$row3['cover_image'].'" width=100% />'.
              '<span style="font-size:1em;" >'.$row3['title'].'</span>'.
              '</div>'.
              '</a>'.($c%2==0 ?'</div>'.($c%12==0?'</div><div class="row tml_row" >':'').'<div class="col-sm-6 row" >':'');
@@ -47,12 +47,12 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
     }
     } 
             }
-        
+                
              $inject.=
-             '<a href="https://www.productlists.co.za/services/sell/products/open.php?product_id='.$row['id'].'" >'.
+             '<a href="https://'.$HOME_.'/services/sell/products/open.php?product_id='.$row['id'].'" >'.
              '<div class="block '.($c%4==0?'block_purple':'').' tml_p" >'.
              '<span class=highlight_green >R'.$row['price'].'</span>'.
-             '<img src="'.(strpos($row2['url'],'//')!==false?$row2['url']:'https://www.productlists.co.za/services/sell/products/product_images/'.$row2['url']).'" width=100% />'.
+             '<img src="'.(strpos($row2['url'],'//')!==false?$row2['url']:'https://'.$HOME_.'/services/sell/products/product_images/'.$row2['url']).'" width=100% />'.
              '<span style="font-size:1em;" >'.$row['title'].'</span>'.
              '</div>'.
              '</a>';
