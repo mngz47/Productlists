@@ -14,21 +14,19 @@ curl_close($curl);
 
 $LOCATION = 'member/signin_main.php';
 
-session_start();
-
-$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php';
 
 ?>
 <!DOCTYPE html>
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Productlists | Sign In</title>
-<link rel=stylesheet href=https://www.productlists.co.za/style.css />
-<link rel=stylesheet href=https://www.productlists.co.za/bootstrap.min.css />
-<link rel=stylesheet href=https://www.productlists.co.za/mobstyle.css />
-<link rel=stylesheet href=https://productlists.co.za/input_style.css />
-<link rel=stylesheet href=https://www.productlists.co.za/feature/sign/style.css />
-<link rel=stylesheet href=https://www.productlists.co.za/feature/search/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/bootstrap.min.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/mobstyle.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/input_style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/sign/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/search/style.css />
 <link rel="shortcut icon" type="image/png" href="https://productlists.co.za/logo.png" />
 <meta name="viewport" content="width=device-width" />
 <meta name="description" content="Become a member, become part real technology within four fields. File sharing; shopping; in depth content" />
@@ -55,16 +53,16 @@ if(ISSET($_SESSION['response'])){
 ?>
 </script> 
 <script src="https://apis.google.com/js/platform.js" async defer></script>
-<script src=https://www.productlists.co.za/api.js ></script>
-<script src=https://www.productlists.co.za/feature/search/api.js ></script>
-<script src=https://www.productlists.co.za/feature/sign/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/feature/search/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/feature/sign/api.js ></script>
 <div id=container class=p_cont >
 
 <div id=header class="header row" >
 <div class="col-sm-3" >
 <div>
-<a href=https://www.productlists.co.za/index.php class="logo logo_start" ></a>
-<a href=https://www.productlists.co.za/index.php class="title logo" >Productlists</a>
+<a href=https://<?php echo $HOME_; ?>/index.php class="logo logo_start" ></a>
+<a href=https://<?php echo $HOME_; ?>/index.php class="title logo" >Productlists</a>
 <a href="#" onclick="toggleUpperScroll();return false;" class="toggleUpperScroll highlight" ></a>
 <a href="#" onclick="toggleSignIn();return false;" class="toggleSignIn highlight" ></a>
 </div>
@@ -78,7 +76,7 @@ if(ISSET($_SESSION['response'])){
 <?php 
 
 if(ISSET($_GET['from'])){
-    echo httpGet('https://www.productlists.co.za/feature/sign/signin.php?from='.$_GET['from']);
+    echo httpGet('https://'.$HOME_.'/feature/sign/signin.php?from='.$_GET['from']);
 }else{
     
 }
@@ -100,12 +98,12 @@ if(ISSET($_GET['from'])){
 <div id="main" class=main >
 
 
-<form id=signin method=post action='https://www.productlists.co.za/feature/sign/signin.php'  >
+<form id=signin method=post action='https://<?php echo $HOME_; ?>/feature/sign/signin.php'  >
 <div class="input" >
 <div class="row" >
 <div class="col-sm-5" >
 <div class="images" >
-<img id=image src='https://productlists.co.za/resources/user.png' />
+<img id=image src='https://<?php echo $HOME_; ?>/resources/user.png' />
 </div>
 </div>
 <div id=slides class="col-sm-7" >
@@ -134,7 +132,7 @@ if(ISSET($_GET['from'])){
 
 <div class=artpiece >
 <h3>Nameless Swag</h3>
-<img src=https://productlists.co.za/resources/nameless_swag.jpg title="nameless swag" />
+<img src=https://<?php echo $HOME_; ?>/resources/nameless_swag.jpg title="nameless swag" />
 </div>
 <style>
 
