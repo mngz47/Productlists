@@ -1,8 +1,6 @@
 <?php
 
-session_start();
-
-$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+include 'config.php';
 
 $LOCATION = 'index.php';
 
@@ -22,16 +20,16 @@ $LOCATION = 'index.php';
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Productlists</title>
-<link rel=stylesheet href=https://productlists.co.za/bootstrap.min.css />
-<link rel=stylesheet href=https://productlists.co.za/style.css />
-<link rel=stylesheet href=https://productlists.co.za/mobstyle.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/bootstrap.min.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/mobstyle.css />
 
-<link rel=stylesheet href=https://productlists.co.za/index_style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/index_style.css />
 
-<link rel=stylesheet href=https://www.productlists.co.za/scroll_style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/scroll_style.css />
 
-<link rel=stylesheet href=https://productlists.co.za/feature/sign/style.css />
-<link rel=stylesheet href=https://productlists.co.za/feature/search/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/sign/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/search/style.css />
 
 <meta name="viewport" content="width=device-width" />
 
@@ -53,10 +51,10 @@ if(ISSET($_SESSION['response'])){
 
 ?>
 </script>
-<script src=https://productlists.co.za/api.js ></script>
-<script src=https://productlists.co.za/feature/search/api.js ></script>
-<script src=https://productlists.co.za/feature/sign/api.js ></script>
-<script src=https://productlists.co.za/services/sell/products/feature/option/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/feature/search/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/feature/sign/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/services/sell/products/feature/option/api.js ></script>
 
 
 <?php include "header_3.php"; ?>
@@ -72,7 +70,7 @@ if(ISSET($_SESSION['response'])){
 <iframe id=four_target_home src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=instruments&banner=0JB0A4VDS5FZSF8J66G2&f=ifr&linkID=957b6056e810aaba8d6734b832d49fbf&t=productlists4-20&tracking_id=productlists4-20" width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
 
 	<div class=forward >
-    <script src="https://www.productlists.co.za/services/banners/api.js" ></script>
+    <script src="https://<?php echo $HOME_; ?>/services/banners/api.js" ></script>
 </div>
 	
 </div>
