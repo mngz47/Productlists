@@ -2,8 +2,8 @@
 box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
 <div class="col-sm-3" >
 <div>
-<a href=https://www.productlists.co.za/index.php class="logo logo_start" ></a>
-<a href=https://www.productlists.co.za/index.php class="title logo" >Productlists</a>
+<a href=https://<?php echo $HOME_; ?>/index.php class="logo logo_start" ></a>
+<a href=https://<?php echo $HOME_; ?>/index.php class="title logo" >Productlists</a>
 <a href="#" onclick="toggleUpperScroll();return false;" class="toggleUpperScroll highlight" ></a>
 <a href="#" onclick="toggleSignIn();return false;" class="toggleSignIn highlight" ></a>
 </div>
@@ -15,7 +15,7 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
        <input style="width:100%;height:30px;border:0px;padding:4px;" onfocus=s_in(); onblur=s_out(this); type=search onkeyup="search(this.value);" class=" shadow" id=search placeholder="search" />   
     </div>
   <div class=col-sm-6 style="padding-top:25px;font-size:1.2em;">
-<a class=space href=https://www.productlists.co.za/services/sell/products/products.php >All Products</a>
+<a class=space href=https://<?php echo $HOME_; ?>/services/sell/products/products.php >All Products</a>
   </div>
 </div>
 
