@@ -1,7 +1,7 @@
 <?php
-session_start();
 
-$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php';
+
 
 function getQueueDiscount($conn,$product_id,$q_price){
 	$q_discount=0;
@@ -97,19 +97,19 @@ $page_meta_content = ($in_product?'|':($brand?'| You can now experience all prod
 
 ?>
 <title>Productlists <?php echo ($page_title); ?></title>
-<link rel=stylesheet href=https://productlists.co.za/bootstrap.min.css />
-<link rel=stylesheet href=https://productlists.co.za/style.css />
-<link rel=stylesheet href=https://productlists.co.za/mobstyle.css />
-<link rel=stylesheet href=https://productlists.co.za/input_style.css />
-<link rel=stylesheet href=https://productlists.co.za/scroll_style.css />
-<link rel=stylesheet href=https://productlists.co.za/feature/sign/style.css />
-<link rel=stylesheet href=https://productlists.co.za/feature/search/style.css />
-<link rel=stylesheet href=https://productlists.co.za/feature/feedback/style.css />
-<link rel=stylesheet href=https://www.productlists.co.za/verification_style.css />
-<link rel=stylesheet href=https://productlists.co.za/services/grocery/grocery_style.css />
-<link rel=stylesheet href=https://productlists.co.za/services/sell/products/style.css />
-<link rel=stylesheet href=https://productlists.co.za/services/sell/products/feature/feeling/style.css />
-<link rel=stylesheet href=https://www.productlists.co.za/feature/shopping_cart/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/bootstrap.min.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/mobstyle.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/input_style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/scroll_style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/sign/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/search/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/feedback/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/verification_style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/services/grocery/grocery_style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/services/sell/products/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/services/sell/products/feature/feeling/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/shopping_cart/style.css />
 <link rel="shortcut icon" type="image/png" href="https://productlists.co.za/logo.png" />
 <meta name="viewport" content="width=device-width" />
 <meta name="description" content="<?php echo ($page_meta_content); ?> " />
@@ -118,15 +118,15 @@ $page_meta_content = ($in_product?'|':($brand?'| You can now experience all prod
 </head>
 <body>
 
-<script src=https://productlists.co.za/api.js ></script>
-<script src=https://productlists.co.za/verification.js ></script>
+<script src=https://<?php echo $HOME_; ?>/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/verification.js ></script>
 
-<script src=https://productlists.co.za/feature/search/api.js ></script>
-<script src=https://productlists.co.za/feature/sign/api.js ></script>
-<script src=https://productlists.co.za/services/sell/products/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/feature/search/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/feature/sign/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/services/sell/products/api.js ></script>
 
-<script src=https://productlists.co.za/feature/shopping_cart/api.js ></script>
-<script src=https://productlists.co.za/services/sell/products/feature/option/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/feature/shopping_cart/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/services/sell/products/feature/option/api.js ></script>
 
 <script>
 <?php 
