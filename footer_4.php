@@ -3,42 +3,42 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
 <div class="col-sm-2" >
 <h3>Company</h3>
 <ul style="list-style:none;" >
-    <li><a href=https://www.productlists.co.za/feature/support.php >Support</a></li>
-    <li><a href=https://www.productlists.co.za/about.php >About</a></li>
-    <li><a href=https://www.productlists.co.za/feature/aggregation/lite/index.html >Automatic</a></li>
-    <li><a href=https://www.productlists.co.za/invest.php >Invest</a></li>
+    <li><a href=https://<?php echo $HOME_; ?>/feature/support.php >Support</a></li>
+    <li><a href=https://<?php echo $HOME_; ?>/about.php >About</a></li>
+    <li><a href=https://<?php echo $HOME_; ?>/feature/aggregation/lite/index.html >Automatic</a></li>
+    <li><a href=https://<?php echo $HOME_; ?>/invest.php >Invest</a></li>
   </ul>
 </div>
 <div class="col-sm-3" >
 <h3>Customer Service</h3>
   <ul style="list-style:none;" >
-    <li><a href=https://productlists.co.za/customer_service/faq.php >FAQ</a></li>
-    <li><a href=https://productlists.co.za/customer_service/privacy_policy.php >Privacy Policy</a></li>
-    <li><a href=https://productlists.co.za/customer_service/terms_conditions.php >Terms & Conditions</a></li>
-    <li><a href=https://productlists.co.za/customer_service/shipping_returns.php >Shipping & Returns</a></li>
+    <li><a href=https://<?php echo $HOME_; ?>/customer_service/faq.php >FAQ</a></li>
+    <li><a href=https://<?php echo $HOME_; ?>/customer_service/privacy_policy.php >Privacy Policy</a></li>
+    <li><a href=https://<?php echo $HOME_; ?>/customer_service/terms_conditions.php >Terms & Conditions</a></li>
+    <li><a href=https://<?php echo $HOME_; ?>/customer_service/shipping_returns.php >Shipping & Returns</a></li>
   </ul>
 </div>
 <div class="col-sm-2" >
 <h3>Suppliers</h3>
   <ul style="list-style:none;" >
-    <li><a href=https://www.productlists.co.za/services/sell/index.php >Add Company</a></li>
-    <li><a href=https://www.productlists.co.za/services/sell/products/product_general.php >Sell Product</a></li>
-    <li><a href=https://www.productlists.co.za/services/sell/company_transactions.php >Transactions</a></li>
-    <li><a href=https://www.productlists.co.za/advertise.php >Advertise</a></li> 
+    <li><a href=https://<?php echo $HOME_; ?>/services/sell/index.php >Add Company</a></li>
+    <li><a href=https://<?php echo $HOME_; ?>/services/sell/products/product_general.php >Sell Product</a></li>
+    <li><a href=https://<?php echo $HOME_; ?>/services/sell/company_transactions.php >Transactions</a></li>
+    <li><a href=https://<?php echo $HOME_; ?>/advertise.php >Advertise</a></li> 
   </ul>
 </div>
 <div class="col-sm-2" >
 <h3>Members</h3>
 <ul style="list-style:none;" >
-    <li><a href=https://www.productlists.co.za/member/signup_main.php >Account</a></li>
-    <li><a href=https://www.productlists.co.za/feature/shopping_cart/index.php >Shopping Cart</a></li>
-    <li><a href=https://www.productlists.co.za/member/customer_transaction.php >Transactions</a></li>
-    <li><a href=https://www.productlists.co.za/services/index.php >Services</a></li>
+    <li><a href=https://<?php echo $HOME_; ?>/member/signup_main.php >Account</a></li>
+    <li><a href=https://<?php echo $HOME_; ?>/feature/shopping_cart/index.php >Shopping Cart</a></li>
+    <li><a href=https://<?php echo $HOME_; ?>/member/customer_transaction.php >Transactions</a></li>
+    <li><a href=https://<?php echo $HOME_; ?>/services/index.php >Services</a></li>
   </ul>
 </div>
 <div class="col-sm-3" >
 <h3>Newsletter</h3>
-<form action="https://www.productlists.co.za/feature/feedback/index.php" method=post onsubmit=setDate('date_added_n'); id=newsletter >
+<form action="https://<?php echo $HOME_; ?>/feature/feedback/index.php" method=post onsubmit=setDate('date_added_n'); id=newsletter >
 <a href=https://www.instagram.com/productlists ><img src=https://www.productlists.co.za/feature/shopping_cart/affiliate_logos/instagram.jpg width=20px /></a>
 <a href=https://www.facebook.com/productlists.co.za ><img src=https://www.productlists.co.za/feature/shopping_cart/affiliate_logos/facebook.png width=20px /></a>
     <input name=email type=text class=form-control placeholder=email style="margin-bottom:10px;width:70%;display:inline-block;" onblur="newsletter_auto_send(this);" />
