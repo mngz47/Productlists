@@ -1,7 +1,8 @@
 <?php
 if(ISSET($_GET['top'])){
 
-$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php';
+    
     $sql = 'SELECT id,title,price FROM product ORDER BY date_added DESC';
     $result = $conn->query($sql);
  
@@ -49,7 +50,7 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
             }
         
              $inject.=
-             '<a href="https://'.$HOME_.'/services/sell/products/products.php?product_id='.$row['id'].'" >'.
+             '<a href="https://'.$HOME_.'/services/sell/products/open.php?product_id='.$row['id'].'" >'.
              '<div class="block '.($c%4==0?'block_purple':'').' tml_p" >'.
              '<span class=highlight_green >R'.$row['price'].'</span>'.
              '<img src="'.(strpos($row2['url'],'//')>-1?$row2['url']:'https://'.$HOME_.'/services/sell/products/product_images/'.$row2['url']).'" width=100% />'.
