@@ -273,7 +273,7 @@ while($row){
 	 
     if($extend && $c_p%4!=0){
 	
-	echo ($c_p%4==0?'<div class=row >':'').'<div class=col-sm-3 style="padding:7px;" >'.(ISSET($_GET['s'])?(($_GET['s']*40)==$c_p?'<a name=current >':''):'');
+	echo ($c_p%4==0?'<div class=row style="padding-bottom:4px;" >':'').'<div class=col-sm-3 style="padding:7px;" >'.(ISSET($_GET['s'])?(($_GET['s']*40)==$c_p?'<a name=current >':''):'');
 	$sql2 = "SELECT url FROM product_image WHERE product_id=".$row["id"];
 	$result2 = $conn->query($sql2);
 	$row2 = $result2->fetch_assoc();
@@ -404,7 +404,7 @@ echo '('.$sql.')---'.mysqli_error($conn);
   
 	echo
 	'<div class=nav >'.
-    (!$hide_s?'<a class=more href="products.php?s='.$s.'#current" > load more </a>':'').
+    (!$hide_s?'<a class=more href="products.php?s='.($s+1).'#current" > load more </a>':'').
 	'</div></div>';
 ?>
 </div>
