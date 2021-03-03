@@ -192,7 +192,7 @@ if(ISSET($_SESSION['response'])){
 <div class="body row" >
 <div class="content col-sm-9" >
 <a name=main ></a>
-<div id="main" class=main >
+<div id="main" class=main style="padding-left:15px;" >
 <?php 
 
 echo ($category?'<h3 class=block >'.$category.'</h3>':'');
@@ -332,7 +332,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		   $body_rows.=
 		   '</div>';
 			
-	    if($c_p%4==0){
+	    if($c_p%4==0 && $c_p!=0){
 		 echo '<div class=row style="padding-bottom:4px;" >'.$body_rows.'</div>';
 		 $body_rows='';
 	     }
