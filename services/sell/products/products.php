@@ -35,7 +35,6 @@ if(ISSET($_GET['category']) && $_GET['category']){
 }
 
 
-
 $title = (ISSET($_GET['title'])?true:false);
 $love = (ISSET($_GET['love'])?true:false);
 $angry = (ISSET($_GET['angry'])?true:false);
@@ -247,7 +246,7 @@ $sql = 'SELECT p.id,p.company_id,p.title,p.price,p.brand,p.specification,p.param
 
 }
 
-	//echo '[sql]<textarea>'.$sql.'</textarea>';
+echo '[sql]<textarea>'.$sql.'</textarea>';
 	
 $result = $conn->query($sql);
 
@@ -260,6 +259,8 @@ $c_p = 0;
 $end = $s*40+40;
 
 $locked = false;
+	
+$body_rows = '';
 
 while($row){
 	 
@@ -273,7 +274,7 @@ while($row){
 	 // && $c_p%4!=0
     if($extend){
 	
-	echo ($c_p%4==0?'<div class=row style="padding-bottom:4px;" >':'').'<div class=col-sm-3 style="padding:7px;" >'.(ISSET($_GET['s'])?(($_GET['s']*40)==$c_p?'<a name=current >':''):'');
+	$body_rows.= '<div class=col-sm-3 style="padding:7px;" >'.(ISSET($_GET['s'])?(($_GET['s']*40)==$c_p?'<a name=current >':''):'');
 	$sql2 = "SELECT url FROM product_image WHERE product_id=".$row["id"];
 	$result2 = $conn->query($sql2);
 	$row2 = $result2->fetch_assoc();
@@ -286,14 +287,14 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 	
 		    
     if(isset($_SESSION['company_id'])?$_SESSION['company_id']==$row['company_id']:false){
-	echo
+	$body_rows.=
 	'<table class=company_options >'.
     '<td><a href="product_general.php?product_id='.$row['id'].'" >edit</a></td>'.
 	'<td><a href=# onclick="deleteProduct('.$row['id'].');return false;" >delete</a></td>'.
 	'</table>';
 	}
 		   
-		   echo
+		  $body_rows.=
 		   '<a class=title href="open.php?product_id='.$row['id'].'" title="'.$row['title'].'" >'.(strlen($row['title'])>14?substr($row['title'],0,14).'...':$row['title']).'</a>'.
 		   '<table class=p_head >'.
 		   '<tr>'.
@@ -312,7 +313,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		$result2 = $conn->query("SELECT logo,name,website FROM company WHERE id=".$row["company_id"]);
 	       if($result2){
            $row2 = $result2->fetch_assoc();
-		   echo 
+		   $body_rows.=
 		   '<table class=p_head width=100% >'.
 		   '<tr>'.
 		   '<td>'.
@@ -328,8 +329,13 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		   }
 		  
 		   
-		   echo
-		   '</div>'.($c_p%4==0?'</div>':''); 
+		   $body_rows.=
+		   '</div>';
+			
+	    if($c_p%4==0){
+		 echo '<div class=row style="padding-bottom:4px;" >'.$body_rows.'</div>';
+		 $body_rows='';
+	     }
 		   
 		   
 		   
