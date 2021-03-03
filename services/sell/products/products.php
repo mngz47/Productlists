@@ -246,7 +246,7 @@ $sql = 'SELECT p.id,p.company_id,p.title,p.price,p.brand,p.specification,p.param
 
 }
 
-echo '[sql]<textarea>'.$sql.'</textarea>';
+// echo '[sql]<textarea>'.$sql.'</textarea>';
 	
 $result = $conn->query($sql);
 
