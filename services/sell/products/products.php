@@ -270,8 +270,8 @@ while($row){
 	 $extend = ($c_p>=$begin && $c_p<$end);
 	 
 	 $completed = false;
-	 
-    if($extend && $c_p%4!=0){
+	 // && $c_p%4!=0
+    if($extend){
 	
 	echo ($c_p%4==0?'<div class=row style="padding-bottom:4px;" >':'').'<div class=col-sm-3 style="padding:7px;" >'.(ISSET($_GET['s'])?(($_GET['s']*40)==$c_p?'<a name=current >':''):'');
 	$sql2 = "SELECT url FROM product_image WHERE product_id=".$row["id"];
