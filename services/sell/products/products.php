@@ -186,11 +186,10 @@ if(ISSET($_SESSION['response'])){
 ?>
 
 </script>
+	<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/aggregation/lite/plug.php'); ?>
 <div class=scroll_master >
 <div id=container class=p_cont >
-
 <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_3.php'); ?>
-
 <div class="body row" >
 <div class="content col-sm-9" >
 <a name=main ></a>
