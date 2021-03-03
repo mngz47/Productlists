@@ -254,7 +254,7 @@ if($result){
 
 $has_products = $row = $result->fetch_assoc();
 
-$c_p = 0;
+$c_p = 1;
 
 $end = $s*40+40;
 
@@ -332,8 +332,8 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		   $body_rows.=
 		   '</div>';
 			
-	    if($c_p%4==0 && $c_p!=0){
-		 echo '<div class=row style="padding-bottom:4px;'.($c_p==0?'display:none;':'').'" >'.$body_rows.'</div>';
+	    if($c_p%4==0){
+		 echo '<div class=row style="padding-bottom:4px;" >'.$body_rows.'</div>';
 		 $body_rows='';
 	     }
 		   
