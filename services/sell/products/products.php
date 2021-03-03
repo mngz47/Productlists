@@ -295,7 +295,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 	}
 		   
 		   echo
-		   '<a class=title href="open.php?product_id='.$row['id'].'" >'.$row['title'].'</a>'.
+		   '<a class=title href="open.php?product_id='.$row['id'].'" title="'.$row['title'].'" >'.(strlen($row['title'])>14?substr($row['title'],0,14).'...':$row['title']).'</a>'.
 		   '<table class=p_head >'.
 		   '<tr>'.
 		   '<td class=price title=price style="color:green;" >'.
