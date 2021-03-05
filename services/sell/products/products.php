@@ -237,7 +237,7 @@ $result = $conn->query($sql);
 $sql = 'SELECT p.id,p.company_id,p.title,p.price,p.brand,p.specification,p.parameters,p.measurement,p.quantity,p.discount,DATE_FORMAT(p.date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
 ' product p'.
 ' WHERE draft=0'.
-($category?' AND category="'.$category.'"':'').
+($category?' AND category=\''.$category.'\'':'').
 ($category_type?' AND category_type="'.$category_type.'"':'').
 ($brand?' '.($category || $category_type?'':'WHERE').'AND brand="'.$brand.'"':'').
 ($alph?' '.($category || $category_type || $brand?'AND':'WHERE').' UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'').
