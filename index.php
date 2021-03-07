@@ -98,8 +98,7 @@ if(ISSET($_SESSION['response'])){
 	
 	<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/option/body_2.php'); ?>	
 	
-		<?php echo 'dddd'; ?>
-		<?php include 'timeline.php'; ?>
+		<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/timeline.php'); ?>
 		
 	</div>	
 		</div>
