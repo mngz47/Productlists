@@ -1,6 +1,6 @@
 <?php
 
-include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php';
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
 
 function getQueueDiscount($conn,$product_id,$q_price){
