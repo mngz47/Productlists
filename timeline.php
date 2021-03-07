@@ -43,7 +43,7 @@ $conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
              '<img src="'.(strpos($row2['url'],'//')!==false?$row2['url']:'https://'.$HOME_.'/services/sell/products/product_images/'.$row2['url']).'" width=100% />'.
              '<span style="font-size:1em;" >'.$row['title'].'</span>'.
              '</div>'.
-             '</a>';
+             '</a>'.($c%2==0 ?'</div>'.($c%12==0?'</div><div class="row tml_row" >':'').'<div class="col-sm-6 row" >':'');
 		
 	}} 
 			}
