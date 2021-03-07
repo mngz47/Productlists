@@ -20,13 +20,13 @@ $LOCATION = 'index.php';
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Productlists</title>
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/bootstrap.min.css />
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/style.css />
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/mobstyle.css />
+<link rel=stylesheet href=bootstrap.min.css />
+<link rel=stylesheet href=style.css />
+<link rel=stylesheet href=mobstyle.css />
 
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/index_style.css />
+<link rel=stylesheet href=index_style.css />
 
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/scroll_style.css />
+<link rel=stylesheet href=scroll_style.css />
 
 <link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/sign/style.css />
 <link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/search/style.css />
