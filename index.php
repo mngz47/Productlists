@@ -28,8 +28,8 @@ $LOCATION = 'index.php';
 
 <link rel=stylesheet href=scroll_style.css />
 
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/sign/style.css />
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/search/style.css />
+<link rel=stylesheet href=feature/sign/style.css />
+<link rel=stylesheet href=feature/search/style.css />
 
 <meta name="viewport" content="width=device-width" />
 
@@ -51,10 +51,10 @@ if(ISSET($_SESSION['response'])){
 
 ?>
 </script>
-<script src=https://<?php echo $HOME_; ?>/api.js ></script>
-<script src=https://<?php echo $HOME_; ?>/feature/search/api.js ></script>
-<script src=https://<?php echo $HOME_; ?>/feature/sign/api.js ></script>
-<script src=https://<?php echo $HOME_; ?>/services/sell/products/feature/option/api.js ></script>
+<script src=api.js ></script>
+<script src=feature/search/api.js ></script>
+<script src=feature/sign/api.js ></script>
+<script src=services/sell/products/feature/option/api.js ></script>
 
 
 <?php include "header_3.php"; ?>
