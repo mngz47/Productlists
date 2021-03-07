@@ -1,7 +1,7 @@
 <div class=timeline id=timeline >
     <?php
 
-$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
     $sql = 'SELECT id,title,price FROM product WHERE draft=0 ORDER BY date_added DESC';
     $result = $conn->query($sql);
  
@@ -14,7 +14,7 @@ $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlis
     if($result){
     while($row = $result->fetch_assoc()){	
         if($c<40){
-        $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+        $conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
               $sql = 'SELECT url FROM product_image WHERE product_id='.$row['id'];
     $result2 = $conn->query($sql);
     if($result2){
