@@ -1,0 +1,45 @@
+.header .upper_scroll input {
+background-image: url(resources/search.png);
+background-repeat:no-repeat;
+background-position:98% 30%;
+background-size:5% 80%;
+padding-right:10%;
+margin-top:25px;
+max-width:750px;
+}
+
+.header_2 .upper_scroll input {
+max-width:250px;
+}
+
+.header .col-sm-3 .toggleUpperScroll {
+background-image: url(resources/search.png);
+background-repeat:no-repeat;
+background-position:0 0;
+background-size:100% 100%;
+width:30px;
+height:30px;
+float:right;
+display:none;
+margin:5px;
+margin-top:20px;
+}
+
+.search_nav {
+    text-align:center;
+    font-size:1.2em;
+}
+
+@media only screen and 
+(max-width: 768px) {
+	
+.header .upper_scroll input {
+background:none;
+}
+
+.header .col-sm-3 .toggleUpperScroll {
+display:block;
+margin-top:-40px;
+}
+	
+}
