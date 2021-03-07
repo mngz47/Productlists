@@ -1,4 +1,4 @@
-<iframe id=tv src="https://productlists.co.za/services/f_snake/index.html" style="width:100%;height:400px;border:2px solid yellow;" ></iframe>
+<iframe id=tv src="https://f-snake.herokuapp.com" style="width:100%;height:400px;border:2px solid yellow;" ></iframe>
 <div class=row >
 <div style="width:80%;float:left;" >
 <a id=tv_title href=https://www.productlists.co.za/services/f_snake/index.html class="block" style="background-repeat:no-repeat;background-size:50px auto;background-postion:0 0;padding-left:55px;display:block;width:100%;" >F Snake</a>
@@ -9,10 +9,10 @@
 </div>
 <script>
 	var apps = 
-	    [ "https://www.productlists.co.za/services/f_snake/index.html",
-	      "https://www.productlists.co.za/services/pamel_slots/index.html",
-	      "https://www.productlists.co.za/services/kasi_nametest/index.html",
-	      "https://productlists.co.za/services/cv_engine/templates/temp32.html"];
+	    [ "https://f-snake.herokuapp.com",
+	      "https://pamel-slots.herokuapp.com",
+	      "https://kasi-nametest.herokuapp.com",
+	      "https://cv-engine.herokuapp.com"];
 	
 	var titles = [ "F Snake",
 		      "Pamel Slots",
