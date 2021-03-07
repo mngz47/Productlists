@@ -32,7 +32,7 @@ $index = $_GET['forward'];
 }
 
 
-$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 
 $gf_best_selling = '';
 $gf_latest = '';
