@@ -105,9 +105,9 @@ echo
 "</style>".
 "<div id=sign_face  >".
 "<table style='display:inline-block;' ><tr><td><a href=https://".$HOME_."/member/signin_main.php >Sign In</a></td></tr>".
-"<tr><td><a href=https://www.productlists.co.za/member/signup_main.php >Sign Up</a></td></tr></table>".
+"<tr><td><a href=https://".$HOME_."/member/signup_main.php >Sign Up</a></td></tr></table>".
 "<a href=# onclick='e(\"sign_face\").style.display=\"none\";e(\"signin\").style.display=\"block\";' ><img src=https://".$HOME_."/resources/user.png width=40px /></a>".
-"<a href=https://www.productlists.co.za/feature/shopping_cart/index.php ><img src=https://".$HOME_."/resources/cart.png width=40px /></a>".
+"<a href=https://".$HOME_."/feature/shopping_cart/index.php ><img src=https://".$HOME_."/resources/cart.png width=40px /></a>".
 "</div>".
 "<form id=signin method=post action='https://".$HOME_."/feature/sign/signin.php".(ISSET($_GET['from'])?'?from='.$_GET['from']:'')."' >".
 "<div class=row ><table><tr>".
