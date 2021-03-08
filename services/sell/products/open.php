@@ -159,10 +159,9 @@ if(ISSET($_SESSION['response'])){
    
 	<div id="main" class=main >
 	   <div class=products id=products >
-		   
-		   <?php
-
-$specification;
+<?php
+		   echo 'why';
+//$specification;
 	
 $sql = 'SELECT p.id,p.company_id,p.title,p.quantity,p.price,p.brand,p.specification,p.parameters,p.measurement,p.discount,p.bulk,DATE_FORMAT(p.date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
 ' product p  WHERE p.id='.$product_id;
