@@ -79,7 +79,7 @@ if($out){
 	$sql = 'SELECT url FROM product_image WHERE product_id='.$row['id'];
 	$result = $conn->query($sql);
 	$row2 = $result->fetch_assoc();
-	$gf_best_selling = ($row['rank']>0?'<a href="https://www.productlists.co.za/services/sell/products/open.php?product_id='.$row['id'].'"  style="background-image:url('.(strpos($row2['url'],'//')!==false?$row2['url']:'https://www.productlists.co.za/services/sell/products/product_images/'.$row2['url']).');" ><div class=tint title="'.$row['title'].'" >'.(strlen($row['title'])>8?substr($row['title'],0,8).'...':$row['title']).'</div></a><span class=price >R'.$row['price'].'</span>':'');
+	$gf_best_selling = ($row['rank']>0?'<a href="https://'.$HOME_.'/services/sell/products/open.php?product_id='.$row['id'].'"  style="background-image:url('.(strpos($row2['url'],'//')!==false?$row2['url']:'https://www.productlists.co.za/services/sell/products/product_images/'.$row2['url']).');" ><div class=tint title="'.$row['title'].'" >'.(strlen($row['title'])>8?substr($row['title'],0,8).'...':$row['title']).'</div></a><span class=price >R'.$row['price'].'</span>':'');
 
 	break;
 }
@@ -126,7 +126,7 @@ if($out){
 	$sql = 'SELECT url FROM product_image WHERE product_id='.$row['id'];
 	$result = $conn->query($sql);
 	$row2 = $result->fetch_assoc();
-	$gf_latest = '<a href="https://www.productlists.co.za/services/sell/products/open.php?product_id='.$row['id'].'"  style="background-image:url('.(strpos($row2['url'],'//')!==false?$row2['url']:'https://www.productlists.co.za/services/sell/products/product_images/'.$row2['url']).');" ><div class=tint title="'.$row['title'].'" >'.(strlen($row['title'])>8?substr($row['title'],0,8).'...':$row['title']).'</div></a><span class=price >R'.$row['price'].'</span>';
+	$gf_latest = '<a href="https://'.$HOME_.'/services/sell/products/open.php?product_id='.$row['id'].'"  style="background-image:url('.(strpos($row2['url'],'//')!==false?$row2['url']:'https://www.productlists.co.za/services/sell/products/product_images/'.$row2['url']).');" ><div class=tint title="'.$row['title'].'" >'.(strlen($row['title'])>8?substr($row['title'],0,8).'...':$row['title']).'</div></a><span class=price >R'.$row['price'].'</span>';
 
 	break;
 }
@@ -174,7 +174,7 @@ if($out){
 	$sql = 'SELECT url FROM product_image WHERE product_id='.$row['id'];
 	$result = $conn->query($sql);
 	$row2 = $result->fetch_assoc();
-	$gf_cheapest = '<a href="https://www.productlists.co.za/services/sell/products/open.php?product_id='.$row['id'].'"  style="background-image:url('.(strpos($row2['url'],'//')!==false?$row2['url']:'https://www.productlists.co.za/services/sell/products/product_images/'.$row2['url']).');" ><div class=tint title="'.$row['title'].'" >'.(strlen($row['title'])>8?substr($row['title'],0,8).'...':$row['title']).'</div></a><span class=price >R'.$row['price'].'</span>';
+	$gf_cheapest = '<a href="https://'.$HOME_.'/services/sell/products/open.php?product_id='.$row['id'].'"  style="background-image:url('.(strpos($row2['url'],'//')!==false?$row2['url']:'https://www.productlists.co.za/services/sell/products/product_images/'.$row2['url']).');" ><div class=tint title="'.$row['title'].'" >'.(strlen($row['title'])>8?substr($row['title'],0,8).'...':$row['title']).'</div></a><span class=price >R'.$row['price'].'</span>';
 
 	break;
 }
@@ -222,7 +222,7 @@ if($out){
 	$sql = 'SELECT url FROM product_image WHERE product_id='.$row['id'];
 	$result = $conn->query($sql);
 	$row2 = $result->fetch_assoc();
-	$gf_discount = '<a href="https://www.productlists.co.za/services/sell/products/open.php?product_id='.$row['id'].'"  style="background-image:url('.(strpos($row2['url'],'//')!==false?$row2['url']:'https://www.productlists.co.za/services/sell/products/product_images/'.$row2['url']).');" ><div class=tint title="'.$row['title'].'" >'.(strlen($row['title'])>8?substr($row['title'],0,8).'...':$row['title']).'</div></a><span class=price >R'.$row['price'].'</span>';
+	$gf_discount = '<a href="https://'.$HOME_.'/services/sell/products/open.php?product_id='.$row['id'].'"  style="background-image:url('.(strpos($row2['url'],'//')!==false?$row2['url']:'https://www.productlists.co.za/services/sell/products/product_images/'.$row2['url']).');" ><div class=tint title="'.$row['title'].'" >'.(strlen($row['title'])>8?substr($row['title'],0,8).'...':$row['title']).'</div></a><span class=price >R'.$row['price'].'</span>';
 
 	break;
 }
