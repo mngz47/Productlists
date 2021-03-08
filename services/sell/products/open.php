@@ -1,8 +1,5 @@
 <?php
 
-include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
-
-
 function getQueueDiscount($conn,$product_id,$q_price){
 	$q_discount=0;
 	$sql = 'SELECT COUNT(id) AS ii FROM queue WHERE product_id='.$product_id;
@@ -19,6 +16,9 @@ function getQueueDiscount($conn,$product_id,$q_price){
 		
           return round(($q_discount?$q_discount:$q_price));
 }
+
+
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
 $LOCATION = 'services/sell/products/open.php?product_id='.$_GET['product_id'];
 
@@ -160,8 +160,10 @@ if(ISSET($_SESSION['response'])){
 	<div id="main" class=main >
 	   <div class=products id=products >
 <?php
-		   echo 'why';
-//$specification;
+
+$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
+
+$specification;
 	
 $sql = 'SELECT p.id,p.company_id,p.title,p.quantity,p.price,p.brand,p.specification,p.parameters,p.measurement,p.discount,p.bulk,DATE_FORMAT(p.date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
 ' product p  WHERE p.id='.$product_id;
