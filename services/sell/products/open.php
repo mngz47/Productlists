@@ -192,12 +192,13 @@ if($row = $result->fetch_assoc()){
 	}
 	   echo '</div>';
     }
-	
+
+	/*
 $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 ' transaction t WHERE t.product_id='.$row['id'];
 	$result3 = $conn->query($sql3);
 	$row3 = $result3->fetch_assoc();
-	
+	*/
           echo 
 		   '</div><div class="col-sm-8" >'.
 		   '<div class="scroll_x force_right" ><div class="variance_p" >';
