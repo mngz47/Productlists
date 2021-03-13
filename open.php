@@ -97,13 +97,13 @@ $page_meta_content = ($in_product?'|':($brand?'| You can now experience all prod
 
 ?>
 <title>Productlists <?php echo ($page_title); ?></title>
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/bootstrap.min.css />
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/style.css />
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/mobstyle.css />
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/input_style.css />
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/scroll_style.css />
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/sign/style.css />
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/search/style.css />
+<link rel=stylesheet href=bootstrap.min.css />
+<link rel=stylesheet href=style.css />
+<link rel=stylesheet href=mobstyle.css />
+<link rel=stylesheet href=input_style.css />
+<link rel=stylesheet href=scroll_style.css />
+<link rel=stylesheet href=feature/sign/style.css />
+<link rel=stylesheet href=feature/search/style.css />
 <link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/feedback/style.css />
 <link rel=stylesheet href=https://<?php echo $HOME_; ?>/verification_style.css />
 <link rel=stylesheet href=https://<?php echo $HOME_; ?>/services/grocery/grocery_style.css />
@@ -118,11 +118,11 @@ $page_meta_content = ($in_product?'|':($brand?'| You can now experience all prod
 </head>
 <body>
 
-<script src=https://<?php echo $HOME_; ?>/api.js ></script>
-<script src=https://<?php echo $HOME_; ?>/verification.js ></script>
+<script src=api.js ></script>
+<script src=verification.js ></script>
 
-<script src=https://<?php echo $HOME_; ?>/feature/search/api.js ></script>
-<script src=https://<?php echo $HOME_; ?>/feature/sign/api.js ></script>
+<script src=feature/search/api.js ></script>
+<script src=feature/sign/api.js ></script>
 <script src=https://<?php echo $HOME_; ?>/services/sell/products/api.js ></script>
 
 <script src=https://<?php echo $HOME_; ?>/feature/shopping_cart/api.js ></script>
