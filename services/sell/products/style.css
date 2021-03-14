@@ -1,0 +1,128 @@
+
+.body .content .products {
+padding-top:25px;
+padding-bottom:0px;
+}
+
+
+.body .content .products .row{
+margin-bottom:10px;
+}
+
+.body .content .products .col-sm-8 {
+padding:2px;
+}
+
+.body .content .products .col-sm-8 .company_options {
+width:100%;
+}
+
+.body .content .products .col-sm-8 .company_options td {
+text-align:center;
+}
+
+.body .content .products .col-sm-8 .title {
+font-size:1.6em;
+font-weight:bold;
+color:black;
+}
+
+.body .content .products .col-sm-8 .p_head {
+width:100%;
+margin-bottom:4px;
+}
+
+.body .content .products .col-sm-8 .p_head td{
+text-align:center;
+}
+
+.body .content .products .col-sm-8 .p_head .price {
+color:green;
+font-weight:bold;
+}
+
+.body .content .products .col-sm-8 .p_head .discount {
+color:red;
+font-weight:bold;
+}
+
+.body .content .products .col-sm-8 .p_head .sold {
+color:blue;
+font-weight:bold;
+}
+
+
+.body .content .products .col-sm-8 .company {
+color:black;
+}
+
+.body .content .products .col-sm-8 .spec{
+padding:10px;
+font-size:1.2em;
+margin-bottom:0px;
+color:rgba(152, 114, 114, 1);
+}
+
+.body .content .products .col-sm-8 .main_product_image {
+ width:100%;
+}
+
+
+.body .content .products .col-sm-8 .main_product_image :hover{
+ transform:scale(1.5);
+}
+
+
+.body .content .products .col-sm-8 .next_product:hover {
+background:rgba(255, 255, 25, 0.8);
+}
+
+
+.body .content .products .col-sm-8 .next_product {
+background:rgba(255, 255, 25, 0.4);
+display:inline-block;
+margin-left:auto;
+margin-right:auto;
+padding-left:3px;
+padding-right:3px;
+font-size:2em;
+font-weight:bold;
+border-radius:40%;
+}
+
+.body .content .products .col-sm-8 .date {
+float:right;
+}
+
+.body .content .products .col-sm-8 .params {
+margin-top:10px;
+margin-bottom:10px;
+padding:10px;
+}
+
+.body .content .products .col-sm-8 .params select{
+margin-bottom:10px;
+border:0px;
+width:150px;
+display:block;
+margin-left:auto;
+margin-right:auto;
+}
+
+
+
+.body .content .products .col-sm-8 .add_to_cart {
+text-align:center;
+margin-top:10px;
+margin-bottom:10px;
+padding-bottom:5px;
+}
+
+.body .content .products .col-sm-8 .add_to_cart input{
+margin-right:4px;
+width:80px;
+}
+
+.body .content .products .col-sm-8 .f {
+margin-top:10px;
+}
