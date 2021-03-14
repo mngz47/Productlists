@@ -22,7 +22,7 @@ $conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
             
        
              $inject.=
-             '<a href="https://'.$HOME_.'/services/sell/products/open.php?product_id='.$row['id'].'" >'.
+             '<a href="open.php?product_id='.$row['id'].'" >'.
              '<div class="block '.($c%4==0?'block_purple':'').' tml_p" >'.
              '<span class=highlight_green >R'.$row['price'].'</span>'.
              '<img src="'.(strpos($row2['url'],'//')!==false?$row2['url']:'https://'.$HOME_.'/services/sell/products/product_images/'.$row2['url']).'" width=100% />'.
@@ -37,7 +37,7 @@ $conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 	if($row2 = $result2->fetch_assoc()){
 		
 		$inject.=
-             '<a href="https://'.$HOME_.'/services/sell/products/open.php?product_id='.$row['id'].'" >'.
+             '<a href="open.php?product_id='.$row['id'].'" >'.
              '<div class="block '.($c%4==0?'block_purple':'').' tml_p" >'.
              '<span class=highlight_green >R'.$row['price'].'</span>'.
              '<img src="'.(strpos($row2['url'],'//')!==false?$row2['url']:'https://'.$HOME_.'/services/sell/products/product_images/'.$row2['url']).'" width=100% />'.
