@@ -107,7 +107,7 @@ $page_meta_content = ($in_product?'|':($brand?'| You can now experience all prod
 <link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/feedback/style.css />
 <link rel=stylesheet href=https://<?php echo $HOME_; ?>/verification_style.css />
 <link rel=stylesheet href=https://<?php echo $HOME_; ?>/services/grocery/grocery_style.css />
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/services/sell/products/style.css />
+<link rel=stylesheet href=services/sell/products/style.css />
 <link rel=stylesheet href=https://<?php echo $HOME_; ?>/services/sell/products/feature/feeling/style.css />
 <link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/shopping_cart/style.css />
 <link rel="shortcut icon" type="image/png" href="https://productlists.co.za/logo.png" />
