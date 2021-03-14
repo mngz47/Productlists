@@ -21,7 +21,7 @@
 				 
 			echo 
 			 '<a class="col-sm-2" style="background-position:0 20;background-repeat:no-repeat;background-size:100%;background-image:url('.(strpos($row4['url'],'//')!==false?$row4['url']:'https://www.productlists.co.za/services/sell/products/product_images/'.str_replace (' ','%20',$row4['url'])).');display:block;height:150px;margin:3px;" '.
-			 ' href="services/sell/products/open.php?product_id='.$row3['id'].'" ><span class=tint >'.$row3['title'].
+			 ' href="open.php?product_id='.$row3['id'].'" ><span class=tint >'.$row3['title'].
 			 '</span></a>';
 			}
 	        	}	
