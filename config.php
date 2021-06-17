@@ -9,7 +9,7 @@ $DATABASE_ = 'zyo1oodysira7ro5';//produc10_productlists
  
 $conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 
-$HOME_ = 'product--lists.heroku.com';
+$HOME_ = 'product--lists.herokuapp.com';
 //$HOME_ = 'www.productlists.co.za';
 
 ?>
