@@ -252,7 +252,7 @@ $sql = 'SELECT p.id,p.company_id,p.title,p.price,p.brand,p.specification,p.param
 ($alph?' '.($category || $category_type || $brand?'AND':'WHERE').' UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'').
 ($love?' ORDER BY f.love DESC':($cheapest?' ORDER BY p.price ASC':($latest?' ORDER BY p.date_added DESC':($alph==''?' ORDER BY p.title ASC':($angry?' ORDER BY f.angry DESC':($happy?' ORDER BY f.happy DESC':($discount?' ORDER BY p.discount DESC':' ')))))));
 
-
+}
 
 echo '[sql]<textarea>'.$sql.'</textarea>';
 
