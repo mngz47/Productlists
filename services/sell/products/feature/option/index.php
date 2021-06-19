@@ -1,6 +1,7 @@
 <?php
+
+
 if(ISSET($_GET['target'])){
-$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
 if(ISSET($_SESSION['customer_id'])){
 if($_GET['t']=='a'){
 $sql = 'INSERT INTO taste (id,customer_id,opt) VALUES (0,'.$_SESSION['customer_id'].',"'.$_GET['target'].'");';
@@ -20,7 +21,6 @@ $conn->close();
 exit();
 }
 
-$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
 
 $taste = '';
 if(ISSET($_SESSION['customer_id'])){
