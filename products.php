@@ -1,4 +1,5 @@
 <?php
+
 include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
 $LOCATION = 'services/sell/products/products.php';
@@ -229,6 +230,11 @@ $sql = 'SELECT COUNT(id) AS s_t FROM product'.
 ($alph?' AND UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'');
 
 echo 'test 1';
+	$HOST_ = 'd6rii63wp64rsfb5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';//localhost
+$USER_ = 'muce70z5ukkwpv5d';//produc10_mng
+$PASS_ = 'bqvn5jp04wlmxu64';//mngzpass636
+$DATABASE_ = 'zyo1oodysira7ro5';//produc10_productlists
+	$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 $result = $conn->query($sql);
 	echo 'test 3';
 	       if($result){
