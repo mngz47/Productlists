@@ -260,9 +260,9 @@ echo '[sql]<textarea>'.$sql.'</textarea>';
 $result = $conn->query($sql);
 
 if($result){
-
+echo 'this wrong';
 $has_products = $row = $result->fetch_assoc();
-
+echo 'no its not this wrong';
 $c_p = 1;
 
 $end = $s*40+40;
