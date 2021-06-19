@@ -39,8 +39,8 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
 <div class="col-sm-3" >
 <h3>Newsletter</h3>
 <form action="https://<?php echo $HOME_; ?>/feature/feedback/index.php" method=post onsubmit=setDate('date_added_n'); id=newsletter >
-<a href=https://www.instagram.com/productlists ><img src=https://www.productlists.co.za/feature/shopping_cart/affiliate_logos/instagram.jpg width=20px /></a>
-<a href=https://www.facebook.com/productlists.co.za ><img src=https://www.productlists.co.za/feature/shopping_cart/affiliate_logos/facebook.png width=20px /></a>
+<a href=https://www.instagram.com/productlists ><img src=https://<?php echo $HOME_; ?>/feature/shopping_cart/affiliate_logos/instagram.jpg width=20px /></a>
+<a href=https://www.facebook.com/productlists.co.za ><img src=https://<?php echo $HOME_; ?>/feature/shopping_cart/affiliate_logos/facebook.png width=20px /></a>
     <input name=email type=text class=form-control placeholder=email style="margin-bottom:10px;width:70%;display:inline-block;" onblur="newsletter_auto_send(this);" />
 <script>
     function newsletter_auto_send(input){
