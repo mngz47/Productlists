@@ -1,5 +1,7 @@
 <?php
 
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
+
 function httpGet($url){
 $curl = curl_init();
 curl_setopt_array($curl, array(
@@ -11,6 +13,6 @@ curl_close($curl);
 }
 
 
-echo httpGet('https://www.productlists.co.za/services/sell/products/feature/group_four.php?forward='.$_GET['index']);
+echo httpGet('https://'.$HOME_.'/services/sell/products/feature/group_four.php?forward='.$_GET['index']);
 
 ?>
