@@ -243,8 +243,8 @@ $result = $conn->query($sql);
 		   $s_t = $row['s_t'];
 		   }
 echo $s_t;
-$sql = 'SELECT p.id,p.company_id,p.title,p.price,p.brand,p.specification,p.parameters,p.measurement,p.quantity,p.discount,DATE_FORMAT(p.date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
-' product p'.
+$sql = 'SELECT id,company_id,title,price,brand,specification,parameters,measurement,quantity,discount,DATE_FORMAT(date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
+' product'.
 ' WHERE draft=0'.
 ($category?' AND category=\''.$category.'\'':'').
 ($category_type?' AND category_type="'.$category_type.'"':'').
