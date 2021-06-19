@@ -235,7 +235,7 @@ $HOST_ = 'd6rii63wp64rsfb5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';//localhost
 $USER_ = 'muce70z5ukkwpv5d';//produc10_mng
 $PASS_ = 'bqvn5jp04wlmxu64';//mngzpass636
 $DATABASE_ = 'zyo1oodysira7ro5';//produc10_productlists
-	//$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
+	$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 $result = $conn->query($sql);
 	echo 'test 3';
 	       if($result){
@@ -256,7 +256,7 @@ $sql = 'SELECT p.id,p.company_id,p.title,p.price,p.brand,p.specification,p.param
 }
 
 //echo '[sql]<textarea>'.$sql.'</textarea>';
-	
+	$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 $result = $conn->query($sql);
 
 if($result){
@@ -285,6 +285,7 @@ while($row){
 	
 	$body_rows.= '<div class=col-sm-3 style="padding:7px;" >'.(ISSET($_GET['s'])?(($_GET['s']*40)==$c_p?'<a name=current >':''):'');
 	$sql2 = "SELECT url FROM product_image WHERE product_id=".$row["id"];
+	    $conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 	$result2 = $conn->query($sql2);
 	$row2 = $result2->fetch_assoc();
 	
