@@ -3,8 +3,8 @@ include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
 $LOCATION = 'services/sell/products/products.php';
 
-$category = (ISSET($_GET['category'])?$_GET['category']:(ISSET($_COOKIE['auto'])?explode(';',$_COOKIE['auto'])[0]:''));
-
+$category = (ISSET($_GET['category'])?$_GET['category']:"");
+/*
 $category_type = (ISSET($_GET['category_type'])?$_GET['category_type']:(ISSET($_COOKIE['auto'])?explode(';',$_COOKIE['auto'])[7]:''));
 
 $brand = (ISSET($_GET['brand'])?$_GET['brand']:(ISSET($_COOKIE['auto'])?explode(';',$_COOKIE['auto'])[6]:''));
@@ -140,6 +140,7 @@ $s = ISSET($_GET["s"])?$_GET["s"]:(ISSET($_COOKIE['auto'])?explode(';',$_COOKIE[
 $begin = $s*40;
 
 setcookie('auto',$category.';'.$alph.';'.$order_by.';'.$product_id.';'.$s.';'.$company.';'.$brand.';'.$category_type,time() + (86400 * 30 * 7),'/');
+*/
 ?>
 <!DOCTYPE html>
 <html>
