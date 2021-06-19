@@ -193,7 +193,6 @@ if(ISSET($_SESSION['response'])){
 <div id="main" class=main style="padding-left:15px;" >
 <?php 
 
-$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 	
 echo ($category?'<h3 class=block >'.$category.'</h3>':'');
 
@@ -219,6 +218,7 @@ if($category){
 <div class=products id=products >
 <?php
 
+$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 $s_t;
 {
 	
