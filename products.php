@@ -254,8 +254,8 @@ $sql = 'SELECT id,company_id,title,price,brand,specification,parameters,measurem
 
 }
 
-//echo '[sql]<textarea>'.$sql.'</textarea>';
-
+echo '[sql]<textarea>'.$sql.'</textarea>';
+$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 $result = $conn->query($sql);
 
 if($result){
