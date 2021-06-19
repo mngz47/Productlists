@@ -256,6 +256,10 @@ $sql = 'SELECT p.id,p.company_id,p.title,p.price,p.brand,p.specification,p.param
 }
 
 //echo '[sql]<textarea>'.$sql.'</textarea>';
+	$HOST_ = 'd6rii63wp64rsfb5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';//localhost
+$USER_ = 'muce70z5ukkwpv5d';//produc10_mng
+$PASS_ = 'bqvn5jp04wlmxu64';//mngzpass636
+$DATABASE_ = 'zyo1oodysira7ro5';//produc10_productlists
 	$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 $result = $conn->query($sql);
 
