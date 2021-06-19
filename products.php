@@ -1,7 +1,5 @@
 <?php
-session_start();
-
-$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
 $LOCATION = 'services/sell/products/products.php';
 
@@ -147,18 +145,18 @@ setcookie('auto',$category.';'.$alph.';'.$order_by.';'.$product_id.';'.$s.';'.$c
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Productlists Products</title>
-<link rel=stylesheet href=https://productlists.co.za/bootstrap.min.css />
-<link rel=stylesheet href=https://productlists.co.za/style.css />
-<link rel=stylesheet href=https://productlists.co.za/mobstyle.css />
-<link rel=stylesheet href=https://productlists.co.za/input_style.css />
-<link rel=stylesheet href=https://productlists.co.za/scroll_style.css />
-<link rel=stylesheet href=https://productlists.co.za/feature/sign/style.css />
-<link rel=stylesheet href=https://productlists.co.za/feature/search/style.css />
-<link rel=stylesheet href=https://productlists.co.za/feature/feedback/style.css />
-
-<link rel=stylesheet href=https://productlists.co.za/services/grocery/grocery_style.css />
-<link rel=stylesheet href=https://productlists.co.za/services/sell/products/style.css />
-<link rel=stylesheet href=https://productlists.co.za/services/sell/products/feature/feeling/style.css />
+<link rel=stylesheet href=bootstrap.min.css />
+<link rel=stylesheet href=style.css />
+<link rel=stylesheet href=mobstyle.css />
+<link rel=stylesheet href=input_style.css />
+<link rel=stylesheet href=scroll_style.css />
+<link rel=stylesheet href=feature/sign/style.css />
+<link rel=stylesheet href=feature/search/style.css />
+	
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/feedback/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/services/grocery/grocery_style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/services/sell/products/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/services/sell/products/feature/feeling/style.css />
 
 <link rel="shortcut icon" type="image/png" href="https://productlists.co.za/logo.png" />
 <meta name="viewport" content="width=device-width" />
@@ -167,13 +165,13 @@ setcookie('auto',$category.';'.$alph.';'.$order_by.';'.$product_id.';'.$s.';'.$c
 <meta name="autor" content="Mongezi Mafunda" />
 </head>
 <body>
-<script src=https://productlists.co.za/api.js ></script>
-<script src=https://productlists.co.za/feature/search/api.js ></script>
-<script src=https://productlists.co.za/feature/sign/api.js ></script>
-<script src=https://productlists.co.za/services/sell/products/api.js ></script>
-<script src=https://productlists.co.za/services/sell/products/feature/feeling/api.js ></script>
-<script src=https://productlists.co.za/feature/shopping_cart/api.js ></script>
-<script src=https://productlists.co.za/services/sell/products/feature/option/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/feature/search/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/feature/sign/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/services/sell/products/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/services/sell/products/feature/feeling/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/feature/shopping_cart/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/services/sell/products/feature/option/api.js ></script>
 
 <script>
 <?php 
