@@ -250,7 +250,7 @@ $sql = 'SELECT id,company_id,title,price,brand,specification,parameters,measurem
 ($category_type?' AND category_type="'.$category_type.'"':'').
 ($brand?' '.($category || $category_type?'':'WHERE').'AND brand="'.$brand.'"':'').
 ($alph?' '.($category || $category_type || $brand?'AND':'WHERE').' UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'').
-($love?' ORDER BY f.love DESC':($cheapest?' ORDER BY p.price ASC':($latest?' ORDER BY p.date_added DESC':($alph==''?' ORDER BY p.title ASC':($angry?' ORDER BY f.angry DESC':($happy?' ORDER BY f.happy DESC':($discount?' ORDER BY p.discount DESC':' ')))))));
+($love?' ORDER BY f.love DESC':($cheapest?' ORDER BY price ASC':($latest?' ORDER BY date_added DESC':($alph==''?' ORDER BY title ASC':($angry?' ORDER BY f.angry DESC':($happy?' ORDER BY f.happy DESC':($discount?' ORDER BY discount DESC':' ')))))));
 
 }
 
