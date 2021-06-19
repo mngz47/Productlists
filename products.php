@@ -222,8 +222,8 @@ if($category){
 	
 $s_t;
 {
-	
-$sql = 'SELECT COUNT(id) AS s_t,id,company_id,title,price,brand,specification,parameters,measurement,quantity,discount,DATE_FORMAT(date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM product'.
+	//DATE_FORMAT(date_added,"%d-%m-%y  %h:%i %p")
+$sql = 'SELECT COUNT(id) AS s_t,id,company_id,title,price,brand,specification,parameters,measurement,quantity,discount,date_added AS date_time FROM product'.
 	' WHERE draft=0'.
 ($category?' AND category="'.$category.'"':'').
 ($category_type?' AND category_type="'.$category_type.'"':'').
@@ -241,7 +241,7 @@ $result = $conn->query($sql);
 		   $row = $result->fetch_assoc();
 		   $s_t = $row['s_t'];
 		   }*/
-echo $row['s_t'];
+
 echo '[sql]<textarea>'.$sql.'</textarea>';
 	
 	/*
@@ -255,12 +255,12 @@ $sql = 'SELECT id,company_id,title,price,brand,specification,parameters,measurem
 //($love?' ORDER BY f.love DESC':($cheapest?' ORDER BY price ASC':($latest?' ORDER BY date_added DESC':($alph==''?' ORDER BY title ASC':($angry?' ORDER BY f.angry DESC':($happy?' ORDER BY f.happy DESC':($discount?' ORDER BY discount DESC':' ')))))));
 */
 }
-
-$result = $conn->query($sql);
-
+	
 if($result){
 
 $has_products = $row = $result->fetch_assoc();
+	
+	echo $row['s_t'];
 	
 $c_p = 1;
 
