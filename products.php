@@ -215,7 +215,7 @@ if($category){
 </div>
 <div class=products id=products >
 <?php
-  $conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);	
+  //$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);	
 	
 $s_t;
 {
