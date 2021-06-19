@@ -199,8 +199,7 @@ echo ($category?'<h3 class=block >'.$category.'</h3>':'');
 ?>
 <div class=category_type id=category_type >
 <?php
-  $conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);	
-	
+/*	
 if($category){
   
     $sql = 'SELECT DISTINCT category_type FROM product WHERE category='.$category;
@@ -211,13 +210,13 @@ if($category){
     echo '<a href="products.php?category='.$category.'&category_type='.$row['category_type'].'" >'.$row['category_type'].'</a>';
 	} 
     }
-	
-}
+}*/
 ?>
 </div>
 <div class=products id=products >
 <?php
-
+  $conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);	
+	
 $s_t;
 {
 	
