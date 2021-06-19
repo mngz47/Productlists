@@ -193,11 +193,15 @@ if(ISSET($_SESSION['response'])){
 <div id="main" class=main style="padding-left:15px;" >
 <?php 
 
+$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
+	
 echo ($category?'<h3 class=block >'.$category.'</h3>':'');
 
 ?>
 <div class=category_type id=category_type >
 <?php
+	
+	
 if($category){
 
     $sql = 'SELECT DISTINCT category_type FROM product WHERE category='.$category;
