@@ -51,7 +51,10 @@ if(ISSET($_SESSION['response'])){
 <div class="col-sm-3" >
 <div id=left_pane class="left_pane" >
 <div id=left_pane_1 >
-<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php'); ?>
+<?php
+	$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
+	
+	include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php'); ?>
 </div>
 <div id=left_pane_3 >
 <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four_control.php'); ?>
