@@ -234,15 +234,16 @@ $HOST_ = 'd6rii63wp64rsfb5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';//localhost
 $USER_ = 'muce70z5ukkwpv5d';//produc10_mng
 $PASS_ = 'bqvn5jp04wlmxu64';//mngzpass636
 $DATABASE_ = 'zyo1oodysira7ro5';//produc10_productlists
-	$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
-	
+$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 $result = $conn->query($sql);
 	/*
 	       if($result){
 		   $row = $result->fetch_assoc();
 		   $s_t = $row['s_t'];
 		   }*/
-echo $s_t;
+echo $row['s_t'];
+echo '[sql]<textarea>'.$sql.'</textarea>';
+	
 	/*
 $sql = 'SELECT id,company_id,title,price,brand,specification,parameters,measurement,quantity,discount,DATE_FORMAT(date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
 ' product'.
@@ -255,8 +256,6 @@ $sql = 'SELECT id,company_id,title,price,brand,specification,parameters,measurem
 */
 }
 
-echo '[sql]<textarea>'.$sql.'</textarea>';
-$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 $result = $conn->query($sql);
 
 if($result){
