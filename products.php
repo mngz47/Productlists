@@ -228,8 +228,9 @@ $sql = 'SELECT COUNT(id) AS s_t FROM product'.
 ($brand?' AND brand="'.$brand.'"':'').
 ($alph?' AND UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'');
 
-
+echo 'test 1';
 $result = $conn->query($sql);
+	echo 'test 3';
 	       if($result){
 		   $row = $result->fetch_assoc();
 		   $s_t = $row['s_t'];
