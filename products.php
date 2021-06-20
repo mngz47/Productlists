@@ -275,16 +275,20 @@ $body_rows = '';
 	 }
 	 
 	 $extend = ($c_p>=$begin && $c_p<$end);
-	 
+	 echo 'checking extent'.$extend;
+		
 	 $completed = false;
 	 // && $c_p%4!=0
     if($extend){
 	
+	    
+	    
 	$body_rows.= '<div class=col-sm-3 style="padding:7px;" >'.(ISSET($_GET['s'])?(($_GET['s']*40)==$c_p?'<a name=current >':''):'');
 	$sql2 = "SELECT url FROM product_image WHERE product_id=".$row["id"];
 	$result2 = $conn->query($sql2);
 	$row2 = $result2->fetch_assoc();
 	
+	    
 	
 $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 ' transaction t WHERE t.product_id='.$row['id'];
@@ -299,7 +303,9 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 	'<td><a href=# onclick="deleteProduct('.$row['id'].');return false;" >delete</a></td>'.
 	'</table>';
 	}
-		   
+		
+	    echo 'body to row '.$extend;
+	    
 		  $body_rows.=
 		   '<a class=title href="open.php?product_id='.$row['id'].'" title="'.$row['title'].'" >'.(strlen($row['title'])>14?substr($row['title'],0,14).'...':$row['title']).'</a>'.
 		   '<table class=p_head >'.
