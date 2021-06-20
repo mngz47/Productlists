@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
 $LOCATION = 'customer_service/faq.php';
 
@@ -9,12 +9,12 @@ $LOCATION = 'customer_service/faq.php';
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Productlists FAQ</title>
-<link rel=stylesheet href=https://productlists.co.za/bootstrap.min.css />
-<link rel=stylesheet href=https://productlists.co.za/style.css />
-<link rel=stylesheet href=https://productlists.co.za/mobstyle.css />
-<link rel=stylesheet href=https://productlists.co.za/feature/sign/style.css />
-<link rel=stylesheet href=https://productlists.co.za/feature/search/style.css />
-<link rel=stylesheet href=https://www.productlists.co.za/scroll_style.css />
+<link rel=stylesheet href=bootstrap.min.css />
+<link rel=stylesheet href=style.css />
+<link rel=stylesheet href=mobstyle.css />
+<link rel=stylesheet href=feature/sign/style.css />
+<link rel=stylesheet href=feature/search/style.css />
+<link rel=stylesheet href=scroll_style.css />
 
 
 <link rel=stylesheet href=https://listro.co.za/style.css />
@@ -38,10 +38,10 @@ if(ISSET($_SESSION['response'])){
 
 ?>
 </script>
-<script src=https://productlists.co.za/api.js ></script>
-<script src=https://productlists.co.za/feature/search/api.js ></script>
-<script src=https://productlists.co.za/feature/sign/api.js ></script>
-<script src=https://productlists.co.za/services/sell/products/feature/option/api.js ></script>
+<script src=api.js ></script>
+<script src=feature/search/api.js ></script>
+<script src=feature/sign/api.js ></script>
+<script src=services/sell/products/feature/option/api.js ></script>
 
 <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_3.php'); ?>
 
@@ -52,9 +52,8 @@ if(ISSET($_SESSION['response'])){
 <div id=left_pane class="left_pane" >
 <div id=left_pane_1 >
 <?php
-	$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
-	
-	include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php'); ?>
+      include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php'); 
+?>
 </div>
 <div id=left_pane_3 >
 <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four_control.php'); ?>
