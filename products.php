@@ -275,6 +275,7 @@ $body_rows = '';
 	 }
 	 
 	 $extend = ($c_p>=$begin && $c_p<$end);
+		
 	 echo 'checking extent'.$extend;
 		
 	 $completed = false;
@@ -284,17 +285,21 @@ $body_rows = '';
 	    
 	    
 	$body_rows.= '<div class=col-sm-3 style="padding:7px;" >'.(ISSET($_GET['s'])?(($_GET['s']*40)==$c_p?'<a name=current >':''):'');
+	    
 	$sql2 = "SELECT url FROM product_image WHERE product_id=".$row["id"];
 	$result2 = $conn->query($sql2);
 	$row2 = $result2->fetch_assoc();
 	
-	    
+	    echo '<br>product images';
 	
+	    /*
 $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 ' transaction t WHERE t.product_id='.$row['id'];
 	$result3 = $conn->query($sql3);
 	$row3 = $result3->fetch_assoc();
+	*/
 	
+	    echo '<br>product transaction';
 		    
     if(isset($_SESSION['company_id'])?$_SESSION['company_id']==$row['company_id']:false){
 	$body_rows.=
