@@ -196,7 +196,6 @@ if(ISSET($_SESSION['response'])){
 <div id="main" class=main style="padding-left:15px;" >
 <?php 
 
-	
 echo ($category?'<h3 class=block >'.$category.'</h3>':'');
 
 ?>
@@ -218,10 +217,13 @@ if($category){
 </div>
 <div class=products id=products >
 <?php
-  //$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);	
+ 
+$HOST_ = 'd6rii63wp64rsfb5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';//localhost
+$USER_ = 'muce70z5ukkwpv5d';//produc10_mng
+$PASS_ = 'bqvn5jp04wlmxu64';//mngzpass636
+$DATABASE_ = 'zyo1oodysira7ro5';//produc10_productlists
+$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);	
 	
-$s_t;
-{
 	//DATE_FORMAT(date_added,"%d-%m-%y  %h:%i %p")
 $sql = 'SELECT COUNT(id) AS s_t,id,company_id,title,price,brand,specification,parameters,measurement,quantity,discount,date_added AS date_time FROM product'.
 	' WHERE draft=0'.
@@ -229,22 +231,13 @@ $sql = 'SELECT COUNT(id) AS s_t,id,company_id,title,price,brand,specification,pa
 ($category_type?' AND category_type="'.$category_type.'"':'').
 ($brand?' AND brand="'.$brand.'"':'').
 ($alph?' AND UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'');
-
-$HOST_ = 'd6rii63wp64rsfb5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';//localhost
-$USER_ = 'muce70z5ukkwpv5d';//produc10_mng
-$PASS_ = 'bqvn5jp04wlmxu64';//mngzpass636
-$DATABASE_ = 'zyo1oodysira7ro5';//produc10_productlists
-$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
+	
 $result = $conn->query($sql);
 	/*
 	       if($result){
 		   $row = $result->fetch_assoc();
 		   $s_t = $row['s_t'];
-		   }*/
-
-echo '[sql]<textarea>'.$sql.'</textarea>';
-	
-	/*
+		   }
 $sql = 'SELECT id,company_id,title,price,brand,specification,parameters,measurement,quantity,discount,DATE_FORMAT(date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
 ' product'.
 ' WHERE draft=0'.
@@ -254,13 +247,17 @@ $sql = 'SELECT id,company_id,title,price,brand,specification,parameters,measurem
 ($alph?' '.($category || $category_type || $brand?'AND':'WHERE').' UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'');
 //($love?' ORDER BY f.love DESC':($cheapest?' ORDER BY price ASC':($latest?' ORDER BY date_added DESC':($alph==''?' ORDER BY title ASC':($angry?' ORDER BY f.angry DESC':($happy?' ORDER BY f.happy DESC':($discount?' ORDER BY discount DESC':' ')))))));
 */
-}
+
+	
+echo '[sql]<textarea>'.$sql.'</textarea>';		
 	
 if($result){
 
 $has_products = $row = $result->fetch_assoc();
 	
 echo $row['s_t'];
+
+$s_t = $row['s_t'];
 	
 $c_p = 1;
 
@@ -272,7 +269,8 @@ $body_rows = '';
 
 	
 	do {
-		 if($c_p>=$begin && !$locked){
+         
+	if($c_p>=$begin && !$locked){
 	 $locked=true;
 	 }
 	 
@@ -284,7 +282,6 @@ $body_rows = '';
 	
 	$body_rows.= '<div class=col-sm-3 style="padding:7px;" >'.(ISSET($_GET['s'])?(($_GET['s']*40)==$c_p?'<a name=current >':''):'');
 	$sql2 = "SELECT url FROM product_image WHERE product_id=".$row["id"];
-	    $conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 	$result2 = $conn->query($sql2);
 	$row2 = $result2->fetch_assoc();
 	
