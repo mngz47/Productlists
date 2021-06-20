@@ -224,8 +224,9 @@ $PASS_ = 'bqvn5jp04wlmxu64';//mngzpass636
 $DATABASE_ = 'zyo1oodysira7ro5';//produc10_productlists
 $conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);	
 	
-	//DATE_FORMAT(date_added,"%d-%m-%y  %h:%i %p")
-$sql = 'SELECT COUNT(id) AS s_t,id,company_id,title,price,brand,specification,parameters,measurement,quantity,discount,date_added AS date_time FROM product'.
+$s_t;
+	
+$sql = 'SELECT COUNT(id) AS s_t,id,company_id,title,price,brand,specification,parameters,measurement,quantity,discount,DATE_FORMAT(date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM product'.
 	' WHERE draft=0'.
 ($category?' AND category="'.$category.'"':'').
 ($category_type?' AND category_type="'.$category_type.'"':'').
@@ -233,11 +234,12 @@ $sql = 'SELECT COUNT(id) AS s_t,id,company_id,title,price,brand,specification,pa
 ($alph?' AND UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'');
 	
 $result = $conn->query($sql);
-	/*
+
 	       if($result){
 		   $row = $result->fetch_assoc();
 		   $s_t = $row['s_t'];
-		   }
+		   }	
+	
 $sql = 'SELECT id,company_id,title,price,brand,specification,parameters,measurement,quantity,discount,DATE_FORMAT(date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
 ' product'.
 ' WHERE draft=0'.
@@ -245,10 +247,9 @@ $sql = 'SELECT id,company_id,title,price,brand,specification,parameters,measurem
 ($category_type?' AND category_type="'.$category_type.'"':'').
 ($brand?' '.($category || $category_type?'':'WHERE').'AND brand="'.$brand.'"':'').
 ($alph?' '.($category || $category_type || $brand?'AND':'WHERE').' UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'');
-//($love?' ORDER BY f.love DESC':($cheapest?' ORDER BY price ASC':($latest?' ORDER BY date_added DESC':($alph==''?' ORDER BY title ASC':($angry?' ORDER BY f.angry DESC':($happy?' ORDER BY f.happy DESC':($discount?' ORDER BY discount DESC':' ')))))));
-*/
+//($cheapest?' ORDER BY price ASC':($latest?' ORDER BY date_added DESC':($alph==''?' ORDER BY title ASC':($discount?' ORDER BY discount DESC':' '))))
 
-	
+$result = $conn->query($sql);	
 echo '[sql]<textarea>'.$sql.'</textarea>';		
 	
 if($result){
@@ -256,8 +257,6 @@ if($result){
 $has_products = $row = $result->fetch_assoc();
 	
 echo $row['s_t'];
-
-$s_t = $row['s_t'];
 	
 $c_p = 1;
 
@@ -348,7 +347,6 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		   }
 		echo '<br>company details body to row '.$extend;  
 	    
-	    echo $body_rows;
 		   
 		   $body_rows.=
 		   '</div>';
