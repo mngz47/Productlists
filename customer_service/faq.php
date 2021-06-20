@@ -9,12 +9,12 @@ $LOCATION = 'customer_service/faq.php';
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Productlists FAQ</title>
-<link rel=stylesheet href=bootstrap.min.css />
-<link rel=stylesheet href=style.css />
-<link rel=stylesheet href=mobstyle.css />
-<link rel=stylesheet href=feature/sign/style.css />
-<link rel=stylesheet href=feature/search/style.css />
-<link rel=stylesheet href=scroll_style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/bootstrap.min.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/mobstyle.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/sign/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/search/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/scroll_style.css />
 
 
 <link rel=stylesheet href=https://listro.co.za/style.css />
@@ -38,10 +38,10 @@ if(ISSET($_SESSION['response'])){
 
 ?>
 </script>
-<script src=api.js ></script>
-<script src=feature/search/api.js ></script>
-<script src=feature/sign/api.js ></script>
-<script src=services/sell/products/feature/option/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/feature/search/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/feature/sign/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/services/sell/products/feature/option/api.js ></script>
 
 <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_3.php'); ?>
 
