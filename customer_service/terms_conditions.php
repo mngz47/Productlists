@@ -9,13 +9,12 @@ $LOCATION = 'customer_service/terms_conditions.php';
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Productlists Terms & Conditions</title>
-<link rel=stylesheet href=https://productlists.co.za/bootstrap.min.css />
-<link rel=stylesheet href=https://productlists.co.za/style.css />
-<link rel=stylesheet href=https://productlists.co.za/mobstyle.css />
-<link rel=stylesheet href=https://productlists.co.za/feature/sign/style.css />
-<link rel=stylesheet href=https://productlists.co.za/feature/search/style.css />
-<link rel=stylesheet href=https://www.productlists.co.za/scroll_style.css />
-
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/bootstrap.min.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/mobstyle.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/sign/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/search/style.css />
+<link rel=stylesheet href=https://<?php echo $HOME_; ?>/scroll_style.css />
 
 <link rel=stylesheet href=https://listro.co.za/style.css />
 
@@ -38,10 +37,10 @@ if(ISSET($_SESSION['response'])){
 
 ?>
 </script>
-<script src=https://productlists.co.za/api.js ></script>
-<script src=https://productlists.co.za/feature/search/api.js ></script>
-<script src=https://productlists.co.za/feature/sign/api.js ></script>
-<script src=https://productlists.co.za/services/sell/products/feature/option/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/feature/search/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/feature/sign/api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/services/sell/products/feature/option/api.js ></script>
 
 <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_3.php'); ?>
 
