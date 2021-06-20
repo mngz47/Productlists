@@ -348,7 +348,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		   }
 		echo '<br>company details body to row '.$extend;  
 	    
-	    
+	    echo $body_rows;
 		   
 		   $body_rows.=
 		   '</div>';
@@ -438,7 +438,7 @@ echo '('.$sql.')---'.mysqli_error($conn);
 <div class="col-sm-3" >
 <div id=right_pane class="right_pane" >
 <div id=left_pane_1 >
-<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four_affiliate.php'); ?>
+<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php'); ?>
 </div>
 <div id=right_pane_1 >
 <?php 
