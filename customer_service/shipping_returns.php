@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
 $LOCATION = 'customer_service/shipping_returns.php';
 
