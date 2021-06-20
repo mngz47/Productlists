@@ -1,0 +1,72 @@
+.body .content .menu .category input {
+width:100px;
+}
+
+.body .content .menu .category div{
+position:absolute;
+background:white;
+width:100px;
+max-height:150px;
+overflow-y:auto;
+}
+
+.body .content .menu .category a{
+display:block;
+border-bottom:black 1px solid;
+}
+
+.body .content .menu .alphabet a{
+font-size:1.3em;
+margin:2px;
+}
+
+.body .content .menu .begin{
+border-left:1px solid black;
+}
+
+.body .content .menu td{
+padding: 3px;
+}
+
+.body .content .menu td select {
+height:40px;
+}
+
+.body .content .menu td .a_z {
+font-size:2em;
+display:block;
+width:70px;
+}
+
+
+.body .content .menu .td_order {
+display:block;
+width:100px;
+}
+
+.body .content .menu .td_order a {
+display:block;
+}
+
+.body .content .scroll select {
+width:200px;
+font-size:1.5em;
+}
+
+.body .content .scroll {
+padding:4px;
+width:100%;
+overflow-x:auto;
+}
+
+.nav {
+text-align:center;
+padding:2px;
+}
+
+.nav .more {
+display:inline-block;
+width:30%;
+height:50px;
+font-weight:800;
+}
