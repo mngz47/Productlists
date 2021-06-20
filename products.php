@@ -276,7 +276,7 @@ $body_rows = '';
 	 
 	 $extend = ($c_p>=$begin && $c_p<$end);
 		
-	 echo 'checking extent'.$extend;
+	 echo '<br>checking extent'.$extend;
 		
 	 $completed = false;
 	 // && $c_p%4!=0
@@ -309,7 +309,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 	'</table>';
 	}
 		
-	    echo 'body to row '.$extend;
+	    echo '<br>Product Detail body to row '.$extend;
 	    
 		  $body_rows.=
 		   '<a class=title href="open.php?product_id='.$row['id'].'" title="'.$row['title'].'" >'.(strlen($row['title'])>14?substr($row['title'],0,14).'...':$row['title']).'</a>'.
@@ -329,7 +329,8 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		   
 		$result2 = $conn->query("SELECT logo,name,website FROM company WHERE id=".$row["company_id"]);
 	       if($result2){
-           $row2 = $result2->fetch_assoc();
+		    if($row2 = $result2->fetch_assoc()){
+           
 		   $body_rows.=
 		   '<table class=p_head width=100% >'.
 		   '<tr>'.
@@ -343,8 +344,11 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		   '</td>'.
 		   '</tr>'.
 		   '</table>';
+	       }
 		   }
-		  
+		echo '<br>company details body to row '.$extend;  
+	    
+	    
 		   
 		   $body_rows.=
 		   '</div>';
