@@ -260,7 +260,7 @@ if($result){
 
 $has_products = $row = $result->fetch_assoc();
 	
-	echo $row['s_t'];
+echo $row['s_t'];
 	
 $c_p = 1;
 
@@ -270,9 +270,9 @@ $locked = false;
 	
 $body_rows = '';
 
-while($row){
-	 
-	 if($c_p>=$begin && !$locked){
+	
+	do {
+		 if($c_p>=$begin && !$locked){
 	 $locked=true;
 	 }
 	 
@@ -356,8 +356,8 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 	}
 	$row = $result->fetch_assoc();
 	$c_p+=1;
-	}
-	
+		
+} while ($row = $result->fetch_assoc());
 
 	echo (!$has_products?'<div class=block >Requested <strong>product</strong> is not found.<br><br></div>':'');
 	
