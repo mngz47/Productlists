@@ -274,9 +274,7 @@ $body_rows = '';
 	 }
 	 
 	 $extend = ($c_p>=$begin && $c_p<$end);
-		
-	 echo '<br>checking extent'.$extend;
-		
+			
 	 $completed = false;
 	 // && $c_p%4!=0
     if($extend){
@@ -289,16 +287,13 @@ $body_rows = '';
 	$result2 = $conn->query($sql2);
 	$row2 = $result2->fetch_assoc();
 	
-	    echo '<br>product images';
-	
 	    /*
 $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 ' transaction t WHERE t.product_id='.$row['id'];
 	$result3 = $conn->query($sql3);
 	$row3 = $result3->fetch_assoc();
 	*/
-	
-	    echo '<br>product transaction';
+
 		    
     if(isset($_SESSION['company_id'])?$_SESSION['company_id']==$row['company_id']:false){
 	$body_rows.=
@@ -307,8 +302,6 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 	'<td><a href=# onclick="deleteProduct('.$row['id'].');return false;" >delete</a></td>'.
 	'</table>';
 	}
-		
-	    echo '<br>Product Detail body to row '.$extend;
 	    
 		  $body_rows.=
 		   '<a class=title href="open.php?product_id='.$row['id'].'" title="'.$row['title'].'" >'.(strlen($row['title'])>14?substr($row['title'],0,14).'...':$row['title']).'</a>'.
@@ -344,8 +337,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		   '</tr>'.
 		   '</table>';
 	       }
-		   }
-		echo '<br>company details body to row '.$extend;  
+		   } 
 	    
 		   
 		   $body_rows.=
