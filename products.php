@@ -250,7 +250,8 @@ $sql = 'SELECT id,company_id,title,price,brand,specification,parameters,measurem
 //($cheapest?' ORDER BY price ASC':($latest?' ORDER BY date_added DESC':($alph==''?' ORDER BY title ASC':($discount?' ORDER BY discount DESC':' '))))
 
 $result = $conn->query($sql);	
-echo '[sql]<textarea>'.$sql.'</textarea>';		
+	
+//echo '[sql]<textarea>'.$sql.'</textarea>';		
 	
 if($result){
 
