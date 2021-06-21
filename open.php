@@ -123,7 +123,6 @@ $page_meta_content = ($in_product?'|':($brand?'| You can now experience all prod
 
 <script src=https://<?php echo $HOME_; ?>/feature/search/api.js ></script>
 <script src=https://<?php echo $HOME_; ?>/feature/sign/api.js ></script>
-<script src=https://<?php echo $HOME_; ?>/feature/sign/api.js ></script>
 <script src=https://<?php echo $HOME_; ?>/services/sell/products/api.js ></script>
 
 <script src=https://<?php echo $HOME_; ?>/feature/shopping_cart/api.js ></script>
