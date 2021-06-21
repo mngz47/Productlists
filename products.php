@@ -332,7 +332,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		   '</td>'.
 		   '<td>'.($category=='grocery'?explode(';',$row['measurement'])[0].($row['title']=='Cooking Oil' || $row['title']=='Milk' || $row['title']=='Mass'?'lt':'kg'):'').'</td>'.
 		   '<td>'.
-		   '<span class=date ><a style="float:right;" class=fshare href="https://facebook.com/sharer.php?u=https://www.productlists.co.za/services/sell/products/products.php?product_id=
+		   '<span class=date ><a style="float:right;" class=fshare href="https://facebook.com/sharer.php?u=https://'.$HOME_.'/open.php?product_id=
 '.$row['id'].'" onclick="javascript:window.open(this.href, \'\', \'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left=\'+((screen.width/2)-300));return false;" >Share</a></span>'.
 		   '</td>'.
 		   '</tr>'.
