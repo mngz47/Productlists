@@ -38,7 +38,7 @@ $result = $conn->query($sql);
 
 if($result){
 echo '<a name=options ></a>'.
-'<a href="https://www.productlists.co.za/services/sell/products/products.php?category=" ><div class="block opt_begin" >all options</div></a>';
+'<a href="products.php?category=" ><div class="block opt_begin" >all options</div></a>';
 while($row = $result->fetch_assoc()){
 	
 	$latest_image;
@@ -55,7 +55,7 @@ while($row = $result->fetch_assoc()){
 	
 echo 
 '<div class="'.(ISSET($category)?($category==$row['category']?'block_hoov':'block'):'block').' opt" >'.
-'<a href="https://www.productlists.co.za/services/sell/products/products.php?category='.$row['category'].'" >'.
+'<a href="products.php?category='.$row['category'].'" >'.
 '<div style="background-image:url('.(strpos($latest_image,'//')!==false?$latest_image:'https://www.productlists.co.za/services/sell/products/product_images/'.$latest_image).');" >'.
 
 $row['category'].'</div></a>'.
