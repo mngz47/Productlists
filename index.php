@@ -33,7 +33,7 @@ $LOCATION = 'index.php';
 
 <meta name="viewport" content="width=device-width" />
 
-<link rel="shortcut icon" type="image/png" href="logo.png" />
+<link rel="shortcut icon" type="image/png" href="https://<?php echo $HOME_; ?>/resources/logo.png" />
 <meta name="description" content="Technology Firm - working towards solutions to free the youth. PRODUCTLISTS" />
 <meta name="keywords" content="productlists,product,sell,discount,cheap,latest,best selling,local,mzansi,south africa,pietermaritzburg,kzn,online shopping,technology,share files,music,documents,content,learn,education,information" />
 <meta name="author" content="Mongezi Mafunda" />
