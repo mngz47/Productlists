@@ -10,9 +10,9 @@ include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
   
 <link rel=stylesheet href=https://listro.co.za/style.css />
 <link rel=stylesheet href=https://<?php echo $HOME_; ?>/index_style.css />  
-
+<?php
 include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php');
-  
+  ?>
 <meta name="viewport" content="width=device-width" />
 <meta name="description" content="Technology Firm - working towards solutions to free the youth. We offer a system for members to sell products through a professional online company and build their brand. The system is suitable for businesses seeking to achieve remote income flow and lower operating costs." />
 <meta name="keywords" content="shares,writer,programmer,engineer,donate,enquiry,productlists,support,contact,south africa,pietermaritzburg,kzn,online shopping,technology,file sharing,music,documents,content,member,company,directory,column,products" />
@@ -29,10 +29,10 @@ include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php');
     }
   }
   
-  ?>
-  
 include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php');
- 
+   
+  ?>
+
 <div class=p_cont >
 
   <?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_3.php'; ?>
