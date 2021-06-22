@@ -1,6 +1,7 @@
 <div class=scroll_x >
 <?php
-$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+	
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
 $t = 0;
 $sql = 'SELECT COUNT(id) as t FROM product WHERE (title LIKE "%'.$_GET["text"].'%" OR specification LIKE "%'.$_GET["text"].'%" OR brand LIKE "%'.$_GET["text"].'%" OR  category LIKE "%'.$_GET["text"].'%") AND draft=0';
@@ -33,8 +34,8 @@ while($row = $result->fetch_assoc()){
 	}
 	
       echo '<tr>'.
-		   '<td><a href="https://www.productlists.co.za/services/sell/products/open.php?product_id='.$row['id'].'" ><img src="'.(strpos($product_image,'//')!==false?$product_image:'https://productlists.co.za/services/sell/products/product_images/'.$product_image).'" width=40 /></a></td>'.
-		   '<td><a href="https://www.productlists.co.za/services/sell/products/open.php?product_id='.$row['id'].'" >'.$row['title'].'</a></td>'.
+		   '<td><a href="https://'.$HOME_.'/open.php?product_id='.$row['id'].'" ><img src="'.(strpos($product_image,'//')!==false?$product_image:'https://'.$HOME_.'/services/sell/products/product_images/'.$product_image).'" width=40 /></a></td>'.
+		   '<td><a href="https://'.$HOME_.'/open.php?product_id='.$row['id'].'" >'.$row['title'].'</a></td>'.
 		   '<td>'.(strlen($row['specification'])>20?substr($row['specification'],0,20).'...':$row['specification']).'</td>'.
 		   '</tr>';
 	  
