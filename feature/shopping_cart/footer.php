@@ -27,25 +27,15 @@ if(ISSET($_SESSION['customer_id'])){
 ?>
 <strong>Recommended</strong>
 </div>
-<div class="column_footer_half block sharp_two delivery" id=post_office selected=false onclick=select(0,this); ><img src="https://www.productlists.co.za/feature/shopping_cart/affiliate_logos/delivery/post_office.png" /><strong>Recommended</strong></div>
+<div class="column_footer_half block sharp_two delivery" id=post_office selected=false onclick=select(0,this); ><p class=big >Post Office</p><strong>Recommended</strong></div>
 </div>
 <div class="row" >
-<div class="col-sm-5 block sharp_two payment" id=paypal selected=false onclick=select(1,this); ><img src="https://www.productlists.co.za/feature/shopping_cart/affiliate_logos/payment/paypal.png" /></div>
-<div class="col-sm-5 block sharp_two delivery" id=courier_it selected=false onclick=select(0,this); ><img src="https://www.productlists.co.za/feature/shopping_cart/affiliate_logos/delivery/courier_it.jpg" /></div>
+<div class="col-sm-5 block sharp_two payment" id=paypal selected=false onclick=select(1,this); ><p class=big >PayPal</p></div>
+<div class="col-sm-5 block sharp_two delivery" id=courier_it selected=false onclick=select(0,this); ><p class=big >Courier It</p></div>
 </div>
 <div class="row" >
-<div class="column_footer_half block sharp_two payment" id=cc selected=false onclick=select(1,this); >
-<p class=big >Credit Card</p>
-<div class=row >
-<div class=col-sm-6 >
-<img src="https://www.productlists.co.za/feature/shopping_cart/affiliate_logos/payment/visa.png" />
-</div>
-<div class=col-sm-6 >
-<img src="https://www.productlists.co.za/feature/shopping_cart/affiliate_logos/payment/master_card.png" />
-</div>
-</div>
-</div>
-<div class="column_footer_half block sharp_two delivery" id=fed_ex selected=false onclick=select(0,this); ><img src="https://www.productlists.co.za/feature/shopping_cart/affiliate_logos/delivery/fed_ex.png" /></div>
+<div class="column_footer_half block sharp_two payment" id=cc selected=false onclick=select(1,this); ><p class=big >Credit Card</p></div>
+<div class="column_footer_half block sharp_two delivery" id=fed_ex selected=false onclick=select(0,this); ><p class=big >Fed Ex</p></div>
 </div>
 
 
