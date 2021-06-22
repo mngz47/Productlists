@@ -15,14 +15,14 @@ header('Location:/services/sell/company_general.php');
 <head>
 <title>Productlists | Company Transaction</title>
 	
-include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php');
+<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php'); ?>
 	
 <meta name="viewport" content="width=device-width" />
 <meta name="autor" content="Mongezi Mafunda" />
 </head>
 <body>
 	
-include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php');
+<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php'); ?>
 	
 <div id=container class=p_cont >
 		
