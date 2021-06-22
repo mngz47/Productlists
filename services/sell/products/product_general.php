@@ -14,7 +14,7 @@ header('Location:/services/sell/company_general.php');
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Productlists | Product General</title>
 	
-include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php');
+<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php'); ?>
 	
 <meta name="viewport" content="width=device-width" />
 <meta name="description" content="" />
@@ -33,7 +33,7 @@ if(ISSET($_SESSION['response'])){
 ?>
 </script>
 	
-include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php');
+<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php'); ?>
 	
 <div class=scroll_master >
 <div id=container class=p_cont >
