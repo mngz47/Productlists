@@ -53,33 +53,26 @@ include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php');
 <p>
    <h3>About</h3>
    
-   @writeforsa on IG is an online initiative to get young writers to grow their influence and expand their knowledge as well as write for lifetime commissions by creating unique content.<br><br>
-The idea is to write an article turn it to a video then link it to Wikipedia.<br><br>
 We are an online marketplace that offers a professional and safe system that allows Members to buy directly from suppliers.<br><br>
 We aim to remove the risk from the Member which is posed by traditional classified sites by using professional suppliers in South Africa as well as China.<br><br>
 The system is suitable for businesses seeking to achieve remote income flow and lower operating costs. <br><br>
-AUTOMATION will allow humans to shift their attention to bigger things rather then food and shelter. Our engineers create SYSTEMS that will automate water, energy, food and shelter supply and make it free for everyone.<br><br>
-We predict that by 2025 we will have created homes for 400 families, an assembly from iron and glass. The houses will be fitted with water, energy and food supply.<br><br>
-
-Please donate to the cause.
-
- <strong style="float:right;margin:3px;" >est. 2012</strong>
+    
 </p> 
 <div class=scroll_x >
 <?php
 
-echo httpGet("https://www.listro.co.za/tasks/list.php?business=http://www.productlists.co.za/about.php");
+// echo httpGet("https://www.listro.co.za/tasks/list.php?business=http://www.productlists.co.za/about.php");
 
 ?>  
 </div>
 <p>
-<h3>Employees</h3>
 <div class="row horizontal_view" >
-<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/member/feature/employee/list.php'; ?>   
+<?php 
+//    include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/member/feature/employee/list.php';
+?>   
 </div>    
 </p>
 </div>
-
 </div>
 <div class="col-sm-3" >
 <div id=right_pane class="right_pane" >
