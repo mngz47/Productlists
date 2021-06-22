@@ -110,7 +110,7 @@ $page_meta_content = ($in_product?'|':($brand?'| You can now experience all prod
 <link rel=stylesheet href=services/sell/products/style.css />
 <link rel=stylesheet href=https://<?php echo $HOME_; ?>/services/sell/products/feature/feeling/style.css />
 <link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/shopping_cart/style.css />
-<link rel="shortcut icon" type="image/png" href="https://productlists.co.za/logo.png" />
+<link rel="shortcut icon" type="image/png" href="https://<?php echo $HOME_; ?>/resources/logo.png" />
 <meta name="viewport" content="width=device-width" />
 <meta name="description" content="<?php echo ($page_meta_content); ?> " />
 <meta name="keywords" content="productlists,product,sell,discount,cheap,latest,best selling,local,mzansi,south africa,pietermaritzburg,kzn,online shopping,technology,share files,music,documents,content,learn,education,information" />
