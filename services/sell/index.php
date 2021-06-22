@@ -1,7 +1,6 @@
 <?php
-session_start();
 
-$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
 $LOCATION = 'services/sell/index.php';
 
@@ -20,16 +19,9 @@ header('Location:/member/signup_main.php');
 <html>
 <head>
 <title>Productlists | Sell Products</title>
-<link rel=stylesheet href=https://productlists.co.za/style.css />
-<link rel=stylesheet href=https://productlists.co.za/bootstrap.min.css />
-<link rel=stylesheet href=https://productlists.co.za/mobstyle.css />
 
-<link rel=stylesheet href=https://productlists.co.za/feature/sign/style.css />
-<link rel=stylesheet href=https://productlists.co.za/feature/search/style.css />
-<link rel=stylesheet href=https://productlists.co.za/feature/feedback/style.css />
-
-<link rel=stylesheet href=https://productlists.co.za/services/sell/style.css />
-<link rel="shortcut icon" type="image/png" href="https://productlists.co.za/logo.png" />
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php');
+	
 <meta name="viewport" content="width=device-width" />
 <meta name="autor" content="Mongezi Mafunda" />
 </head>
@@ -44,10 +36,9 @@ if(ISSET($_SESSION['response'])){
 
 ?>
 </script>   
-<script src=https://productlists.co.za/api.js ></script>
-<script src=https://productlists.co.za/feature/search/api.js ></script>
-<script src=https://productlists.co.za/feature/sign/api.js ></script>
-<script src=https://productlists.co.za/services/sell/products/feature/option/api.js ></script>
+	
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php');
+	
 <div id=container class=p_cont >
 
 <?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_3.php'; ?>
