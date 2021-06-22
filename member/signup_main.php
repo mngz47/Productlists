@@ -1,7 +1,6 @@
 <?php
 
-
-session_start();
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
 $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
 
@@ -12,16 +11,9 @@ $LOCATION = 'member/signup_main.php';
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Productlists | Primary Info</title>
-<link rel=stylesheet href=https://productlists.co.za/style.css />
-<link rel=stylesheet href=https://productlists.co.za/bootstrap.min.css />
-<link rel=stylesheet href=https://productlists.co.za/mobstyle.css />
-<link rel=stylesheet href=https://productlists.co.za/input_style.css />
-<link rel=stylesheet href=https://productlists.co.za/verification_style.css />
-
-<link rel=stylesheet href=https://productlists.co.za/feature/sign/style.css />
-<link rel=stylesheet href=https://productlists.co.za/feature/search/style.css />
-
-<link rel="shortcut icon" type="image/png" href="https://productlists.co.za/logo.png" />
+	
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php');
+	
 <meta name="viewport" content="width=device-width" />
 <meta name="description" content="Sign in to be able use all the features offered by productlists. Welcome back!" />
 <meta name="keywords" content="productlists,sign in,directory,south africa,pmb,pietermaritzburg,kzn,online shopping,technology,file sharing,shopping,in depth content" />
@@ -46,10 +38,9 @@ if(ISSET($_SESSION['response'])){
 
 ?>
 </script>
-<script src=https://productlists.co.za/api.js ></script>
-<script src=https://productlists.co.za/verification.js ></script>
-<script src=https://productlists.co.za/feature/search/api.js ></script>
-<script src=https://productlists.co.za/feature/sign/api.js ></script>
+	
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php');
+	
 <div id=container class=p_cont >
 
 <?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/header_3.php"; ?>
