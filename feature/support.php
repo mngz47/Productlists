@@ -10,7 +10,7 @@ include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 <link rel=stylesheet href=https://listro.co.za/style.css />
 <link rel=stylesheet href=https://<?php echo $HOME_; ?>/index_style.css />
     
-include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php');
+<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php'); ?>
     
 <meta name="viewport" content="width=device-width" />
 <meta name="description" content="Technology Firm - working towards solutions to free the youth. We offer a system for members to sell products through a professional online company and build their brand. The system is suitable for businesses seeking to achieve remote income flow and lower operating costs." />
@@ -19,7 +19,7 @@ include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php');
 </head>
 <body>
     
-include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php');
+<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php'); ?>
     
 <div id=container class=p_cont >
     
