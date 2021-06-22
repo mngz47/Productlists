@@ -76,7 +76,7 @@ $row = $result->fetch_assoc();
 <div class="col-sm-5" >
 <div class="images" >
 <span>Profile Image</span>
-<a href=# onclick="setImage(e('image'),<?php echo ($row?'\'member/update_customer_image.php\'':'\'\''); ?>);return false;" ><img id=image src="<?php echo (ISSET($row['p_p']) && $row['p_p']?'https://productlists.co.za/member/customer_images/'.$row['p_p']:'https://productlists.co.za/resources/user.png'); ?>" /></a>
+<a href=# onclick="setImage(e('image'),<?php echo ($row?'\'member/update_customer_image.php\'':'\'\''); ?>);return false;" ><img id=image src="<?php echo (ISSET($row['p_p']) && $row['p_p']?'https://'.$HOME_.'/member/customer_images/'.$row['p_p']:'https://'.$HOME_.'/resources/user.png'); ?>" /></a>
 <input id=image_input type=file name=p_p accept="image/*"  />
 </div>
 </div>
