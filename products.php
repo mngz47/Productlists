@@ -245,7 +245,7 @@ echo '<br>count('.$s_t.')';
 $sql = 'SELECT id,company_id,title,price,brand,specification,parameters,measurement,quantity,discount,DATE_FORMAT(date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
 ' product'.
 ' WHERE draft=0'.
-($category?' AND category=\''.$category.'\'':'').
+($category?' AND category="'.$category.'"':'').
 ($category_type?' AND category_type="'.$category_type.'"':'').
 ($brand?' '.($category || $category_type?'':'WHERE').'AND brand="'.$brand.'"':'').
 ($alph?' '.($category || $category_type || $brand?'AND':'WHERE').' UPPER(SUBSTRING(title,1,1))="'.$alph.'"':'');
