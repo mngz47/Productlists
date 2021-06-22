@@ -1,0 +1,18 @@
+.column_footer_half{
+width:48%;
+float:left;
+}
+
+ .shopping_cart {
+margin-top:10px;
+margin-bottom:20px;
+}
+
+.shopping_cart .total{
+border-top:1px solid black;
+}
+
+.shopping_cart .btn_cont{
+float:right;
+}
+
