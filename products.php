@@ -136,7 +136,7 @@ if(ISSET($_COOKIE['product_view_lock']) && ISSET($_SESSION['customer_id']) && st
 
 $product_id = (ISSET($_GET['product_id'])?$_GET['product_id']:($reverse_p_id?-1:(ISSET($_COOKIE['auto'])?explode(';',$_COOKIE['auto'])[3]:-1)));
 
-$s = ISSET($_GET["s"])?$_GET["s"]:(ISSET($_COOKIE['auto'])?explode(';',$_COOKIE['auto'])[4]:0);
+$s = (ISSET($_GET["s"])?$_GET["s"]:0);
 
 $begin = $s*40;
 
@@ -186,7 +186,7 @@ if(ISSET($_SESSION['response'])){
 ?>
 
 </script>
-	<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/aggregation/lite/plug.php'); ?>
+<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/aggregation/lite/plug.php'); ?>
 <div class=scroll_master >
 <div id=container class=p_cont >
 <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_3.php'); ?>
