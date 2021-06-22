@@ -1,7 +1,6 @@
 <?php
-session_start();
 
-$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
 $LOCATION = 'services/sell/company_transactions.php';
 
@@ -15,22 +14,16 @@ header('Location:/services/sell/company_general.php');
 <html>
 <head>
 <title>Productlists | Company Transaction</title>
-<link rel=stylesheet href=https://www.productlists.co.za/style.css />
-<link rel=stylesheet href=https://www.www.productlists.co.za/scroll_style.css />
-<link rel=stylesheet href=https://www.productlists.co.za/bootstrap.min.css />
-<link rel=stylesheet href=https://www.productlists.co.za/mobstyle.css />
-<link rel=stylesheet href=https://www.productlists.co.za/feature/feedback/style.css />
-<link rel=stylesheet href=https://www.productlists.co.za/feature/sign/style.css />
-<link rel=stylesheet href=https://www.productlists.co.za/feature/search/style.css />
-<link rel="shortcut icon" type="image/png" href="https://www.productlists.co.za/logo.png" />
+	
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php');
+	
 <meta name="viewport" content="width=device-width" />
 <meta name="autor" content="Mongezi Mafunda" />
 </head>
 <body>
-<script src=https://www.productlists.co.za/api.js ></script>
-<script src=https://www.productlists.co.za/feature/search/api.js ></script>
-<script src=https://www.productlists.co.za/feature/sign/api.js ></script>
-<script src=https://www.productlists.co.za/services/sell/products/feature/option/api.js ></script>
+	
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php');
+	
 <div id=container class=p_cont >
 		
 <?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_3.php'; ?>	
