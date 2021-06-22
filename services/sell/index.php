@@ -20,7 +20,7 @@ header('Location:/member/signup_main.php');
 <head>
 <title>Productlists | Sell Products</title>
 
-include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php');
+<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php'); ?>
 	
 <meta name="viewport" content="width=device-width" />
 <meta name="autor" content="Mongezi Mafunda" />
@@ -37,7 +37,7 @@ if(ISSET($_SESSION['response'])){
 ?>
 </script>   
 	
-include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php');
+<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php'); ?>
 	
 <div id=container class=p_cont >
 
