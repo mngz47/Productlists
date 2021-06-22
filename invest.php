@@ -61,7 +61,7 @@ include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
     <tr><td>Mobile App</td></tr>
   </table>
   After you process the transaction you will recieve personal email from us with confirmation.<br>
-  To make investment greater than R6000 access <a href=https://www.productlists.co.za/customer_service/faq.php >FAQ</a> for banking details.
+  To make investment greater than R6000 access <a href=https://<?php echo $HOME_; ?>/customer_service/faq.php >FAQ</a> for banking details.
   </p>
     <div id=calculator style="width:333px;margin-left:auto;margin-right:auto;margin-bottom:20px;" >
           <p>
