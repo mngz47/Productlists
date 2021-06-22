@@ -47,7 +47,7 @@ $_SESSION['cart'] = str_replace($_GET['cart_target'].'&','',$_SESSION['cart']);
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Productlists | Shopping Cart</title>
 	
-include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php');
+<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php'); ?>
 	
 <meta name="viewport" content="width=device-width" />
 <meta name="description" content="Welcome to productlists, let's help you experience the best of technology - we are ready to embrace your partnership." />
@@ -65,7 +65,7 @@ if(ISSET($_SESSION['response'])){
 
 ?>
 </script>
-include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php');
+<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php'); ?>
 	
 <div id=container class=p_cont >
 
@@ -91,7 +91,8 @@ The delivery cost remains the same regardless of the method you choose, this is 
 <div class="row shopping_cart scroll_x" >
 <table class="table" ><tr><th></th><th>title</th><th>weight</th><th>params</th><th class=highlight_green >original price</th><th class=highlight >dicount price</th><th>Qty</th><th></th></tr>
 <?php
-$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+	
+$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 
 $total_cost = 0;
 
@@ -117,8 +118,8 @@ $row = $result->fetch_assoc();
 	if($result2){
     $row2 = $result2->fetch_assoc();
 	  echo '<tr>'.
-		   '<td><img src="'.(strpos($row2["url"],'https://')!==false?$row2["url"]:'https://www.productlists.co.za/services/sell/products/product_images/'.$row2["url"]).'" width=40 /></td>'.
-		   '<td><a href="https://www.productlists.co.za/services/sell/products/products.php?product_id='.$row['id'].'" >'.$row['title'].'</a></td>'.
+		   '<td><img src="'.(strpos($row2["url"],'https://')!==false?$row2["url"]:'https://'.$HOME_.'/services/sell/products/product_images/'.$row2["url"]).'" width=40 /></td>'.
+		   '<td><a href="https://'.$HOME_.'/open.php?product_id='.$row['id'].'" >'.$row['title'].'</a></td>'.
 		   '<td>'.(explode(';',$row['measurement'])[0]).($row['title']=='Cooking Oil' || $row['title']=='Milk' || $row['title']=='Mass'?'lt':'kg').'</td>';
 		  $qty = explode('/',$products[$a])[1];
 		  
@@ -135,7 +136,7 @@ $row = $result->fetch_assoc();
 	   '<td><span><strike>R'.($row['price']+($row['price']*$row['discount']/100)).'</strike></span></td>'.
 	   '<td><span>R'.($row['bulk']==1?getQueueDiscount($row['id'],$row['price']):$row['price']).'</span></td>'.
 	   '<td><span>'.$qty.'</span></td>'.
-	   '<td><a href="https://www.productlists.co.za/feature/shopping_cart/index.php?cart_target='.$products[$a].'" >X</a></td></tr>'; 
+	   '<td><a href="https://'.$HOME_.'/feature/shopping_cart/index.php?cart_target='.$products[$a].'" >X</a></td></tr>'; 
 		
 		   $total_cost+=(($row['bulk']==1?getQueueDiscount($row['id'],$row['price']):$row['price'])*$qty);
 		   $delivery+=$row['shipment_cost']*$qty;
