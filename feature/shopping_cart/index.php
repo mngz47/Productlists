@@ -1,5 +1,6 @@
 <?php
-session_start();
+
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
 $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
 
@@ -47,13 +48,9 @@ $_SESSION['cart'] = str_replace($_GET['cart_target'].'&','',$_SESSION['cart']);
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Productlists | Shopping Cart</title>
-<link rel=stylesheet href=https://www.productlists.co.za/style.css />
-<link rel=stylesheet href=https://www.productlists.co.za/bootstrap.min.css />
-<link rel=stylesheet href=https://www.productlists.co.za/mobstyle.css />
-<link rel=stylesheet href=https://www.productlists.co.za/feature/sign/style.css />
-<link rel=stylesheet href=https://www.productlists.co.za/feature/search/style.css />
-<link rel=stylesheet href=https://www.productlists.co.za/feature/shopping_cart/style.css />
-<link rel="shortcut icon" type="image/png" href="https://www.productlists.co.za/logo.png" />
+	
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php');
+	
 <meta name="viewport" content="width=device-width" />
 <meta name="description" content="Welcome to productlists, let's help you experience the best of technology - we are ready to embrace your partnership." />
 <meta name="keywords" content="productlists,contact,south africa,pietermaritzburg,kzn,online shopping,technology,file sharing,music,documents,content,member,company,directory,column,products" />
@@ -70,10 +67,8 @@ if(ISSET($_SESSION['response'])){
 
 ?>
 </script>
-<script src=https://www.productlists.co.za/api.js ></script>
-<script src=https://www.productlists.co.za/feature/search/api.js ></script>
-<script src=https://www.productlists.co.za/feature/sign/api.js ></script>
-<script src=https://www.productlists.co.za/feature/shopping_cart/api.js ></script>
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php');
+	
 <div id=container class=p_cont >
 
 <?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/header_3.php"; ?>
