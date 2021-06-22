@@ -52,33 +52,8 @@ include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php');
 ?>	
 <div id=container class=p_cont >
 
-<div id=header class="header row" >
-<div class="col-sm-3" >
-<div>
-<a href=https://<?php echo $HOME_; ?>/index.php class="logo logo_start" ></a>
-<a href=https://<?php echo $HOME_; ?>/index.php class="title logo" >Productlists</a>
-<a href="#" onclick="toggleUpperScroll();return false;" class="toggleUpperScroll highlight" ></a>
-<a href="#" onclick="toggleSignIn();return false;" class="toggleSignIn highlight" ></a>
-</div>
-</div>
-<div class="col-sm-6" >
-<div class=upper_scroll >
-<input onfocus=s_in(); onblur=s_out(this); type=search onkeyup="search(this.value);" class="form-control shadow" id=search placeholder="search" />
-</div>
-</div>
-<div id=header_right class="col-sm-3">
-<?php 
-
-if(ISSET($_GET['from'])){
-    echo httpGet('https://'.$HOME_.'/feature/sign/signin.php?from='.$_GET['from']);
-}else{
-    
-}
-
-?>
-</div>
-</div>
-
+<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_3.php'; ?>
+	
 <div class="body row" >
 <div class="col-sm-3" >
 <div id=left_pane class="left_pane" >
@@ -123,23 +98,6 @@ if(ISSET($_GET['from'])){
 </div>
 </form>
 
-
-<div class=artpiece >
-<h3>Nameless Swag</h3>
-<img src=https://<?php echo $HOME_; ?>/resources/nameless_swag.jpg title="nameless swag" />
-</div>
-<style>
-
-.artpiece {
-margin-bottom:20px;
-text-align:center;
-}
-
-.artpiece img {
-width:70%;
-}
-</style>
-
 </div>
 </div>
 <div class="col-sm-3" >
@@ -147,9 +105,9 @@ width:70%;
 </div>
 </div>
 </div>
-<?php
- include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/footer_2.php"; 
-?>
+ <?php
+ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/footer_4.php'; 
+ ?>
 </div>
 </body>
 </html>
