@@ -240,7 +240,7 @@ $result = $conn->query($sql);
 		   $s_t = $row['s_t'];
 		   }	
 	
-echo '<br>count('.$s_t.')';
+//echo '<br>count('.$s_t.')';
 	
 $sql = 'SELECT id,company_id,title,price,brand,specification,parameters,measurement,quantity,discount,DATE_FORMAT(date_added,"%d-%m-%y  %h:%i %p") AS date_time FROM'.
 ' product'.
@@ -253,13 +253,11 @@ $sql = 'SELECT id,company_id,title,price,brand,specification,parameters,measurem
 
 $result = $conn->query($sql);	
 	
-echo '<br>[sql]<textarea>'.$sql.'</textarea>';		
+//echo '<br>[sql]<textarea>'.$sql.'</textarea>';		
 	
 if($result){
 
 $has_products = $row = $result->fetch_assoc();
-	
-echo $row['s_t'];
 	
 $c_p = 1;
 
