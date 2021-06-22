@@ -4,7 +4,7 @@ include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
 $LOCATION = 'services/sell/products/products.php';
 
-$category = (ISSET($_GET['category'])?$_GET['category']:"");
+$category = (ISSET($_GET['category'])?$_GET['category']:(ISSET($_COOKIE['auto'])?explode(';',$_COOKIE['auto'])[0]:''));
 
 $category_type = (ISSET($_GET['category_type'])?$_GET['category_type']:(ISSET($_COOKIE['auto'])?explode(';',$_COOKIE['auto'])[7]:''));
 
@@ -160,7 +160,7 @@ setcookie('auto',$category.';'.$alph.';'.$order_by.';'.$product_id.';'.$s.';'.$c
 <link rel=stylesheet href=https://<?php echo $HOME_; ?>/services/sell/products/style.css />
 <link rel=stylesheet href=https://<?php echo $HOME_; ?>/services/sell/products/feature/feeling/style.css />
 
-<link rel="shortcut icon" type="image/png" href="https://productlists.co.za/logo.png" />
+<link rel="shortcut icon" type="image/png" href="https://<?php echo $HOME_; ?>/resources/logo.png" />
 <meta name="viewport" content="width=device-width" />
 <meta name="description" content="Productlists" />
 <meta name="keywords" content="productlists,product,sell,discount,cheap,latest,best selling,local,mzansi,south africa,pietermaritzburg,kzn,online shopping,technology,share files,music,documents,content,learn,education,information" />
