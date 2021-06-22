@@ -41,7 +41,7 @@ include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 <div class="col-sm-3" >
 <div id=left_pane class="left_pane" >
 <div id=left_pane_1 >
-<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four_affiliate.php'; ?>
+<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php'; ?>
 </div>
 <div id=left_pane_2 style="display:none;" >
 <?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/relationship.php'; ?>
