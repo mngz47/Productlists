@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 function httpGet($url){
 $curl = curl_init();
 curl_setopt_array($curl, array(
@@ -21,13 +19,9 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php';
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Productlists | Sign In</title>
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/style.css />
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/bootstrap.min.css />
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/mobstyle.css />
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/input_style.css />
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/sign/style.css />
-<link rel=stylesheet href=https://<?php echo $HOME_; ?>/feature/search/style.css />
-<link rel="shortcut icon" type="image/png" href="https://productlists.co.za/logo.png" />
+	
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php');
+	
 <meta name="viewport" content="width=device-width" />
 <meta name="description" content="Become a member, become part real technology within four fields. File sharing; shopping; in depth content" />
 <meta name="keywords" content="productlists,sign in,south africa,pmb,pietermaritzburg,kzn,online shopping,technology,sharing,shopping,in depth content" />
@@ -53,9 +47,9 @@ if(ISSET($_SESSION['response'])){
 ?>
 </script> 
 <script src="https://apis.google.com/js/platform.js" async defer></script>
-<script src=https://<?php echo $HOME_; ?>/api.js ></script>
-<script src=https://<?php echo $HOME_; ?>/feature/search/api.js ></script>
-<script src=https://<?php echo $HOME_; ?>/feature/sign/api.js ></script>
+	
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php');
+	
 <div id=container class=p_cont >
 
 <div id=header class="header row" >
