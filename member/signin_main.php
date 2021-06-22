@@ -19,9 +19,9 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php';
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Productlists | Sign In</title>
-	
+<?php	
 include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php');
-	
+	?>
 <meta name="viewport" content="width=device-width" />
 <meta name="description" content="Become a member, become part real technology within four fields. File sharing; shopping; in depth content" />
 <meta name="keywords" content="productlists,sign in,south africa,pmb,pietermaritzburg,kzn,online shopping,technology,sharing,shopping,in depth content" />
@@ -47,9 +47,9 @@ if(ISSET($_SESSION['response'])){
 ?>
 </script> 
 <script src="https://apis.google.com/js/platform.js" async defer></script>
-	
+<?php	
 include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php');
-	
+?>	
 <div id=container class=p_cont >
 
 <div id=header class="header row" >
