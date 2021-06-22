@@ -2,8 +2,6 @@
 
 include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
-$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
-
 function getQueueDiscount($product_id,$price){
 	$q_discount;
 	$sql = 'SELECT COUNT(id) AS ii FROM queue WHERE product_id='.$product_id;
