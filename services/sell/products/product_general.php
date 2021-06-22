@@ -1,7 +1,6 @@
 <?php
-session_start();
 
-$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
 $LOCATION = 'services/sell/products/product_general.php';
 
@@ -14,16 +13,9 @@ header('Location:/services/sell/company_general.php');
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Productlists | Product General</title>
-<link rel=stylesheet href=https://productlists.co.za/bootstrap.min.css />
-<link rel=stylesheet href=https://productlists.co.za/style.css />
-<link rel=stylesheet href=https://productlists.co.za/mobstyle.css />
-<link rel=stylesheet href=https://productlists.co.za/input_style.css />
-<link rel=stylesheet href=https://productlists.co.za/services/sell/products/input_style.css />
-<link rel=stylesheet href=https://productlists.co.za/verification_style.css />
-<link rel=stylesheet href=https://productlists.co.za/feature/sign/style.css />
-<link rel=stylesheet href=https://productlists.co.za/feature/search/style.css />
-
-<link rel="shortcut icon" type="image/png" href="https://productlists.co.za/logo.png" />
+	
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php');
+	
 <meta name="viewport" content="width=device-width" />
 <meta name="description" content="" />
 <meta name="keywords" content="productlists,product,sell,discount,cheap,latest,best selling,local,mzansi,south africa,pietermaritzburg,kzn,online shopping,technology,share files,music,documents,content,learn,education,information" />
@@ -40,13 +32,9 @@ if(ISSET($_SESSION['response'])){
 
 ?>
 </script>
-<script src=https://productlists.co.za/api.js ></script>
-<script src=https://productlists.co.za/verification.js ></script>
-<script src=https://productlists.co.za/feature/search/api.js ></script>
-<script src=https://productlists.co.za/feature/sign/api.js ></script>
-<script src=https://productlists.co.za/services/sell/products/product_image_input_api.js ></script>
-<script src=https://productlists.co.za/services/sell/products/product_general_api.js ></script>
-<script src=https://productlists.co.za/services/sell/products/feature/option/api.js ></script>
+	
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php');
+	
 <div class=scroll_master >
 <div id=container class=p_cont >
 	
