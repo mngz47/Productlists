@@ -11,9 +11,9 @@ $LOCATION = 'member/signup_main.php';
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Productlists | Primary Info</title>
-	
+<?php	
 include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php');
-	
+?>	
 <meta name="viewport" content="width=device-width" />
 <meta name="description" content="Sign in to be able use all the features offered by productlists. Welcome back!" />
 <meta name="keywords" content="productlists,sign in,directory,south africa,pmb,pietermaritzburg,kzn,online shopping,technology,file sharing,shopping,in depth content" />
@@ -38,9 +38,9 @@ if(ISSET($_SESSION['response'])){
 
 ?>
 </script>
-	
+<?php	
 include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php');
-	
+?>	
 <div id=container class=p_cont >
 
 <?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/header_3.php"; ?>
