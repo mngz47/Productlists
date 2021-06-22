@@ -5,7 +5,7 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
 <ul style="list-style:none;" >
     <li><a href=https://<?php echo $HOME_; ?>/feature/support.php >Support</a></li>
     <li><a href=https://<?php echo $HOME_; ?>/about.php >About</a></li>
-    <li><a href=https://<?php echo $HOME_; ?>/feature/aggregation/lite/index.html >Automatic</a></li>
+    <li><a href=https://agg-lite.herokuapp.com >Automatic</a></li>
     <li><a href=https://<?php echo $HOME_; ?>/invest.php >Invest</a></li>
   </ul>
 </div>
