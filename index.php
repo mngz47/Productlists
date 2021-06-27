@@ -66,12 +66,6 @@ if(ISSET($_SESSION['response'])){
 <div id="main" class=main >
 	
 <?php include 'services/face_2.php'; ?>	
-
-<iframe id=four_target_home src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=instruments&banner=0JB0A4VDS5FZSF8J66G2&f=ifr&linkID=957b6056e810aaba8d6734b832d49fbf&t=productlists4-20&tracking_id=productlists4-20" width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
-
-	<div class=forward >
-    <script src="https://<?php echo $HOME_; ?>/services/banners/api.js" ></script>
-</div>
 	
 </div>
 </div>
