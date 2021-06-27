@@ -1,12 +1,12 @@
 .header .signin .user_image {
-background-image:url(https://www.productlists.co.za/resources/user.png);
+background-image:url(https://product--lists.herokuapp.com/resources/user.png);
 background-repeat:no-repeat;
 background-position:0 0;
 background-size:100% 100%;
 }
 
 .header .col-sm-3 .toggleSignIn {
-background-image: url(https://www.productlists.co.za/resources/user.png);
+background-image: url(https://product--lists.herokuapp.com/resources/user.png);
 background-repeat:no-repeat;
 background-position:0 0;
 background-size:100% 100%;
