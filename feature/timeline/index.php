@@ -3,10 +3,6 @@ if(ISSET($_GET['top'])){
 
 //include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php';
     
-    $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
-    
-    $HOME_ = 'www.productlists.co.za';
-    
     $sql = 'SELECT id,title,price FROM product ORDER BY date_added DESC';
     $result = $conn->query($sql);
  
