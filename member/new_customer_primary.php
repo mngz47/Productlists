@@ -1,7 +1,7 @@
 <?php
-include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/api.php';
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
-session_start();
+include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/api.php';
 
 $_SESSION['customer_primary_cache'] =
     $_POST['name'].';'.
@@ -38,8 +38,7 @@ if($_POST['name'] &&
    move_uploaded_file($_FILES['p_p']['tmp_name'],'customer_images/'.$p_p);
    }
    
-   $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
-   
+  
    $sql = 'SELECT id FROM customer WHERE email_cell="'.$_POST['new_email'].'"';
    $result = $conn->query($sql);
    
