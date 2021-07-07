@@ -2,8 +2,6 @@
 
 include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
-$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
-
 $LOCATION = 'member/signup_main.php';
 
 ?>
