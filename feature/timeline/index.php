@@ -1,7 +1,7 @@
 <?php
 if(ISSET($_GET['top'])){
 
-//include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php';
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php';
     
     $sql = 'SELECT id,title,price FROM product ORDER BY date_added DESC';
     $result = $conn->query($sql);
@@ -15,14 +15,14 @@ if(ISSET($_GET['top'])){
     if($result){
     while($row = $result->fetch_assoc()){	
         if($c>$_GET['top'] && $c<($_GET['top']+40)){
-        $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+    //    $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
               $sql = 'SELECT url FROM product_image WHERE product_id='.$row['id'];
     $result2 = $conn->query($sql);
     if($result2){
             if($row2 = $result2->fetch_assoc()){
             
             if($c%3==0){
-    $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists_columns');
+ //   $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists_columns');
     $sql = 'SELECT id,title,cover_image FROM col ORDER BY date_added DESC';
     $result3 = $conn->query($sql);
     if($result3){
