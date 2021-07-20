@@ -6,7 +6,7 @@ if(ISSET($_POST['type']) && ISSET($_POST['email_cell']) && ISSET($_POST['passwor
     
     //$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
    // $conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
-    include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
+   // include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
     
 $sql = 'SELECT id,password FROM '.$_POST['type'].' WHERE email_cell="'.$_POST['email_cell'].'"';
 $result = $conn->query($sql);
