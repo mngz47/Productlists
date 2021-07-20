@@ -17,6 +17,7 @@ if($row = $result->fetch_assoc()){
     
 if($row['password']==$_POST['password']){ 
 
+session_start();
 $_SESSION[$_POST['type'].'_id']=$row['id'];
 $_SESSION['response'] = 'success';
 
