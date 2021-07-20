@@ -2,7 +2,7 @@
 
 include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/api.php';
 
-//include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
 if(ISSET($_POST['type']) && ISSET($_POST['email_cell']) && ISSET($_POST['password'])){
     
