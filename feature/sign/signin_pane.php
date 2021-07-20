@@ -1,6 +1,8 @@
 <?php
 
-$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
+//$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
+
+$conn = new mysqli('d6rii63wp64rsfb5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com','muce70z5ukkwpv5d','bqvn5jp04wlmxu64','zyo1oodysira7ro5');
 
 if(ISSET($_SESSION['company_id'])){
 $sql = 'SELECT id,name,logo FROM company WHERE id='.$_SESSION['company_id'];
