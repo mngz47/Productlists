@@ -23,6 +23,6 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
 
 </div>
 <div id=header_right class="col-sm-3">
-<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/sign/signin.php'; ?>
+<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/sign/signin_pane.php'; ?>
 </div>
 </div>
