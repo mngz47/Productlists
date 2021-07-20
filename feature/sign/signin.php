@@ -2,9 +2,12 @@
 
 include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/api.php';
 
-include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
+//include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
 if(ISSET($_POST['type']) && ISSET($_POST['email_cell']) && ISSET($_POST['password'])){
+    
+    //$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+    $conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
     
 $sql = 'SELECT id,password FROM '.$_POST['type'].' WHERE email_cell="'.$_POST['email_cell'].'"';
 $result = $conn->query($sql);
@@ -55,6 +58,8 @@ if(ISSET($_GET['from'])){
 if(ISSET($_COOKIE['auto_login']) && $_COOKIE['auto_login'] && ISSET($_SESSION['customer_id'])){
 $_SESSION['customer_id'] = $_COOKIE['auto_login'];
 }
+
+$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 
 if(ISSET($_SESSION['company_id'])){
 $sql = 'SELECT id,name,logo FROM company WHERE id='.$_SESSION['company_id'];
