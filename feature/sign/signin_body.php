@@ -1,6 +1,8 @@
 <?php
 
-$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+//$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+
+$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 
 if(ISSET($_SESSION['company_id'])){
 
