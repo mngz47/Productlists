@@ -15,7 +15,7 @@ include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php';
     if($result){
     while($row = $result->fetch_assoc()){	
         if($c>$_GET['top'] && $c<($_GET['top']+40)){
-    //    $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
+      $conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
               $sql = 'SELECT url FROM product_image WHERE product_id='.$row['id'];
     $result2 = $conn->query($sql);
     if($result2){
@@ -23,7 +23,8 @@ include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php';
             
             if($c%3==0){
  //   $conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists_columns');
-    $sql = 'SELECT id,title,cover_image FROM col ORDER BY date_added DESC';
+     $conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
+                $sql = 'SELECT id,title,cover_image FROM col ORDER BY date_added DESC';
     $result3 = $conn->query($sql);
     if($result3){
         
