@@ -8,6 +8,8 @@ if(ISSET($_POST['type']) && ISSET($_POST['email_cell']) && ISSET($_POST['passwor
    // $conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
    // include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
     
+    $conn = new mysqli('d6rii63wp64rsfb5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com','muce70z5ukkwpv5d','bqvn5jp04wlmxu64','zyo1oodysira7ro5');
+    
 $sql = 'SELECT id,password FROM '.$_POST['type'].' WHERE email_cell="'.$_POST['email_cell'].'"';
 $result = $conn->query($sql);
 
