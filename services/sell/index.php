@@ -50,7 +50,9 @@ if(ISSET($_SESSION['response'])){
 <?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php'; ?>
 </div>
 <div id=left_pane_3 >
-<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four_control.php'; ?>
+<?php 
+	//include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four_control.php'; 
+?>
 </div>
 <div id=left_pane_2 style="display:none;" >
 <?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/relationship.php'; ?>
@@ -68,7 +70,7 @@ if(ISSET($_SESSION['response'])){
     if($result){
     while($row=$result->fetch_assoc()){
         echo
-        '<a href="https://www.productlists.co.za/services/sell/open_company.php?company_id='.$row['id'].'" ><div class="block company" style="background-image:url(https://www.productlists.co.za/services/sell/company_images/'.$row['logo'].');background-repeat:no-repeat;background-size:70px auto;padding-left:74px;" >'.
+        '<a href="https://'.$HOME_.'/services/sell/open_company.php?company_id='.$row['id'].'" ><div class="block company" style="background-image:url(https://'.$HOME_.'/services/sell/company_images/'.$row['logo'].');background-repeat:no-repeat;background-size:70px auto;padding-left:74px;" >'.
         '<span>'.$row['name'].'</span></div></a>';
         
     }   
@@ -76,7 +78,7 @@ if(ISSET($_SESSION['response'])){
     
     ?>
 
-<a href="https://www.productlists.co.za/services/sell/company_general.php" ><div class="block company" style="background-image:url(https://www.productlists.co.za/resources/company.png);background-repeat:no-repeat;background-size:70px auto;padding-left:74px;" >
+<a href="https://'.$HOME_.'/services/sell/company_general.php" ><div class="block company" style="background-image:url(https://'.$HOME_.'/resources/company.png);background-repeat:no-repeat;background-size:70px auto;padding-left:74px;" >
 <span>New Company</span></div></a>
 
 
