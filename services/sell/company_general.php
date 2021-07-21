@@ -18,15 +18,9 @@ header('Location:/member/signup_main.php');
 <html>
 <head>
 <title>Productlists | Company General</title>
-<link rel=stylesheet href=https://productlists.co.za/style.css />
-<link rel=stylesheet href=https://productlists.co.za/bootstrap.min.css />
-<link rel=stylesheet href=https://productlists.co.za/mobstyle.css />
-<link rel=stylesheet href=https://productlists.co.za/input_style.css />
-<link rel=stylesheet href=https://productlists.co.za/verification_style.css />
-<link rel=stylesheet href=https://productlists.co.za/feature/feedback/style.css />
-<link rel=stylesheet href=https://productlists.co.za/feature/sign/style.css />
-<link rel=stylesheet href=https://productlists.co.za/feature/search/style.css />
-<link rel="shortcut icon" type="image/png" href="https://productlists.co.za/logo.png" />
+	
+<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_styles.php'); ?>
+	
 <meta name="viewport" content="width=device-width" />
 <meta name="autor" content="Mongezi Mafunda" />
 </head>
@@ -41,12 +35,9 @@ if(ISSET($_SESSION['response'])){
 
 ?>
 </script>
-<script src=https://productlists.co.za/api.js ></script>
-<script src=https://productlists.co.za/verification.js ></script>
-<script src=https://productlists.co.za/feature/search/api.js ></script>
-<script src=https://productlists.co.za/feature/sign/api.js ></script>
-<script src=https://productlists.co.za/services/sell/company_general_api.js ></script>
-<script src=https://productlists.co.za/services/sell/products/feature/option/api.js ></script>
+	
+	<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/p_scripts.php'); ?>
+
 <div id=container class=p_cont >
 	
 	<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_3.php'; ?>
@@ -89,7 +80,7 @@ $row = $result->fetch_assoc();
 <div class="images" >
 <span>Logo</span>
 <a href=# onclick="setImage(e('image'),<?php echo ($row?'\'services/sell/update_company_image.php\'':'\'\''); ?>);return false;" >
-<img id=image src="<?php echo ($row['logo']?'https://www.productlists.co.za/services/sell/company_images/'.$row['logo']:'https://www.productlists.co.za/resources/company.png'); ?>" /></a>
+<img id=image src="<?php echo ($row['logo']?'https://'.$HOME_.'/services/sell/company_images/'.$row['logo']:'https://'.$HOME_.'/resources/company.png'); ?>" /></a>
 <input id=image_input type=file name=logo accept="image/*"  />
 </div>
 </div>
@@ -124,7 +115,7 @@ echo '];</script>'.
 <input type=text name=email_cell onfocus="v_open(this,100);" onkeydown="return (len(this,null)?true:false);" value="<?php echo ($row?$row['email_cell']:(ISSET($_SESSION['company_general_cache'])?explode(';',$_SESSION['company_general_cache'])[1]:'')); ?>" onblur=<?php echo ($row?'editfield_2("services/sell/update_company.php","'.$row['id'].'","email_cell","\""+this.value+"\"",email(this,"company",0));':'email(this,"company",1);'); ?> />
 <?php echo ($row?'':'<span>Password</span><input onfocus="v_open(this,15);showPassword(this,1);" onblur="password_v(this);showPassword(this,0);" onkeydown="return (len(this,\'p\')?true:false);" autocomplete=false type=password name=password value="'.(ISSET($_SESSION['company_general_cache'])?explode(';',$_SESSION['company_general_cache'])[2]:'').'" />'); ?>
 <div id=v_load >
-<img src=https://productlists.co.za/resources/loader.gif width=20px /><span>sending verification code...</span>
+<img src=https://<?php echo $HOME_; ?>/resources/loader.gif width=20px /><span>sending verification code...</span>
 </div>
 <div id=v_code >
 <span>Verification Code</span>
