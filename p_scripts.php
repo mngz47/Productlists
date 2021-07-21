@@ -6,4 +6,5 @@
 <script src=https://<?php echo $HOME_; ?>/feature/shopping_cart/api.js ></script>
 <script src=https://<?php echo $HOME_; ?>/services/sell/products/product_image_input_api.js ></script>
 <script src=https://<?php echo $HOME_; ?>/services/sell/products/product_general_api.js ></script>
+<script src=https://<?php echo $HOME_; ?>/services/sell/company_general_api.js ></script>
 <script src=https://<?php echo $HOME_; ?>/services/sell/products/feature/option/api.js ></script>
