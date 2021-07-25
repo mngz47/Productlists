@@ -296,8 +296,6 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		
 		<?php
 		
-		echo '<h1>tabs</h1>';
-		
 		$queue_checkout;
 		if(ISSET($row['bulk']) && $row['bulk']==1){
 			$sql = 'SELECT COUNT(id) AS ii FROM queue WHERE product_id='.$_GET['product_id'];
@@ -323,13 +321,13 @@ $result = $conn->query($sql);
 	</div>
 	<div id=queue <?php echo (ISSET($row['bulk']) && $row['bulk']==1?'':'style="display:none;"'); ?> >
 	<?php 
-		echo '<h1>bulk</h1>';
+		
+		
 		if(ISSET($row['bulk']) && $row['bulk']==1){
 		include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/queue/index.php'; 
 		}else{
 			echo '<p>Feature is supported for items available in bulk.</p>';
 		}
-		echo '<h1>bulkk</h1>';
 	?>
 	</div>
 <div id=checkout style="display:none;" >
@@ -342,13 +340,13 @@ $result = $conn->query($sql);
     */
 	
     include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/face.php');
-   echo '<h1>face</h1>';
+   
     
      ?>
   
     
     <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/footer.php'); ?>
-echo '<h1>footer/h1>';
+
 	</div>
 <div class=row id=reviews style="display:none;" >	
 <?php
