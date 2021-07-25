@@ -295,6 +295,9 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		<a href=# onclick="e('checkout').style.display='none';e('reviews').style.display='none';e('spec').style.display='';e('queue').style.display='none';return false;" class="space" >Description</a>
 		
 		<?php
+		
+		echo '<h1>tabs</h1>';
+		
 		$queue_checkout;
 		if(ISSET($row['bulk']) && $row['bulk']==1){
 			$sql = 'SELECT COUNT(id) AS ii FROM queue WHERE product_id='.$_GET['product_id'];
