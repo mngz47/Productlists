@@ -320,22 +320,24 @@ $result = $conn->query($sql);
 	</div>
 	<div id=queue <?php echo (ISSET($row['bulk']) && $row['bulk']==1?'':'style="display:none;"'); ?> >
 	<?php 
+		echo '<h1>bulk</h1>';
 		if(ISSET($row['bulk']) && $row['bulk']==1){
 		include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/queue/index.php'; 
 		}else{
 			echo '<p>Feature is supported for items available in bulk.</p>';
 		}
+		echo '<h1>bulkk</h1>';
 	?>
 	</div>
 <div id=checkout style="display:none;" >
 	 <?php
-    
-    if(!ISSET($_SESSION['customer_id'])){
-     
-    // include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/q_c/quick_c.php');
    
+    /*
+    if(!ISSET($_SESSION['customer_id'])){
+    include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/q_c/quick_c.php');
     }
-    
+    */
+	
     include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/face.php');
    echo '<h1>face</h1>';
     
