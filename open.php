@@ -337,13 +337,13 @@ $result = $conn->query($sql);
     }
     
     include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/face.php');
-   
+   echo '<h1>face</h1>';
     
      ?>
   
     
     <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/footer.php'); ?>
-
+echo '<h1>footer/h1>';
 	</div>
 <div class=row id=reviews style="display:none;" >	
 <?php
