@@ -4,10 +4,11 @@
 <div class="column_footer_half sharp_two" ><strong>Select Delivery Method</strong></div>
 </div>
 <div class="row" >
-<div class="column_footer_half block sharp_two payment" id=balance selected=false onclick=<?php echo (ISSET($_SESSION['customer_id'])?'select(1,this);':(ISSET($_COOKIE['has_account'])?'signInFocus();':'document.location="https://www.productlists.co.za/member/signup_main.php";')); ?> >
+<div class="column_footer_half block sharp_two payment" id=balance selected=false onclick=<?php echo (ISSET($_SESSION['customer_id'])?'select(1,this);':(ISSET($_COOKIE['has_account'])?'signInFocus();':'document.location="https://'.$HOME_.'/member/signup_main.php";')); ?> >
 <p>Use My Balance</p>
 <?php
 if(ISSET($_SESSION['customer_id'])){
+	$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 	$sql = 'SELECT balance FROM customer WHERE id='.$_SESSION['customer_id'];
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
