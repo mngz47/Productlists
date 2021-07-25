@@ -350,8 +350,12 @@ $result = $conn->query($sql);
 	</div>
 <div class=row id=reviews style="display:none;" >	
 	
-	<iframe width=auto height=auto src="https://feedback.aliexpress.com/display/productEvaluation.htm?v=2&productId=<?php echo $row['ali_productId']; ?>&ownerMemberId=<?php echo $row['ali_companyId']; ?>" ></iframe>
-	
+	<?php 
+	if($row['ali_productId'] && $row['ali_companyId']){
+	echo '<iframe width=auto height=auto src="https://feedback.aliexpress.com/display/productEvaluation.htm?v=2&productId='.$row['ali_productId'].'&ownerMemberId='.$row['ali_companyId'].'" ></iframe>';
+	}
+	?>
+
 <?php
 include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products/reply/index.php";
    
