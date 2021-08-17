@@ -351,6 +351,7 @@ $result = $conn->query($sql);
 <div class=row id=reviews style="display:none;" >	
 	
 	<?php 
+	$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 	$sql = 'SELECT ali_productId,ali_companyId FROM product WHERE id='.$_GET['product_id'];
 $result = $conn->query($sql);
 	       if($row = $result->fetch_assoc()){
