@@ -351,10 +351,14 @@ $result = $conn->query($sql);
 <div class=row id=reviews style="display:none;" >	
 	
 	<?php 
-	echo 'test('.$row['ali_productId'].','.$row['ali_companyId'].')';
-	if($row['ali_productId'] && $row['ali_companyId']){
+	$sql = 'SELECT ali_productId,ali_companyId FROM product WHERE id='.$_GET['product_id'];
+$result = $conn->query($sql);
+	       if($row = $result->fetch_assoc()){
+		       //echo 'test('.$row['ali_productId'].','.$row['ali_companyId'].')';
+			if($row['ali_productId'] && $row['ali_companyId']){
 	echo '<iframe width=auto height=auto src="https://feedback.aliexpress.com/display/productEvaluation.htm?v=2&productId='.$row['ali_productId'].'&ownerMemberId='.$row['ali_companyId'].'" ></iframe>';
-	}
+			} 
+		  }
 	?>
 
 <?php
