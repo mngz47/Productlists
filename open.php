@@ -357,7 +357,7 @@ $result = $conn->query($sql);
 	       if($row = $result->fetch_assoc()){
 		       //echo 'test('.$row['ali_productId'].','.$row['ali_companyId'].')';
 			if($row['ali_productId'] && $row['ali_companyId']){
-	echo '<iframe width=auto height=auto src="https://feedback.aliexpress.com/display/productEvaluation.htm?v=2&productId='.$row['ali_productId'].'&ownerMemberId='.$row['ali_companyId'].'" ></iframe>';
+	echo '<iframe width=100% height=auto src="https://feedback.aliexpress.com/display/productEvaluation.htm?v=2&productId='.$row['ali_productId'].'&ownerMemberId='.$row['ali_companyId'].'" ></iframe>';
 			} 
 		  }
 	?>
