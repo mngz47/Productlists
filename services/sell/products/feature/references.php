@@ -7,7 +7,9 @@ $row = $result->fetch_assoc();
 $refs = explode('|',$row['refs']);
 for($a=0;$a<count($refs)-1;$a++){
 $p = explode('>',$refs[$a]);
-echo '<a href="'.$p[1].'" target=blank ><div class=block >'.$p[0].'</div></a>';
+echo '<a href="'.$p[1].'" target=blank ><div class=block >'.$p[0].
+  (strpos($p[1],"aliexpress")>-1?'<img src=https://'.$HOME_.'/resources/AliExpress.png width=100% />':'').
+  '</div></a>';
 }
 }
 ?>
