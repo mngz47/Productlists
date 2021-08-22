@@ -173,7 +173,9 @@ if($result = $conn->query($sql)){
     
 if($row = $result->fetch_assoc()){
 	
-	$more_than_one_product = false;
+	$more_than_one_image = false;
+	
+	$images = '';
 	
 	echo 
 	
@@ -185,12 +187,12 @@ if($row = $result->fetch_assoc()){
 	
 	if($result2){
 
-		echo '<div id=product_images >';
 	while($row22=$result2->fetch_assoc()){
-		 $more_than_one_product = true;
-	echo '<span id="'.(strpos($row22["url"],'//')!==false?$row22["url"]:'product_images/'.$row22["url"]).'" /></span>';
+		 $more_than_one_image = true;
+		 $images .= '<span id="'.(strpos($row22["url"],'//')!==false?$row22["url"]:'product_images/'.$row22["url"]).'" />'.
+		 '<img src="'.(strpos($row22["url"],'//')!==false?$row22["url"]:'product_images/'.$row22["url"]).'" width=50px height=auto title="'.$row['title'].'" />'.
+		 '</span>';
 	}
-	   echo '</div>';
     }
 	/*
 $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
@@ -225,8 +227,11 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		   '</table>'.
 		   '<a href="products.php?product_id='.$row['id'].'" ><img id=main_product_image class=main_product_image onmouseleave=" e(\'mother\').style.display = \'none\';" onmousemove="showMother(event);" src="'.(strpos($row2["url"],'//')!==false?$row2["url"]:'product_images/'.$row2["url"]).'" /></a>'.
 		   
-		   (ISSET($more_than_one_product)?
-		   '<div style="text-align:center;" ><a href=# onclick="nextProduct();return false;" class=next_product > > </a></div>':'');
+		   (ISSET($more_than_one_image)?
+		   '<div style="text-align:center;" id=product_images >'.
+		   $images.
+		   '<a href=# onclick="nextProduct();return false;" class=next_product > > </a>'.
+		   '</div>':'');
 		   
 		$result2 = $conn->query("SELECT logo,name,website FROM company WHERE id=".$row["company_id"]);
 	       if($result2){
@@ -408,6 +413,7 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/cover_face.ph
 	<div class="row" >
 <div class="content col-sm-9" >
 	<div style="padding:20px;" >
+		
 		<div id='amazon_products' style='display:none' >
 		<span class=title >Introduction To Productlists</span>
 		<p>Productlists is a tech firm working towards solutions to free the youth. Enjoy our instant game service, product listings and reviews.</p>	
@@ -465,10 +471,12 @@ Ready to help - Ask Alexa to tell a joke, play music, answer questions, play the
 		
 	</div>
 		</div>
+		
 <div class="col-sm-3" >
 <?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products/feature/group_four_affiliate_video.php"; ?>
 	<div id=group_four_affiliate_video_dd style="padding:4px;font-size:1.3em;" >Productlists is a tech firm working towards solutions to free the youth. Enjoy our instant game service, product listings and reviews.</div>
 		</div>
+		
 	</div>
 	
 <?php 	
