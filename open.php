@@ -225,7 +225,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		   '</td>'.
 		   '</tr>'.
 		   '</table>'.
-		   '<a href="products.php?product_id='.$row['id'].'" ><img id=main_product_image class=main_product_image onmouseleave=" e(\'mother\').style.display = \'none\';" onmousemove="showMother(event);" src="'.(strpos($row2["url"],'//')!==false?$row2["url"]:'product_images/'.$row2["url"]).'" /></a>'.
+		   '<a href="products.php?product_id='.$row['id'].'" ><img title="'.$row['title'].'" id=main_product_image class=main_product_image onmouseleave=" e(\'mother\').style.display = \'none\';" onmousemove="showMother(event);" src="'.(strpos($row2["url"],'//')!==false?$row2["url"]:'product_images/'.$row2["url"]).'" /></a>'.
 		   
 		   (ISSET($more_than_one_image)?
 		   '<div style="text-align:center;" id=product_images >'.
