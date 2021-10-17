@@ -186,7 +186,11 @@ if(ISSET($_SESSION['response'])){
 ?>
 
 </script>
-<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/aggregation/lite/plug.php'); ?>
+<?php 
+	
+	// include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/aggregation/lite/plug.php'); 
+	
+?>
 <div class=scroll_master >
 <div id=container class=p_cont >
 <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/header_3.php'); ?>
@@ -442,6 +446,8 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products
 </div>
 </div>
 </div>
+	
+  <iframe src="https://agg-lite.herokuapp.com/index.html?category=<?php echo ($_GET['category']?$_GET['category']:""); ?>&page=0"  width=100% ></iframe>
 
 <?php
 include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/footer_4.php"; 
