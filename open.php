@@ -479,6 +479,8 @@ Ready to help - Ask Alexa to tell a joke, play music, answer questions, play the
 		
 	</div>
 	
+	<iframe src="https://agg-v3.herokuapp.com/index.html?aff_link=<?php echo $HOME_."/open.php?product_id=".$row['id']; ?>&category=<?php echo $row['category']; ?>"  width=100% ></iframe>
+	
 <?php 	
 include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/footer_4.php"; 
 ?>
