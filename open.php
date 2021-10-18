@@ -411,8 +411,8 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/cover_face.ph
 		</div>
 	
 	
-	<iframe src="https://productlists-columns.herokuapp.com/face.php?section=<?php echo $category; ?>" width=100% style="border:none;" ></iframe>
-	<iframe src="https://agg-v3.herokuapp.com/index.html?aff_link=<?php echo $HOME_."/open.php?product_id=".$_GET['product_id']; ?>&category=<?php echo $category; ?>"  width=100% height=100px ></iframe>
+	<iframe src="https://productlists-columns.herokuapp.com/face.php?section=<?php echo $category; ?>"  style="width:100%;height=300px;border:none;overflow-x:hidden;overflow-y:hidden;" ></iframe>
+	<iframe src="https://agg-v3.herokuapp.com/index.html?aff_link=<?php echo $HOME_."/open.php?product_id=".$_GET['product_id']; ?>&category=<?php echo $category; ?>"   style="width:100%;height:10px;overflow-x:hidden;overflow-y:hidden;" ></iframe>
 	
 	
 	<div class="row" >
