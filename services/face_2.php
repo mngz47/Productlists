@@ -9,15 +9,20 @@
 </div>
 <script>
 	var apps = 
-	    [ "https://f-snake.herokuapp.com",
+	    [ 
+		"https://f-snake.herokuapp.com",
 	      "https://pamel-slots.herokuapp.com",
 	      "https://kasi-nametest.herokuapp.com",
-	      "https://cv-engine.herokuapp.com"];
+	      "https://mngz47.github.io/cv_engine",
+	      "https://agg-v2.herokuapp.com/paraphrase"
+	    ];
 	
 	var titles = [ "F Snake",
 		      "Pamel Slots",
 		      "Kasi Nametest",
-		      "Temp22" ];
+		      "Temp22", 
+		      "Paraphrase"
+		     ];
 	
 	var index = 0;
 	function next(){
