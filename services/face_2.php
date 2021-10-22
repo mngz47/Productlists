@@ -14,7 +14,7 @@
 	      "https://pamel-slots.herokuapp.com",
 	      "https://kasi-nametest.herokuapp.com",
 	      "https://mngz47.github.io/cv_engine",
-	      "https://agg-v2.herokuapp.com/paraphrase"
+	      "https://agg-v3.herokuapp.com/paraphrase"
 	    ];
 	
 	var titles = [ "F Snake",
