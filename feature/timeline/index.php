@@ -1,7 +1,7 @@
 <?php
 if(ISSET($_GET['top'])){
 
-include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php';
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
  
     
     $sql = 'SELECT id,title,price FROM product WHERE draft=0 ORDER BY date_added DESC';
