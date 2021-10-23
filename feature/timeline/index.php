@@ -2,10 +2,9 @@
 if(ISSET($_GET['top'])){
 
 include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php';
-  
-$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
+ 
     
-         $sql = 'SELECT id,title,price FROM product WHERE draft=0 ORDER BY date_added DESC';
+    $sql = 'SELECT id,title,price FROM product WHERE draft=0 ORDER BY date_added DESC';
     $result = $conn->query($sql);
  
     $target = '';
@@ -15,10 +14,11 @@ $conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
     $c = 1;
     
     if($result){
-    while($row = $result->fetch_assoc()){	
+    while($row = $result->fetch_assoc()){
+	    
         if($c>$_GET['top'] && $c<($_GET['top']+40)){
-        $conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
-              $sql = 'SELECT url FROM product_image WHERE product_id='.$row['id'];
+     
+    $sql = 'SELECT url FROM product_image WHERE product_id='.$row['id'];
     $result2 = $conn->query($sql);
     if($result2){
             if($row2 = $result2->fetch_assoc()){
