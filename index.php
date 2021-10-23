@@ -65,7 +65,7 @@ if(ISSET($_SESSION['response'])){
 <a name=main ></a>
 <div id="main" class=main >
 	
-	<iframe src="https://productlists-services.herokuapp.com/face.php" style="width:100%;" ></iframe>
+	<iframe src="https://productlists-services.herokuapp.com/face.php" style="width:100%;height:100%;" ></iframe>
 	
 <?php
 	// include 'services/face_2.php'; 
