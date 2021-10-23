@@ -104,8 +104,6 @@ if(ISSET($_SESSION['response'])){
 		<div id='amazon_products' style='display:none' >
 		<span class=title >Introduction To Productlists</span>
 		<p>Productlists is a tech firm working towards solutions to free the youth. Enjoy our instant game service, product listings and reviews.</p>	
-		<span class=title >Workx Vacuum Cleaner</span>
-		<p>Portable with strong suction good for removig dirt in narrow spaces. Good for cleaning carpets and car interior.</p>
 		<span class=title >Kasi Nametest</span>
 		<p>South African local instant game - enter your name and find out with Mzansi kasi you are from.</p>
 		<span class=title >Recreational Activies In Newcastle South Africa</span>
@@ -126,32 +124,6 @@ if(ISSET($_SESSION['response'])){
 		<p>Use the best tools to sell on Amazon, optimize your listing - access best selling keywords and automatic repricing.</p>
 		<span class=title >Adzooma</span>
 		<p>Automate and manage all your Google, Facebook and Microsoft Ads in one place. Award winning App.</p>
-			<span>Apple Watch Series 3</span>
-			<p>GPS, Retina display, Swimproof, Optical heart sensor, Stores music, podcasts, and audiobooks
-Elevation, Emergency SOS, S3 chip with dual-core processor,watchOS with Activity trends, cycle tracking, hearing health innovations, and the App Store on your wrist
-Aluminum case</p>
-			<span>10'' Ring Light with 50'' Extendable Tripod Stand</span>
-			<p>
-			Sensyne selfie ring light features a high sensitivity touch panel design that has a longer life than traditional mechanical buttons.	
-			</p>
-			<span>Casio Men's W800H-1AV Classic Sport Watch</span>
-			<p>
-			Imported, 10-year battery life, 100-meter water resistance
-LED backlight, Dual time, Approx. battery life: 10 years on CR2025	
-			</p>
-			<span>All-new Echo Dot (4th Gen)</span>
-			<p>
-Ready to help - Ask Alexa to tell a joke, play music, answer questions, play the news, check the weather, set alarms, and more.	
-			</p>
-			<span>DJI Mavic Mini Combo - Drone FlyCam Quadcopter UAV</span>
-			<p>
-			Mavic Mini’s weight allows it to stay in the air longer than similar consumer FlyCams on the market Enjoy up to 30 minutes of flight time with a fully-charged battery.	
-			</p>
-			<span>Pixel 4 - Clearly White</span>
-			<p>
-			Get more done with your voice. The new Google Assistant is the easiest way to send texts, share photos, and more.	
-			</p>
-			
 		</div>
 		
 		<?php include "services/build_your_brand/feature/video_2.php"; ?>
