@@ -33,14 +33,14 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
     <li><a href=https://<?php echo $HOME_; ?>/member/signup_main.php >Account</a></li>
     <li><a href=https://<?php echo $HOME_; ?>/feature/shopping_cart/index.php >Shopping Cart</a></li>
     <li><a href=https://<?php echo $HOME_; ?>/member/customer_transaction.php >Transactions</a></li>
-    <li><a href=https://<?php echo $HOME_; ?>/services/index.php >Services</a></li>
+    <li><a href=https://productlists-services.herokuapp.com >Services</a></li>
   </ul>
 </div>
 <div class="col-sm-3" >
 <h3>Newsletter</h3>
 <form action="https://<?php echo $HOME_; ?>/feature/feedback/index.php" method=post onsubmit=setDate('date_added_n'); id=newsletter >
-<a href=https://www.instagram.com/productlists ><img src=https://<?php echo $HOME_; ?>/resources/instagram.jpg width=20px /></a>
-<a href=https://www.facebook.com/productlists.co.za ><img src=https://<?php echo $HOME_; ?>/resources/facebook.png width=20px /></a>
+<a href=https://www.instagram.com/productlists ><img src=https://mngz47.github.io/productlists-resources/instagram.jpg width=20px /></a>
+<a href=https://www.facebook.com/productlists.co.za ><img src=https://mngz47.github.io/productlists-resources/facebook.png width=20px /></a>
     <input name=email type=text class=form-control placeholder=email style="margin-bottom:10px;width:70%;display:inline-block;" onblur="newsletter_auto_send(this);" />
 <script>
     function newsletter_auto_send(input){
