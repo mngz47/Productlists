@@ -48,7 +48,11 @@ include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php';
              '</div>'.
              '</a>'.($c%2==0 ?'</div>'.($c%12==0?'</div><div class="row tml_row" >':'').'<div class="col-sm-6 row" >':'');
 		
-	}} 
+	}}else{
+        echo
+        'error: '.
+        mysqli_error($conn);
+    } 
 			}
              
        if($c%2==0){
@@ -69,13 +73,8 @@ include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php';
                 $target='';
              }
             }
-    }else{
-        echo
-        'error: '.
-        mysqli_error($conn);
+	}
     }
-        }     
-            
        $c+=1; 
     }
     }else{
