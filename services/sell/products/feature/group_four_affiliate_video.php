@@ -5,17 +5,17 @@
    
     var affiliates =
 	[
-	    "https://raw.githubusercontent.com/mngz47/productlists-resources/main/banners/productlists.html",
-	    "https://raw.githubusercontent.com/mngz47/productlists-resources/main/banners/kasi_nametest.html",
-	    "https://raw.githubusercontent.com/mngz47/productlists-resources/main/banners/recreation.html",
-	    "https://raw.githubusercontent.com/mngz47/productlists-resources/main/banners/f_snake.html",
-	    "https://raw.githubusercontent.com/mngz47/productlists-resources/main/banners/f_snake.html",
-	    "https://raw.githubusercontent.com/mngz47/productlists-resources/main/banners/touchbistro2.html",
-	    "https://raw.githubusercontent.com/mngz47/productlists-resources/main/banners/touchbistro2.html",
-	    "https://raw.githubusercontent.com/mngz47/productlists-resources/main/banners/cv_engine2.html",
-	    "https://raw.githubusercontent.com/mngz47/productlists-resources/main/banners/free_traffic.html",
-	    "https://raw.githubusercontent.com/mngz47/productlists-resources/main/banners/jungle_scout2.html",
-	    "https://raw.githubusercontent.com/mngz47/productlists-resources/main/banners/adzooma.html",
+	    "https://mngz47.github.io/productlists-resources/banners/productlists.html",
+	    "https://mngz47.github.io/productlists-resources/banners/kasi_nametest.html",
+	    "https://mngz47.github.io/productlists-resources/banners/recreation.html",
+	    "https://mngz47.github.io/productlists-resources/banners/f_snake.html",
+	    "https://mngz47.github.io/productlists-resources/banners/f_snake.html",
+	    "https://mngz47.github.io/productlists-resources/banners/touchbistro2.html",
+	    "https://mngz47.github.io/productlists-resources/banners/touchbistro2.html",
+	    "https://mngz47.github.io/productlists-resources/banners/cv_engine2.html",
+	    "https://mngz47.github.io/productlists-resources/banners/free_traffic.html",
+	    "https://mngz47.github.io/productlists-resources/banners/jungle_scout2.html",
+	    "https://mngz47.github.io/productlists-resources/banners/adzooma.html",
 	];
     
     var index = 0;
