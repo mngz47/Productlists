@@ -1,5 +1,5 @@
 <?php
-
+/*
 function isRepeat($v1,$v2,$v3,$v4){
     
     if(ISSET($_SESSION['GF_slide_end1'])){
@@ -262,5 +262,5 @@ echo
 '<div class="col-sm-5 block sharp_two" >'.$gf_cheapest.'latest</div>'.
 ($gf_best_selling?'<div class="col-sm-5 block sharp_two" >'.$gf_best_selling.'best selling</div>':'').
 '</div></div>';
-
+*/
 ?>
