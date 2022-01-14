@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/api.php';
+include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
 if(ISSET($_SESSION['company_id'])){
 
