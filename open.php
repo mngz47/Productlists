@@ -379,7 +379,9 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 	<div class=row style="padding:20px;" >
 		<div class=col-sm-4 >
 <div id=left_pane_1 >
-<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php'); ?>
+<?php
+//	include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php');
+?>
 </div>
 <div id=left_pane_3 >
 <?php
