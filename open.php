@@ -207,7 +207,7 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
     if(isset($_SESSION['company_id'])?$_SESSION['company_id']==$row['company_id']:false){
 	echo
 	'<table class=company_options >'.
-    '<td><a href="product_general.php?product_id='.$row['id'].'" >edit</a></td>'.
+    '<td><a href="/services/sell/products/product_general.php?product_id='.$row['id'].'" >edit</a></td>'.
 	'<td><a href=# onclick="deleteProduct('.$row['id'].');return false;" >delete</a></td>'.
 	'</table>';
 	}
