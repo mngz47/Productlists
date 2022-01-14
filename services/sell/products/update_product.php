@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
