@@ -372,30 +372,7 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 </div>
 	</div>
 	<div class=row style="padding:20px;" >
-		<div class=col-sm-4 >
-
-			
-</div>
-		<div class=col-sm-4 >
-
-<div id=left_pane_2 style="display:none;" >
-<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/relationship.php'); ?>
-			</div>
-<?php 
-include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/option/index.php';
-?>
-	</div>
-		<div class=col-sm-4 >
-			
-<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/references.php'); ?>
-			
-	<?php
-
-$service_item = 2;
-include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/cover_face.php';
- 
-?>
-	</div>
+		
 		</div>
 	
 	
