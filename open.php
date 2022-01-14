@@ -337,15 +337,20 @@ $result = $conn->query($sql);
     if(!ISSET($_SESSION['customer_id'])){
     include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/q_c/quick_c.php');
     }
-    */
-	
+    
+    	
     include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/face.php');
+    */
+
    
     
      ?>
   
     
-    <?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/footer.php'); ?>
+    <?php 
+	//include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/footer.php'); 
+	
+	?>
 
 	</div>
 <div class=row id=reviews style="display:none;" >	
