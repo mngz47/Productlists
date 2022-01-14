@@ -77,7 +77,9 @@ if(ISSET($_SESSION['response'])){
 <div id=right_pane class="right_pane" >
 	
 <div id=left_pane_1 >
-<?php include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php'); ?>
+<?php 
+	include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php');
+?>
 </div>
 
 	
