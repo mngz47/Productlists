@@ -1,7 +1,9 @@
 <?php
 session_start();
+
+include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/api.php';
+
 if(ISSET($_SESSION['company_id'])){
-$conn = new mysqli('localhost','produc10_mng','mngzpass636','produc10_productlists');
 
 if($_GET['fieldname']==='price'){
 $sql = 'UPDATE product SET discount=((price-'.$_GET['fieldval'].')/price*100) WHERE id='.$_GET['id'].';';
