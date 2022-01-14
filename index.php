@@ -78,7 +78,7 @@ if(ISSET($_SESSION['response'])){
 	
 <div id=left_pane_1 >
 <?php 
-	include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php');
+	//include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php');
 ?>
 </div>
 
