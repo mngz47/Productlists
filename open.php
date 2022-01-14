@@ -281,15 +281,10 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 	         $specification = $row['specification'];
 			 
            echo 
-		   '</div></div></div>';
-		   
-		   
+		   '</div></div></div>';		   
     }
-}
-	
-?>
-	
-		   
+}	
+?>	   
 		</div>
 	</div>
 	</div>
@@ -380,7 +375,7 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 		<div class=col-sm-4 >
 <div id=left_pane_1 >
 <?php
-//	include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php');
+/*	include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/services/sell/products/feature/group_four.php'); */
 ?>
 </div>
 <div id=left_pane_3 >
