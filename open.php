@@ -18,6 +18,17 @@ function getQueueDiscount($conn,$product_id,$q_price){
 }
 
 
+function httpGet($url){
+$curl = curl_init();
+curl_setopt_array($curl, array(
+    CURLOPT_RETURNTRANSFER => 1,
+    CURLOPT_URL => $url,
+));
+return curl_exec($curl);
+curl_close($curl);
+}
+
+
 include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/config.php');
 
 $LOCATION = 'services/sell/products/open.php?product_id='.$_GET['product_id'];
@@ -361,8 +372,7 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 		
 </div>
 	
-	
-	<iframe src="https://productlists-reviews.herokuapp.com/face.php?title=<?php echo $t; ?>"  style="width:100%;height=100%;border:none;overflow-x:hidden;overflow-y:hidden;" ></iframe>
+	<?php echo httpGet("https://productlists-reviews.herokuapp.com/face.php?title=".$t); ?>
 	
 	<iframe src="https://agg-v3.herokuapp.com/index.html?aff_link=<?php echo $HOME_."/open.php?product_id=".$_GET['product_id']; ?>&category=<?php echo $category; ?>"   style="width:0px;height:0px;overflow-x:hidden;overflow-y:hidden;" ></iframe>
 	
