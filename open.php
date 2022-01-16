@@ -372,8 +372,11 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 		
 </div>
 	
-	<?php echo httpGet("https://productlists-reviews.herokuapp.com/face.php?title=".$t); ?>
-	
+	<div id=productlists-reviews ></div>
+	<script>
+		 sendreq_2("https://productlists-reviews.herokuapp.com/face.php?title=<?php echo $t; ?>",e("productlists-reviews"));
+	</script>
+
 	<iframe src="https://agg-v3.herokuapp.com/index.html?aff_link=<?php echo $HOME_."/open.php?product_id=".$_GET['product_id']; ?>&category=<?php echo $category; ?>"   style="width:0px;height:0px;overflow-x:hidden;overflow-y:hidden;" ></iframe>
 	
 <?php 	
