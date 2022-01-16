@@ -337,21 +337,12 @@ $result = $conn->query($sql);
     if(!ISSET($_SESSION['customer_id'])){
     include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/q_c/quick_c.php');
     }
-    
+     */
     	
     include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/face.php');
-    */
-
-   
-    
-     ?>
-  
-    
-    <?php 
-	//include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/footer.php'); 
+    include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/footer.php'); 
 	
-	?>
-
+     ?>
 	</div>
 <div class=row id=reviews style="display:none;" >	
 	
@@ -373,59 +364,17 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products/reply/list.php";
 ?>
 </div>
-	</div>
 </div>
-	</div>
-	<div class=row style="padding:20px;" >
+</div>
+</div>
+<div class=row style="padding:20px;" >
 		
-		</div>
+</div>
 	
 	
-	<iframe src="https://productlists-columns.herokuapp.com/face.php?section=<?php echo $category; ?>"  style="width:100%;height=300px;border:none;overflow-x:hidden;overflow-y:hidden;" ></iframe>
+	<iframe src="https://productlists-reviews.herokuapp.com/face.php?title=<?php echo $t; ?>"  style="width:100%;height=auto;border:none;overflow-x:hidden;overflow-y:hidden;" ></iframe>
+	
 	<iframe src="https://agg-v3.herokuapp.com/index.html?aff_link=<?php echo $HOME_."/open.php?product_id=".$_GET['product_id']; ?>&category=<?php echo $category; ?>"   style="width:100%;height:10px;overflow-x:hidden;overflow-y:hidden;" ></iframe>
-	
-	
-	<div class="row" >
-<div class="content col-sm-9" >
-	<div style="padding:20px;" >
-		
-		<div id='amazon_products' style='display:none' >
-		<span class=title >Introduction To Productlists</span>
-		<p>Productlists is a tech firm working towards solutions to free the youth. Enjoy our instant game service, product listings and reviews.</p>	
-		<span class=title >Kasi Nametest</span>
-		<p>South African local instant game - enter your name and find out with Mzansi kasi you are from.</p>
-		<span class=title >Recreational Activies In Newcastle South Africa</span>
-		<p>Get the latest business and tourist information about Newcastle. Learn about Accommodation, Job Recruitment and more.</p>
-		<span class=title >F-Snake Classic Productlists Game</span>
-		<p>Play our classic snake game with seven stages. Overcome the obstacle and score as much points as you can.</p>
-		<span class=title >F-Snake Classic Productlists Game</span>
-		<p>Play our classic snake game. As you progress in the stages the obstacle moves faster and faster.</p>
-		<span class=title >Touch Bistro Restaurant POS</span>
-		<p>Replace your printed out food menu with a digital tablet menu able to send orders directly to kitchen without calling for waiter.</p>
-		<span class=title >Touch Bistro Digital Menu and Payment</span>
-		<p>Collect more information during payment so you can resell your specials to frequent customers.</p>
-		<span class=title >CV Engine</span>
-		<p>Generate Your CV For FREE in 3 minutes and send it to your email.</p>
-		<span class=title >Stop Paying For Traffic.</span>
-		<p>Saas and other large companies that need to pay for advertising on a monthly basis can create a content division in their businesses.</p>	
-		<span class=title >Jungle Scout</span>
-		<p>Use the best tools to sell on Amazon, optimize your listing - access best selling keywords and automatic repricing.</p>
-		<span class=title >Adzooma</span>
-		<p>Automate and manage all your Google, Facebook and Microsoft Ads in one place. Award winning App.</p>
-		</div>
-		
-		<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/build_your_brand/feature/video_2.php"; ?>
-		
-	</div>
-		</div>
-		
-<div class="col-sm-3" >
-<?php include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products/feature/group_four_affiliate_video.php"; ?>
-	<div id=group_four_affiliate_video_dd style="padding:4px;font-size:1.3em;" >Productlists is a tech firm working towards solutions to free the youth. Enjoy our instant game service, product listings and reviews.</div>
-		</div>
-		
-	</div>
-	
 	
 <?php 	
 include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/footer_4.php"; 
