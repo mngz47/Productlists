@@ -82,13 +82,8 @@ target.innerHTML = req.responseText;
 function sendreq_3(url,target){
 var req = new XMLHttpRequest();
 req.open("GET",url,true);	
-	
-target.className+=' loader';
 req.send();
-req.onload = function(){
-target.className = target.className.replace(' loader','');
-target.innerHTML = req.responseText;
-};
+	return req;
 }
 
 function sendform(url,form){
