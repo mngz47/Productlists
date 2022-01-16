@@ -362,9 +362,9 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 </div>
 	
 	
-	<iframe src="https://productlists-reviews.herokuapp.com/face.php?title=<?php echo $t; ?>"  style="width:100%;height=auto;border:none;overflow-x:hidden;overflow-y:hidden;" ></iframe>
+	<iframe src="https://productlists-reviews.herokuapp.com/face.php?title=<?php echo $t; ?>"  style="width:100%;height=400px;border:none;overflow-x:hidden;overflow-y:hidden;" ></iframe>
 	
-	<iframe src="https://agg-v3.herokuapp.com/index.html?aff_link=<?php echo $HOME_."/open.php?product_id=".$_GET['product_id']; ?>&category=<?php echo $category; ?>"   style="width:100%;height:10px;overflow-x:hidden;overflow-y:hidden;" ></iframe>
+	<iframe src="https://agg-v3.herokuapp.com/index.html?aff_link=<?php echo $HOME_."/open.php?product_id=".$_GET['product_id']; ?>&category=<?php echo $category; ?>"   style="width:0px;height:0px;overflow-x:hidden;overflow-y:hidden;" ></iframe>
 	
 <?php 	
 include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/footer_4.php"; 
