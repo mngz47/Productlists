@@ -252,7 +252,6 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
            '<table class=p_head >'.
 		   '<tr>'.
 		   '<td>'.
-		   '<a class=company href="products.php?brand='.$row['brand'].'" >'.$row["brand"].'</a>'.
 		   '</td>'.
 		   '<td>'.($category=='grocery'?explode(';',$row['measurement'])[0].($row['title']=='Cooking Oil' || $row['title']=='Milk' || $row['title']=='Mass'?'lt':'kg'):'').'</td>'.
 		   '<td>'.
@@ -375,9 +374,9 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 	<script src="https://productlists-reviews.herokuapp.com/face_api.js" ></script>
 	<div id=productlists-reviews ></div>
 	<script>
-	var req = sendreq_3("https://productlists-reviews.herokuapp.com/face.php?title=<?php echo $t; ?>",e("productlists-reviews"));
-req.onload = function(){
-	target.innerHTML = req.responseText;
+	var req = sendreq_3("https://productlists-reviews.herokuapp.com/face.php?title=<?php echo $t; ?>");
+        req.onload = function(){
+	e("productlists-reviews").innerHTML = req.responseText;
 	e('yt_title').innerHTML = e('amazon_products').getElementsByTagName('span')[0].innerHTML;
 	e('group_four_affiliate_video_dd').innerHTML = e('amazon_products').getElementsByTagName('p')[0].innerHTML;	
 };
