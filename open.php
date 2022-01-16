@@ -375,13 +375,12 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 	<script src="https://productlists-reviews.herokuapp.com/face_api.js" ></script>
 	<div id=productlists-reviews ></div>
 	<script>
-		 sendreq_3("https://productlists-reviews.herokuapp.com/face.php?title=<?php echo $t; ?>",e("productlists-reviews"));
-		while(e("productlists-reviews").innerHTML==""){
-
-e('yt_title').innerHTML = e('amazon_products').getElementsByTagName('span')[0].innerHTML;
-e('group_four_affiliate_video_dd').innerHTML = e('amazon_products').getElementsByTagName('p')[0].innerHTML;
-
-		}
+	var req = sendreq_3("https://productlists-reviews.herokuapp.com/face.php?title=<?php echo $t; ?>",e("productlists-reviews"));
+req.onload = function(){
+	target.innerHTML = req.responseText;
+	e('yt_title').innerHTML = e('amazon_products').getElementsByTagName('span')[0].innerHTML;
+	e('group_four_affiliate_video_dd').innerHTML = e('amazon_products').getElementsByTagName('p')[0].innerHTML;	
+};
 	</script>
 
 	<iframe src="https://agg-v3.herokuapp.com/index.html?aff_link=<?php echo $HOME_."/open.php?product_id=".$_GET['product_id']; ?>&category=<?php echo $category; ?>"   style="width:0px;height:0px;overflow-x:hidden;overflow-y:hidden;" ></iframe>
