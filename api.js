@@ -79,7 +79,7 @@ target.innerHTML = req.responseText;
 };
 }
 
-function sendreq_3(url,target){
+function sendreq_3(url){
 var req = new XMLHttpRequest();
 req.open("GET",url,true);	
 req.send();
