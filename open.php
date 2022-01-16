@@ -377,6 +377,13 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 	var req = sendreq_3("https://productlists-reviews.herokuapp.com/face.php?title=<?php echo $t; ?>");
         req.onload = function(){
 	e("productlists-reviews").innerHTML = req.responseText;
+	e('yt_tv').src = e('videos').getElementsByTagName('span')[0].innerHTML;
+		
+		e('yt_tv').style.height = (e('yt_tv').offsetWidth*220/400)+'px';
+		e('yt_tv').onresize = function(){
+		e('yt_tv').style.height = (e('yt_tv').offsetWidth*220/400)+'px';
+    			};
+		
 	e('yt_title').innerHTML = e('amazon_products').getElementsByTagName('span')[0].innerHTML;
 	e('group_four_affiliate_video_dd').innerHTML = e('amazon_products').getElementsByTagName('p')[0].innerHTML;	
 };
