@@ -271,14 +271,10 @@ $sql3 = 'SELECT DISTINCT COUNT(t.product_id) AS rank FROM'.
 		   
 		   echo 
 		   '</div>'.
-		   '<script>checkImageParameterAbility();</script>'.
-		   '<div class="center block" >'.($category=='grocery'?'Specialized grocery delivery.':'Expect delivery within 2 weeks.').'</div>'.
-		   
-		   
+		   '<script>checkImageParameterAbility();</script>'. 
 		   ($row['quantity']>0?
 		   '<div class=add_to_cart ><input id=cart_qty type=number value=1 placeholder="Qty" /><a class="btn btn-primary" id=add_to_cart href=# onclick="addToCart(setParameters('.$row['id'].'),this);return false;" >add to cart</a></div>':'<div class="block center" >Out of Stock</div>');
-		  
-	         $specification = $row['specification'];
+	           $specification = $row['specification'];
 			 
            echo 
 		   '</div></div></div>';		   
@@ -332,15 +328,9 @@ $result = $conn->query($sql);
 	</div>
 <div id=checkout style="display:none;" >
 	 <?php
-   
-    /*
-    if(!ISSET($_SESSION['customer_id'])){
-    include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/q_c/quick_c.php');
-    }
-     */
     	
-    include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/face.php');
-    include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/footer.php'); 
+  //  include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/face.php');
+  //  include (str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']).'/feature/shopping_cart/footer.php'); 
 	
      ?>
 	</div>
