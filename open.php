@@ -385,6 +385,7 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
     			};
 		
 	e('yt_title').innerHTML = e('amazon_products').getElementsByTagName('span')[0].innerHTML;
+	e('four_target').src = e('affiliates').getElementsByTagName('span')[0].innerHTML;
 	e('group_four_affiliate_video_dd').innerHTML = e('amazon_products').getElementsByTagName('p')[0].innerHTML;	
 };
 	</script>
