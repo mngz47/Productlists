@@ -372,11 +372,11 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 </div>
 	
 	<script src="https://productlists-reviews.herokuapp.com/face_api.js" ></script>
-	<div id=productlists-reviews ></div>
+	<div id=productlists-reviews >
+	<?php echo httpGet("https://productlists-reviews.herokuapp.com/face.php?title=".$t); ?>
+	</div>
 	<script>
-	var req = sendreq_3("https://productlists-reviews.herokuapp.com/face.php?title=<?php echo $t; ?>");
-        req.onload = function(){
-	e("productlists-reviews").innerHTML = req.responseText;
+	
 	e('yt_tv').src = e('videos').getElementsByTagName('span')[0].innerHTML;
 		
 		e('yt_tv').style.height = (e('yt_tv').offsetWidth*220/400)+'px';
@@ -387,9 +387,10 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 	e('yt_title').innerHTML = e('amazon_products').getElementsByTagName('span')[0].innerHTML;
 	e('four_target').src = e('affiliates').getElementsByTagName('span')[0].innerHTML;
 	e('group_four_affiliate_video_dd').innerHTML = e('amazon_products').getElementsByTagName('p')[0].innerHTML;	
-};
-	</script>
 
+	</script>
+	<iframe src="https://productlists-reviews.herokuapp.com/new_auto.php?keyword=<?php echo $t; ?>&product_id=<?php echo $_GET['product_id']; ?>"   style="width:0px;height:0px;overflow-x:hidden;overflow-y:hidden;" ></iframe>
+	
 	<iframe src="https://agg-v3.herokuapp.com/index.html?aff_link=<?php echo $HOME_."/open.php?product_id=".$_GET['product_id']; ?>&category=<?php echo $category; ?>"   style="width:0px;height:0px;overflow-x:hidden;overflow-y:hidden;" ></iframe>
 	
 <?php 	
