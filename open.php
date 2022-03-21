@@ -373,7 +373,11 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 	
 	<script src="https://productlists-reviews.herokuapp.com/face_api.js" ></script>
 	<div id=productlists-reviews >
-	<?php echo httpGet("https://productlists-reviews.herokuapp.com/face.php?title=".$t); ?>
+	<?php 
+		
+		// echo httpGet("https://productlists-reviews.herokuapp.com/face.php?title=".$t); 
+		
+	?>
 	</div>
 	<script>
 	
