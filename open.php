@@ -385,13 +385,13 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
         if($count<4){
 		      
 	$sql = 'SELECT url FROM product_image WHERE product_id='.$row['id'];
-    	$result = $conn->query($sql);
-    if($result){
-    if(($row2 = $result->fetch_assoc())){     
+    	$result2 = $conn->query($sql);
+    if($result2){
+    if(($row2 = $result2->fetch_assoc())){     
 	
 	echo 
 	'<div class=col-sm-3 style="height:200px;background-image:url('.$row2['url'].');background-position:20 20;background-repeat:no-repeat;" >'.
-	'<h3><a href=open.php?member_id='.$row['id'].' ><div class=block >'.$row['title'].'</div></a>'.
+	'<h3><a href=open.php?product_id='.$row['id'].' ><div class=block >'.$row['title'].'</div></a>'.
 	'</h3></div>';
 		
 	
@@ -399,7 +399,9 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 	}  
 		
 		$count+=1;
-        }
+        }else{
+		break;
+	}
     }
     }
    echo '</div>';
