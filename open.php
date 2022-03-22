@@ -374,7 +374,7 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 	// related product
 	
 	echo
-   '<div style="padding-bottom:20px;" ><h3>Related</h3><div class=row >';
+   '<h3>Related</h3><div class=row >';
    
    	$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
 	$count=0;
@@ -402,6 +402,8 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
         }
     }
     }
+   echo '</div>';
+	
 ?>
 	<div id=productlists-reviews >
 	<?php 
