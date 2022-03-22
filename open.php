@@ -393,10 +393,12 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 	'<div class=col-sm-3 style="height:200px;background-image:url('.$row2['url'].');background-position:20 20;background-repeat:no-repeat;" >'.
 	'<h3><a href=open.php?member_id='.$row['id'].' ><div class=block >'.$row['title'].'</div></a>'.
 	'</h3></div>';
-		$count+=1;
+		
 	
 	}
-	}    
+	}  
+		
+		$count+=1;
         }else{
            break; 
         }
