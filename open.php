@@ -371,7 +371,6 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 		
 </div>
 	
-	<script src="https://productlists-reviews.herokuapp.com/face_api.js" ></script>
 	<div id=productlists-reviews >
 	<?php 
 		
@@ -393,6 +392,7 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 	e('group_four_affiliate_video_dd').innerHTML = e('amazon_products').getElementsByTagName('p')[0].innerHTML;	
 
 	</script>
+	
 	<iframe src="https://productlists-reviews.herokuapp.com/new_auto.php?keyword=<?php echo str_replace(' ','%20',$t); ?>&product_id=<?php echo $_GET['product_id']; ?>" style="width:0px;height:0px;overflow-x:hidden;overflow-y:hidden;" ></iframe>
 	
 	<iframe src="https://agg-v3.herokuapp.com/index.html?aff_link=<?php echo $HOME_."/open.php?product_id=".$_GET['product_id']; ?>&category=<?php echo $category; ?>" style="width:0px;height:0px;overflow-x:hidden;overflow-y:hidden;" ></iframe>
