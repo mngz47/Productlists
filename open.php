@@ -368,8 +368,6 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 </div>
 </div>
 <div class=row style="padding:20px;" >
-		
-</div>
 <?php
 	// related product
 	
@@ -406,7 +404,9 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
     }
    echo '</div>';
 	
-?>
+?>	
+</div>
+	
 	<div id=productlists-reviews >
 	<?php 
 		
