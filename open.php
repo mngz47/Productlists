@@ -371,6 +371,39 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 		
 </div>
 	
+	// related product
+	
+
+	echo
+   '<div style="padding-bottom:20px;" ><h3>Related</h3><div class=row >';
+   
+   	$conn = new mysqli($HOST_,$USER_,$PASS_,$DATABASE_);
+	$count=0;
+	$sql = 'SELECT id,title FROM product WHERE category="'.$o.'" AND id>'.$product_id;
+    $result = $conn->query($sql);
+    if($result){
+    while(($row = $result->fetch_assoc())){
+        if($count<4){
+		      
+	$sql = 'SELECT url FROM product_image WHERE product_id='.$row['id'];
+    	$result = $conn->query($sql);
+    if($result){
+    if(($row2 = $result->fetch_assoc())){     
+	
+	echo 
+	'<div class=col-sm-3 style="height:200px;background-image:url('.$row2['url'].');background-position:20 20;background-repeat:no-repeat;" >'.
+	'<h3><a href=open.php?member_id='.$row['id'].' ><div class=block >'.$row['title'].'</div></a>'.
+	'</h3></div>';
+		$count+=1;
+	
+	}
+	}    
+        }else{
+           break; 
+        }
+    }
+    }
+
 	<div id=productlists-reviews >
 	<?php 
 		
