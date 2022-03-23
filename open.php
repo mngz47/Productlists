@@ -67,16 +67,6 @@ if(ISSET($_COOKIE['product_view_lock']) && ISSET($_SESSION['customer_id']) && st
 
 $product_id = $_GET['product_id'];
 
-if(ISSET($_COOKIE['product_lastviewed']) && count(explode(";",$_COOKIE['product_lastviewed']))<5){
-
-setcookie('product_lastviewed',$_COOKIE['product_lastviewed'].$product_id.";",time() + (86400 * 30 * 7),'/');
-	
-}else{
-
-setcookie('product_lastviewed',"",time() + (86400 * 30 * 7),'/');
-
-}
-
 $in_product = true;
 
 ?>
@@ -418,6 +408,19 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 </div>
 <div class=row style="padding:20px;" >	
 	<?php
+	
+if(ISSET($_COOKIE['product_lastviewed']) && count(explode(";",$_COOKIE['product_lastviewed']))<5){
+
+setcookie('product_lastviewed',$_COOKIE['product_lastviewed'].$product_id.";",time() + (86400 * 30 * 7),'/');
+	
+}else{
+
+setcookie('product_lastviewed',"",time() + (86400 * 30 * 7),'/');
+	
+	echo 'product last viewed init<br>';
+
+}
+	
 	
 	if($_COOKIE['product_lastviewed']!=""){
 		
