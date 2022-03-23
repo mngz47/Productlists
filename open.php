@@ -409,7 +409,12 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 <div class=row style="padding:20px;" >	
 	<?php
 	
-if(ISSET($_COOKIE['product_lastviewed']) && count(explode(";",$_COOKIE['product_lastviewed']))<5){
+	
+	$product_lastviewed = explode(";",$_COOKIE['product_lastviewed']);
+	
+	echo $_COOKIE['product_lastviewed'].'('.count($product_lastviewed).')br>';
+	
+if(ISSET($_COOKIE['product_lastviewed']) && (count($product_lastviewed)<5)){
 
 setcookie('product_lastviewed',$_COOKIE['product_lastviewed'].$product_id.";",time() + (86400 * 30 * 7),'/');
 	
