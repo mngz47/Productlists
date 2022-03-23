@@ -67,7 +67,7 @@ if(ISSET($_COOKIE['product_view_lock']) && ISSET($_SESSION['customer_id']) && st
 
 $product_id = $_GET['product_id'];
 
-if($_COOKIE['product_lastviewed']!=null && count(explode(";",$_COOKIE['product_lastviewed']))<5){
+if(ISSET($_COOKIE['product_lastviewed']) && count(explode(";",$_COOKIE['product_lastviewed']))<5){
 
 setcookie('product_lastviewed',$_COOKIE['product_lastviewed'].$product_id.";",time() + (86400 * 30 * 7),'/');
 	
