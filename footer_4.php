@@ -5,7 +5,7 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
 <ul style="list-style:none;" >
     <li><a href=https://<?php echo $HOME_; ?>/feature/support.php >Support</a></li>
     <li><a href=https://<?php echo $HOME_; ?>/about.php >About</a></li>
-    <li><a href=https://agg-lite.herokuapp.com >Automatic</a></li>
+    <li><a href=https://agg-lite.herokuapp.com/index.html >Automatic</a></li>
     <li><a href=https://<?php echo $HOME_; ?>/invest.php >Invest</a></li>
   </ul>
 </div>
@@ -34,6 +34,8 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
     <li><a href=https://<?php echo $HOME_; ?>/feature/shopping_cart/index.php >Shopping Cart</a></li>
     <li><a href=https://<?php echo $HOME_; ?>/member/customer_transaction.php >Transactions</a></li>
     <li><a href=https://productlists-services.herokuapp.com >Services</a></li>
+    <li><a href=https://productlists-columns.herokuapp.com >Columns</a></li>
+    <li><a href=https://productlists-reviews.herokuapp.com >Reviews</a></li>
   </ul>
 </div>
 <div class="col-sm-3" >
@@ -54,7 +56,7 @@ box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.2);" >
     <input name=text value="Newsletter" placeholder=message class=invisible />
 </form>
     <div>
-  <a href= "mailto:admin@productlists.co.za">admin@productlists.co.za</a><br>
+  <a href= "mailto:mng636@gmail.com" >mng636@gmail.com</a><br>
   <a href= "tel:+2771 947 1009">+2771 947 1009</a><br>
         <span id=c_year ></span> © Productlists
         <script>
