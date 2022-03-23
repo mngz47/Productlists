@@ -67,7 +67,6 @@ if(ISSET($_COOKIE['product_view_lock']) && ISSET($_SESSION['customer_id']) && st
 
 $product_id = $_GET['product_id'];
 
-/*
 if($_COOKIE['product_lastviewed']!=null && count(explode(";",$_COOKIE['product_lastviewed']))<5){
 
 setcookie('product_lastviewed',$_COOKIE['product_lastviewed'].$product_id.";",time() + (86400 * 30 * 7),'/');
@@ -76,7 +75,7 @@ setcookie('product_lastviewed',$_COOKIE['product_lastviewed'].$product_id.";",ti
 
 setcookie('product_lastviewed',"",time() + (86400 * 30 * 7),'/');
 
-}*/
+}
 
 $in_product = true;
 
@@ -427,7 +426,7 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 		
 		$product_lastviewed = explode(";",$_COOKIE['product_lastviewed']);
 		
-		for($a=0;$a<count($product_lastviewed);$a){
+		for($a=0;$a<count($product_lastviewed);$a++){
 			
 			
 			$sql = 'SELECT id,title FROM product WHERE id='.$product_lastviewed[$a];
