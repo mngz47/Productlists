@@ -67,6 +67,17 @@ if(ISSET($_COOKIE['product_view_lock']) && ISSET($_SESSION['customer_id']) && st
 
 $product_id = $_GET['product_id'];
 
+
+if(count(explode(";",$_COOKIE['product_lastviewed']))<5){
+
+setcookie('product_lastviewed',$_COOKIE['product_lastviewed'].$product_id.";",time() + (86400 * 30 * 7),'/');
+	
+}else{
+
+setcookie('product_lastviewed',"",time() + (86400 * 30 * 7),'/');
+
+}
+
 $in_product = true;
 
 ?>
@@ -406,7 +417,44 @@ include str_replace('\\','/',$_SERVER['DOCUMENT_ROOT'])."/services/sell/products
 	
 ?>	
 </div>
+<div class=row style="padding:20px;" >	
+	<?php
 	
+	if($_COOKIE['product_lastviewed']!=""){
+		
+		echo
+   		'<h3>Last Viewed</h3><div class=row >';
+		
+		$product_lastviewed = explode(";",$_COOKIE['product_lastviewed']);
+		
+		for($a=0;$a<count($product_lastviewed);$a){
+			
+			
+			$sql = 'SELECT id,title FROM product WHERE id='.$product_lastviewed[$a];
+    $result = $conn->query($sql);
+    if($result){
+    if(($row = $result->fetch_assoc())){
+       	      
+	$sql = 'SELECT url FROM product_image WHERE product_id='.$row['id'];
+    	$result2 = $conn->query($sql);
+    if($result2){
+    if(($row2 = $result2->fetch_assoc())){     
+	
+	echo 
+	'<div class=col-sm-3 style="height:200px;background-image:url('.$row2['url'].');background-position:20 20;background-repeat:no-repeat;" >'.
+	'<h3><a href=open.php?product_id='.$row['id'].' ><div class=block >'.$row['title'].'</div></a>'.
+	'</h3></div>';
+		
+	
+	}
+	}  
+		}
+	 
+		echo '</div>';	
+	}
+	
+	?>
+	</div>
 	<div id=productlists-reviews >
 	<?php 
 		
